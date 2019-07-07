@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Mainstay from 'src/components/Mainstay';
+
 const MainstayPreview = ({ entry, widgetFor }) => (
-  <div>
-    <h1>MUTHAFUCKIN TITLE YO: {entry.getIn(['data', 'title'])}</h1>
-  </div>
+  <Mainstay
+    imageUrl={entry.getIn(['data', 'image'])}
+    name={entry.getIn(['data', 'title'])}
+    title={entry.getIn(['data', 'jobTitle'])}
+  />
 );
 
 MainstayPreview.propTypes = {
