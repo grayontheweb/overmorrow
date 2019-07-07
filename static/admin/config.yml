@@ -56,6 +56,11 @@ collections:
         name: bottleImage
         widget: image
       -
+        label: Position
+        name: position
+        valueType: Int
+        widget: number
+      -
         fields:
           -
             label: Long
