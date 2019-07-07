@@ -5,7 +5,7 @@ import Founder from 'src/components/Founder';
 export default () => (
   <div>
     <Founder
-      imageUrl="http://lorempixel.com/400/400/"
+      imageUrl="https://lorempixel.com/400/400/"
       name="Lorem Ipsum"
       title="Chief Beer drinker"
     />
