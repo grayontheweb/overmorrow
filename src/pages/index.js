@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Founder from 'src/components/Founder';
+import Founders from 'src/components/Founders';
 
-export default () => (
-  <div>
-    <Founder
-      imageUrl="https://lorempixel.com/400/400/"
-      name="Lorem Ipsum"
-      title="Chief Beer drinker"
-    />
-  </div>
-);
+export default () => {
+  return (
+    <div>
+      <Founders />
+    </div>
+  );
+};
