@@ -34,7 +34,7 @@ collections:
     folder: data/founders
     label: Founders
     name: founders
-    slug: "{{slug}}"
+    slug: "{{position}}-{{title}}"
   -
     create: true
     fields:

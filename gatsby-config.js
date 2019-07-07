@@ -16,11 +16,19 @@ module.exports = {
         name: 'uploads',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/data`,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
+        path: `${__dirname}/data`,
         plugins: [
           {
             resolve: 'gatsby-remark-relative-images',
