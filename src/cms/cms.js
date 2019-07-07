@@ -7,4 +7,4 @@ import MainstayPreview from './preview-templates/Mainstay';
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
-CMS.registerPreviewTemplate('mainstayBeers', MainstayPreview);
+CMS.registerPreviewTemplate('founders', MainstayPreview);
