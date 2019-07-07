@@ -1,201 +1,60 @@
----
 backend:
-  branch: master
   name: git-gateway
+  branch: master
+
 media_folder: static/img
 public_folder: /img
+
 collections:
-  -
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      -
-        default: founder
-        label: "Template Key"
-        name: templateKey
-        widget: hidden
-      -
-        label: Name
-        name: name
-        widget: string
-      -
-        label: Title
-        name: title
-        widget: string
-      -
-        label: Image
-        name: image
-        widget: image
-    folder: data/founders
-    label: Founders
-    name: founders
-    slug: "{{slug}}"
-  -
-    create: true
-    fields:
-      -
-        default: mainstay
-        label: "Template Key"
-        name: templateKey
-        widget: hidden
-      -
-        label: Title
-        name: title
-        widget: string
-      -
-        label: "Name Image"
-        name: nameImage
-        widget: image
-      -
-        label: "Bottle Image"
-        name: bottleImage
-        widget: image
-      -
-        fields:
-          -
-            label: Long
-            name: long
-            widget: string
-          -
-            label: Short
-            name: short
-            widget: markdown
-        label: Description
-        name: description
-        widget: object
-      -
-        fields:
-          -
-            label: "Aroma & Taste"
-            name: aromaAndTaste
-            widget: string
-          -
-            label: ABV
-            name: abv
-            widget: string
-          -
-            label: OG
-            name: og
-            widget: string
-          -
-            label: Grains
-            name: grains
-            widget: string
-          -
-            label: Hops
-            name: hops
-            widget: string
-          -
-            label: Yeast
-            name: yeast
-            widget: string
-        label: "Flavor Profile"
-        name: flavorProfile
-        widget: object
-      -
-        fields:
-          -
-            label: "Accent Dark"
-            name: accentDark
-            widget: string
-          -
-            label: "Accent Light"
-            name: accentLight
-            widget: string
-        label: Style
-        name: style
-        widget: object
-    folder: data/mainstays
-    label: "Mainstay Beers"
-    name: mainstayBeers
-    slug: "{{slug}}"
-  -
-    label: Pages
-    name: pages
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+
+  - name: "pages"
+    label: "Pages"
     files:
-      -
-        file: data/intro.md
-        label: Intro
-        name: intro
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
         fields:
-          -
-            default: intro
-            label: "Template Key"
-            name: templateKey
-            widget: hidden
-          -
-            label: Heading
-            name: heading
-            widget: string
-          -
-            label: Description
-            name: description
-            widget: string
-          -
-            label: Dictionary
-            name: dictionary
-            widget: object
-            fields:
-              -
-                label: Title
-                name: title
-                widget: string
-              -
-                label: Phonetic
-                name: phonetic
-                widget: string
-              -
-                label: Defintion
-                name: definition
-                widget: string
-              -
-                label: Source
-                name: source
-                widget: string
-      -
-        file: data/subscribe.md
-        label: Subscribe
-        name: subscribe
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Subheading, name: subheading, widget: string}
+          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Description, name: description, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
         fields:
-          -
-            default: subscribe
-            label: "Template Key"
-            name: templateKey
-            widget: hidden
-          -
-            label: Content
-            name: content
-            widget: string
-          -
-            label: "Button Text"
-            name: buttonText
-            widget: string
-      -
-        file: data/footer.md
-        label: Footer
-        name: footer
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/products/index.md"
+        label: "Products Page"
+        name: "products"
         fields:
-          -
-            default: footer
-            label: "Template Key"
-            name: templateKey
-            widget: hidden
-          -
-            label: "English Company Name"
-            name: englishCompanyName
-            widget: string
-          -
-            label: "Vietnamese Company Name"
-            name: vietnameseCompanyName
-            widget: string
-          -
-            label: Address
-            name: address
-            widget: string
-          -
-            label: Email
-            name: email
-            widget: string
-          -
-            label: "Legal Text"
-            name: legalText
-            widget: string
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+          - {label: Full_image, name: full_image, widget: image}
+          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
