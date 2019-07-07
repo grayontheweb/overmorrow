@@ -14,12 +14,12 @@ collections:
         name: templateKey
         widget: hidden
       -
-        label: Name
-        name: name
+        label: Full Name
+        name: title
         widget: string
       -
-        label: Title
-        name: title
+        label: Job Title
+        name: jobTitle
         widget: string
       -
         label: Image
