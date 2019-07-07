@@ -25,6 +25,12 @@ collections:
         label: Image
         name: image
         widget: image
+
+      -
+        label: Position
+        name: position
+        valueType: Int
+        widget: number
     folder: data/founders
     label: Founders
     name: founders
