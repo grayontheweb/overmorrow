@@ -1,7 +1,17 @@
 {
-  "endOfLine": "lf",
-  "semi": false,
-  "singleQuote": false,
+  "overrides": [
+    {
+      "files": [".prettierrc", ".babelrc", ".eslintrc", ".stylelintrc"],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ],
+  "arrowParens": "always",
+  "printWidth": 80,
   "tabWidth": 2,
-  "trailingComma": "es5"
+  "semi": true,
+  "singleQuote": true,
+  "jsxBracketSameLine": false,
+  "trailingComma": "all"
 }
