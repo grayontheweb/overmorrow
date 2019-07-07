@@ -118,7 +118,7 @@ collections:
     folder: data/mainstays
     label: "Mainstay Beers"
     name: mainstayBeers
-    slug: "{{slug}}"
+    slug: "{{position}}-{{title}}"
   -
     label: Pages
     name: pages
