@@ -70,8 +70,8 @@ collections:
             label: Long
             name: long
             widget: markdown
-        label: Description
-        name: description
+        label: Beer Description
+        name: beerDescription
         widget: object
       -
         fields:

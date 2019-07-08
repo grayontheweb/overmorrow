@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Founders from 'src/components/Founders';
+import Mainstays from 'src/components/Mainstays';
 
 export default () => {
   return (
     <div>
-      <Founders />
+      <Mainstays />
     </div>
   );
 };
