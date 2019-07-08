@@ -5,10 +5,10 @@ nameImage: /img/sonsette-text.png
 bottleImage: /img/sonsette-bottle.png
 position: 2
 description:
-  long: >-
+  short: >-
     A Savory and Rustic Belgian-style Grisette Ale with Vietnamese Mountain
     Spices
-  short: >-
+  long: >-
     At sunup, 19th-century French miners would descend deep into the mountain,
     looking forward only to a rustic beer served by gray-clad women at the end
     of their sunless shift: **“Grisette”**. We’ve revived this nearly lost

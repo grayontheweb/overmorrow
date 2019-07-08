@@ -63,12 +63,12 @@ collections:
       -
         fields:
           -
-            label: Long
-            name: long
-            widget: string
-          -
             label: Short
             name: short
+            widget: string
+          -
+            label: Long
+            name: long
             widget: markdown
         label: Description
         name: description
