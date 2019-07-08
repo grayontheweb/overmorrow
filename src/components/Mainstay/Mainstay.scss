@@ -1,0 +1,45 @@
+.Mainstay {
+  padding-top: 20px;
+  position: relative;
+
+  &__bottle-image {
+    flex: none;
+    margin-right: 85px;
+    max-width: 255px;
+    z-index: 1;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .container {
+    display: flex;
+  }
+
+  &__title {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 220px;
+    text-indent: -9999px;
+    width: 100%;
+  }
+
+  &__introduction {
+    font-family: 'Gotham Bold';
+    font-size: 28px;
+  }
+
+  &__border-bottom {
+    background: #FAA51A;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 120px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index:0;
+  }
+}

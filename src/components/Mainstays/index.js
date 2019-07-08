@@ -1,8 +1,8 @@
-// import React from 'react';
+import React from 'react';
 import { get } from 'lodash';
 import { graphql, useStaticQuery } from 'gatsby';
 
-// import MainstaysComponent from './Mainstays';
+import MainstaysComponent from './Mainstays';
 
 const Mainstays = () => {
   const data = useStaticQuery(graphql`
@@ -14,10 +14,26 @@ const Mainstays = () => {
         edges {
           node {
             frontmatter {
+              bottleImage
+              description
+              introduction
+              nameImage
               position
               title
-              nameImage
-              bottleImage
+
+              flavorProfile {
+                abv
+                aromaAndTaste
+                grains
+                hops
+                og
+                yeast
+              }
+
+              style {
+                accentDark
+                accentLight
+              }
             }
           }
         }
@@ -29,10 +45,7 @@ const Mainstays = () => {
     .map((founder) => founder.node.frontmatter)
     .sort((a, b) => a.position - b.position);
 
-  console.log(mainstays); // eslint-disable-line
-
-  return null;
-  // return <MainstaysComponent mainstays={mainstays} />;
+  return <MainstaysComponent mainstays={mainstays} />;
 };
 
 export default Mainstays;
