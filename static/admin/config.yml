@@ -61,18 +61,13 @@ collections:
         valueType: Int
         widget: number
       -
-        fields:
-          -
-            label: Short
-            name: short
-            widget: string
-          -
-            label: Long
-            name: long
-            widget: markdown
-        label: Beer Description
-        name: beerDescription
-        widget: object
+        label: Introduction
+        name: Introduction
+        widget: string
+      -
+        label: "Description"
+        name: description
+        widget: markdown
       -
         fields:
           -
