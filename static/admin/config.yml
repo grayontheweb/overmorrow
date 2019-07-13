@@ -62,7 +62,7 @@ collections:
         widget: number
       -
         label: Introduction
-        name: Introduction
+        name: introduction
         widget: string
       -
         label: "Description"
