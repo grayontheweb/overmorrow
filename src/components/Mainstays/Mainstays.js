@@ -4,8 +4,8 @@ import Mainstay from 'src/components/Mainstay';
 
 const Mainstays = ({ mainstays }) => (
   <div className="Mainstays">
-    {mainstays.map((mainstay) => (
-      <Mainstay key={mainstay.id} mainstay={mainstay} />
+    {mainstays.map((mainstay, index) => (
+      <Mainstay key={mainstay.id} mainstay={mainstay} reverse={index % 2} />
     ))}
   </div>
 );

@@ -1,11 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
 import Markdown from 'react-markdown';
+import PropTypes from 'prop-types';
 
 import './Mainstay.scss';
 
-const Mainstay = ({ mainstay }) => (
-  <div className={classNames('Mainstay', `Mainstay-${mainstay.id}`)}>
+const Mainstay = ({ mainstay, reverse = false }) => (
+  <div
+    className={classNames('Mainstay', `Mainstay-${mainstay.id}`, {
+      Mainstay__reverse: reverse,
+    })}
+  >
     {/* Sets the color on the strong tags in the description Markdown */}
     <style
       dangerouslySetInnerHTML={{
@@ -34,14 +39,11 @@ const Mainstay = ({ mainstay }) => (
 
     <div className="container">
       <div className="Mainstay__content">
-        <h2
+        <img
+          alt={mainstay.title}
           className="Mainstay__title"
-          style={{
-            backgroundImage: `url("${mainstay.nameImage}")`,
-          }}
-        >
-          {mainstay.title}
-        </h2>
+          src={mainstay.nameImage}
+        />
 
         <h3 className="Mainstay__introduction">{mainstay.introduction}</h3>
 
@@ -50,8 +52,10 @@ const Mainstay = ({ mainstay }) => (
           source={mainstay.description}
         />
 
-        <h4 className="Mainstay__aroma-and-taste">Aroma & Taste</h4>
-        <p>{mainstay.flavorProfile.aromaAndTaste}</p>
+        <div className="Mainstay__aroma-and-taste">
+          <h4>Aroma & Taste</h4>
+          <p>{mainstay.flavorProfile.aromaAndTaste}</p>
+        </div>
 
         <dl className="Mainstay__recipe">
           <dt>Grains</dt>
@@ -67,8 +71,12 @@ const Mainstay = ({ mainstay }) => (
 
       <div
         className="Mainstay__bottle-image"
-        style={{ backgroundImage: `url("${mainstay.bottleImage}")` }}
-      />
+        style={{
+          backgroundColor: mainstay.style.accentLight,
+        }}
+      >
+        <img alt={`${mainstay.title} Bottle`} src={mainstay.bottleImage} />
+      </div>
     </div>
 
     <div
@@ -77,5 +85,10 @@ const Mainstay = ({ mainstay }) => (
     />
   </div>
 );
+
+Mainstay.propTypes = {
+  mainstay: PropTypes.object,
+  reverse: PropTypes.bool,
+};
 
 export default Mainstay;

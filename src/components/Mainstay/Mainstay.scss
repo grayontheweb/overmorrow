@@ -1,99 +1,245 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
 .Mainstay {
-  color: #5A5B62;
-  min-height: 100vh;
-  padding-top: 20px;
+  color: $dark-blue;
+  padding-top: 60px;
   position: relative;
-  margin-top: 100px;
 
-  &__bottle-image {
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    flex: none;
-    height: 140vh;
-    margin-right: 85px;
-    max-height: 1200px;
-    max-width: 400px;
-    right: 0;
-    margin-top: -130px;
-    width: 3000px;
-    z-index: 1;
-
-    img {
-      height: auto;
-      width: 100%;
-    }
+  @include breakpoint(desktop) {
+    margin-top: 160px;
+    min-height: 100vh;
   }
 
   .container {
-    display: flex;
-    max-width: 960px;
-  }
-
-  &__content {
-    max-width: 540px;
-  }
-
-  &__title {
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 220px;
-    line-height: 1;
-    margin-bottom: 0;
-    margin-left: 10px;
-    max-width: 362px;
-    text-indent: -9999px;
-    width: 100%;
-  }
-
-  &__introduction {
-    margin: 0;
-    line-height: 1.2;
-    font-size: 28px;
-  }
-
-  &__description {
-    font-size: 16px;
-    line-height: 1.5;
-
-    strong {
-      font-weight: bold;
+    @include breakpoint(desktop) {
+      display: flex;
+      // margin-bottom: 120px;
+      max-width: 932px;
+      padding: 0 20px;
     }
   }
 
-  &__aroma-and-taste {
-    font-weight: bold;
-    margin: 0;
-    line-height: 1;
-    font-size: 20px;
+  &__content {
+    padding: 0 25px 25px;
+
+    @include breakpoint(phablet) {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+
+    @include breakpoint(desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    p {
+      line-height: 1.4;
+      margin: 14px 0;
+    }
   }
 
-  p {
-    line-height: 1.5;
-    margin: 12px 0;
+  &__title {
+    height: auto;
+    margin-bottom: 35px;
+    width: 350px;
+
+    // @include breakpoint(tablet) {
+    //   margin-bottom: 35px;
+    //   margin-left: 10px;
+    // }
+  }
+
+  &__introduction {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 2px 0 0;
+  }
+
+  &__aroma-and-taste {
+    h4 {
+      font-weight: bold;
+      margin: 10px 0 0;
+      line-height: 1.2;
+      font-size: 20px;
+    }
+
+    p {
+      margin-top: 0;
+    }
   }
 
   &__recipe {
-    font-size: 18px;
+    font-size: 16px;
 
     dt {
       float: left;
       font-weight: bold;
-      line-height: 1;
+      line-height: 1.1;
       margin-right: 5px;
     }
 
     dd {
       clear: right;
       font-weight: bold;
-      line-height: 1;
+      line-height: 1.1;
       margin-bottom:5px;
     }
   }
 
-  &__border-bottom {
-    background: #47b648;
-    height: 120px;
-    margin-top: -100px;
+  &__bottle-image {
+    flex: none;
+    overflow: hidden;
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      background: none !important;
+      margin-top: -400px;
+      height: 1052px;
+      width: 340px;
+      margin-left: 25px;
+      margin-top: -140px;
+    }
+
+    img {
+      margin-bottom: -30px;
+      margin-top: -525px;
+      width: 340px;
+
+      @include breakpoint(desktop) {
+        margin-bottom: 0;
+        margin-top: 0;
+        height: auto;
+        width: 100%;
+      }
+    }
   }
+
+
+
+
+  // margin-top: 160px;
+  // min-height: 100vh;
+
+  // p {
+  //   line-height: 1.4;
+  //   margin: 14px 0;
+  // }
+
+
+
+  // .container {
+  //   display: flex;
+  //   margin-bottom: 120px;
+  //   max-width: 932px;
+  //   padding: 0 20px;
+  // }
+
+  // &__bottle-image {
+  //   flex: none;
+  //   height: 1052px;
+  //   width: 340px;
+  //   margin-left: 25px;
+  //   margin-top: -140px;
+
+  //   img {
+  //     width: 100%;
+  //     height: auto;
+  //   }
+  // }
+
+  // &__content {
+  //   flex: none;
+  //   padding-right: 60px;
+  //   width: 600px;
+  // }
+
+  // &__introduction {
+  //   margin: 2px 0 0;
+  //   line-height: 1.2;
+  //   font-size: 28px;
+  // }
+
+  // &__description {
+  //   font-size: 16px;
+  //   margin-top: -4px;
+
+  //   strong {
+  //     font-weight: bold;
+  //   }
+  // }
+
+  // &__aroma-and-taste {
+  //   h4 {
+  //     font-weight: bold;
+  //     margin: 10px 0 0;
+  //     line-height: 1.2;
+  //     font-size: 20px;
+  //   }
+
+  //   p {
+  //     margin-top: 0;
+  //   }
+  // }
+
+  // &__recipe {
+  //   font-size: 16px;
+
+  //   dt {
+  //     float: left;
+  //     font-weight: bold;
+  //     line-height: 1.1;
+  //     margin-right: 5px;
+  //   }
+
+  //   dd {
+  //     clear: right;
+  //     font-weight: bold;
+  //     line-height: 1.1;
+  //     margin-bottom:5px;
+  //   }
+  // }
+
+  &__border-bottom {
+    @include breakpoint(desktop) {
+      height: 120px;
+      margin-top: -120px;
+    }
+  }
+
+  &.Mainstay__reverse {
+    .container {
+      @include breakpoint(desktop) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .Mainstay__content {
+      @include breakpoint(desktop) {
+        padding-left: 60px;
+        padding-right: 0;
+      }
+    }
+
+    .Mainstay__bottle-image {
+      @include breakpoint(desktop) {
+        margin-left: 0;
+        margin-right: 25px;
+        margin-top: -140px;
+      }
+    }
+  }
+
+  // @media screen and (max-width: 1080px) {
+  //   // .Mainstay__content {
+  //   //   fl
+  //   // }
+
+  //   .Mainstay__bottle-image {
+  //     margin-left: 0;
+  //     height: auto;
+  //     width: auto;
+  //     flex: 1;
+  //   }
+  // }
 }
