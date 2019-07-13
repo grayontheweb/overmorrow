@@ -99,6 +99,9 @@ collections:
         widget: object
       -
         fields:
+          - label: "Accent"
+            name: accent
+            widget: string
           -
             label: "Accent Dark"
             name: accentDark
