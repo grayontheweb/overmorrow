@@ -3,6 +3,8 @@
   min-height: 100vh;
   padding-top: 20px;
   position: relative;
+  // margin-bottom: 100px;
+  margin-top: 100px;
 
   &__bottle-image {
     background-position: top right;
@@ -46,11 +48,9 @@
   }
 
   &__introduction {
-    color: #269354;
     margin: 0;
     line-height: 1.2;
     font-size: 28px;
-
   }
 
   &__description {
@@ -58,13 +58,11 @@
     line-height: 1.5;
 
     strong {
-      color: #269354;
       font-weight: bold;
     }
   }
 
   &__aroma-and-taste {
-    color: #269354;
     font-weight: bold;
     margin: 0;
     line-height: 1;
@@ -80,7 +78,6 @@
     font-size: 18px;
 
     dt {
-      color: #47b648;
       float: left;
       font-weight: bold;
       line-height: 1;
@@ -89,7 +86,6 @@
 
     dd {
       clear: right;
-      color: #37a44e;
       font-weight: bold;
       line-height: 1;
       margin-bottom:5px;

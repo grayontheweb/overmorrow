@@ -5,7 +5,7 @@ import Mainstay from 'src/components/Mainstay';
 const Mainstays = ({ mainstays }) => (
   <div className="Mainstays">
     {mainstays.map((mainstay) => (
-      <Mainstay key={mainstay.position} mainstay={mainstay} />
+      <Mainstay key={mainstay.id} mainstay={mainstay} />
     ))}
   </div>
 );

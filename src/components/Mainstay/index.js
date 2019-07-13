@@ -1,10 +1,37 @@
 import React from 'react';
+import classNames from 'classnames';
 import Markdown from 'react-markdown';
 
 import './Mainstay.scss';
 
 const Mainstay = ({ mainstay }) => (
-  <div className="Mainstay">
+  <div className={classNames('Mainstay', `Mainstay-${mainstay.id}`)}>
+    {/* Sets the color on the strong tags in the description Markdown */}
+    <style
+      dangerouslySetInnerHTML={{
+        __html: `
+      .Mainstay-${mainstay.id} strong,
+      .Mainstay-${mainstay.id} h1,
+      .Mainstay-${mainstay.id} h2,
+      .Mainstay-${mainstay.id} h3,
+      .Mainstay-${mainstay.id} h4,
+      .Mainstay-${mainstay.id} h5,
+      .Mainstay-${mainstay.id} h6
+      {
+        color: ${mainstay.style.accentDark}
+      }
+
+      .Mainstay-${mainstay.id} dl {
+        color: ${mainstay.style.accent}
+      }
+
+      .Mainstay-${mainstay.id} dl dt {
+        color: ${mainstay.style.accentLight}
+      }
+    `,
+      }}
+    />
+
     <div className="container">
       <div className="Mainstay__content">
         <h2
@@ -44,7 +71,10 @@ const Mainstay = ({ mainstay }) => (
       />
     </div>
 
-    <div className="Mainstay__border-bottom" />
+    <div
+      className="Mainstay__border-bottom"
+      style={{ backgroundColor: mainstay.style.accentLight }}
+    />
   </div>
 );
 

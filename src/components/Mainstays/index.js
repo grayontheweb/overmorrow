@@ -13,6 +13,7 @@ const Mainstays = () => {
       ) {
         edges {
           node {
+            id
             frontmatter {
               bottleImage
               description
@@ -31,6 +32,7 @@ const Mainstays = () => {
               }
 
               style {
+                accent
                 accentDark
                 accentLight
               }
@@ -42,7 +44,7 @@ const Mainstays = () => {
   `);
 
   const mainstays = get(data, 'allMarkdownRemark.edges', [])
-    .map((founder) => founder.node.frontmatter)
+    .map((mainstay) => ({ id: mainstay.node.id, ...mainstay.node.frontmatter }))
     .sort((a, b) => a.position - b.position);
 
   return <MainstaysComponent mainstays={mainstays} />;
