@@ -1,32 +1,20 @@
 ---
 templateKey: mainstay
 title: Leann on Mía
-nameImage: /img/sonsette-text.png
-bottleImage: /img/sonsette-bottle.png
-position: 2
-introduction: >-
-  A Savory and Rustic Belgian-style Grisette Ale with Vietnamese Mountain
-  Spices
-description: >-
-  At sunup, 19th-century French miners would descend deep into the mountain,
-  looking forward only to a rustic beer served by gray-clad women at the end
-  of their sunless shift: **“Grisette”**. We’ve revived this nearly lost
-  style, a thirst-quenching ale to be enjoyed as the crimson sunset washes
-  over a hard day’s labor.
-
-
-  **Sơnsette** is the marriage of handpicked spices from mountainous Northern
-  Vietnam, international hops, and French farmhouse ale yeast to create a
-  savory yet thirst-quenching beer.
+nameImage: /img/beer-name_lom.svg
+bottleImage: /img/overmorrow-bottle-visual-lom-645x2000px.png
+position: 0
+Introduction: An Easy-Drinking Scottish Ale with Caramelized Local Sugarcane
+description: "Over 200 years ago, the term **“Scotch Ale”** was first used to describe the full-bodied ales placed onto ships in Edinburgh harbour and sent to every corner of the globe. With every sip of malt and sweetness, weary expatriates were reminded of the crash of the waves against the rocks along the Scottish coast.\n\n\r**Leann on Mía** is a classic 80-shilling “Export” Ale with local caramelized sugarcane to bring out natural toffee flavors. Low in alcohol content but high in crisp and refreshing flavor."
 flavorProfile:
-  abv: 5%
+  abv: 4.3%
   aromaAndTaste: >-
-    Effervescent, with rustic grain flavors and aromas of berries, earth, and
-    Vietnamese pepper.
-  grains: 'Pilsner malt, Flaked Oats, Wheat Malt, Carahell'
-  hops: 'Callista, Mosaic'
-  og: 11.00 °P
-  yeast: Wallonian Farmhouse Yeast
+    Caramel, toffee, faint citrus and green notes, with a smooth, balanced
+    sweetness.
+  grains: 'Pale Malt, Caraamber, Caramunich, Carafa'
+  hops: Nugget
+  og: 10.85 °P
+  yeast: Neutral Ale Yeast
 style:
   accentDark: '#f37120'
   accentLight: '#f68a1e'
