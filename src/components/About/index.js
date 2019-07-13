@@ -24,7 +24,7 @@ const About = () => {
   };
 
   return (
-    <div className="About">
+    <div className="About" id="about-us">
       <div className="About__content">
         <Markdown source={about.introduction} />
         <Markdown source={about.content} />

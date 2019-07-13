@@ -31,23 +31,23 @@ const Intro = () => {
   return (
     <div className="Intro">
       <div className="Intro__content">
+        <div className="Intro__dictionary">
+          <span className="Intro__dictionary__title">
+            {intro.dictionary.title} /
+          </span>
+          <span className="Intro__dictionary__phonetic">
+            {intro.dictionary.phonetic}
+          </span>
+          <span className="Intro__dictionary__definition">
+            {intro.dictionary.definition}
+          </span>
+          <span className="Intro__dictionary__source">
+            {intro.dictionary.source}
+          </span>
+        </div>
+
         <h2 className="Intro__heading">{intro.heading}</h2>
         <p className="Intro__description">{intro.description}</p>
-      </div>
-
-      <div className="Intro__dictionary">
-        <span className="Intro__dictionary__title">
-          {intro.dictionary.title} /
-        </span>
-        <span className="Intro__dictionary__phonetic">
-          {intro.dictionary.phonetic}
-        </span>
-        <span className="Intro__dictionary__definition">
-          {intro.dictionary.definition}
-        </span>
-        <span className="Intro__dictionary__source">
-          {intro.dictionary.source}
-        </span>
       </div>
     </div>
   );
