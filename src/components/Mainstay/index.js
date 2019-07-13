@@ -1,14 +1,11 @@
 import React from 'react';
+import Markdown from 'react-markdown';
 
 import './Mainstay.scss';
 
 const Mainstay = ({ mainstay }) => (
   <div className="Mainstay">
     <div className="container">
-      <div className="Mainstay__bottle-image">
-        <img alt={`${mainstay.title} Bottle`} src={mainstay.bottleImage} />
-      </div>
-
       <div className="Mainstay__content">
         <h2
           className="Mainstay__title"
@@ -19,21 +16,17 @@ const Mainstay = ({ mainstay }) => (
           {mainstay.title}
         </h2>
 
-        <h3
-          style={{
-            color: mainstay.style.accentDark,
-          }}
-          className="Mainstay__introduction"
-        >
-          {mainstay.introduction}
-        </h3>
+        <h3 className="Mainstay__introduction">{mainstay.introduction}</h3>
 
-        <p>{mainstay.description}</p>
+        <Markdown
+          className="Mainstay__description"
+          source={mainstay.description}
+        />
 
-        <h4>Aroma & Taste</h4>
+        <h4 className="Mainstay__aroma-and-taste">Aroma & Taste</h4>
         <p>{mainstay.flavorProfile.aromaAndTaste}</p>
 
-        <dl>
+        <dl className="Mainstay__recipe">
           <dt>Grains</dt>
           <dd>{mainstay.flavorProfile.grains}</dd>
 
@@ -44,6 +37,11 @@ const Mainstay = ({ mainstay }) => (
           <dd>{mainstay.flavorProfile.yeast}</dd>
         </dl>
       </div>
+
+      <div
+        className="Mainstay__bottle-image"
+        style={{ backgroundImage: `url("${mainstay.bottleImage}")` }}
+      />
     </div>
 
     <div className="Mainstay__border-bottom" />

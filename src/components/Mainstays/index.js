@@ -16,6 +16,7 @@ const Mainstays = () => {
             frontmatter {
               bottleImage
               description
+              introduction
               nameImage
               position
               title
