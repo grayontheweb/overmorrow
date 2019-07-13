@@ -1,0 +1,30 @@
+.Subscribe {
+  padding: 50px 0;
+
+  &__content {
+    margin: 0 auto;
+    max-width: 960px;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  &__button {
+    align-items: center;
+    border-radius: 50px;
+    border: 10px solid #000031;
+    color: #000031;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 28px;
+    font-weight: bold;
+    justify-content: center;
+    line-height: 1;
+    padding: 20px 40px 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
