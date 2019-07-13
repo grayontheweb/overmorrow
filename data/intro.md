@@ -14,5 +14,6 @@ dictionary:
   phonetic: ˈō-vər-mȯr-ō/ noun
   source: '(Webster’s English Dictionary, 1913)'
   title: Overmorrow
+templateKey: intro
 ---
 

@@ -125,6 +125,7 @@ collections:
         file: data/intro.md
         label: Intro
         name: intro
+        templateKey: intro
         fields:
           -
             default: intro
@@ -164,6 +165,7 @@ collections:
         file: data/subscribe.md
         label: Subscribe
         name: subscribe
+        templateKey: subscribe
         fields:
           -
             default: subscribe
@@ -182,6 +184,7 @@ collections:
         file: data/footer.md
         label: Footer
         name: footer
+        templateKey: footer
         fields:
           -
             default: footer

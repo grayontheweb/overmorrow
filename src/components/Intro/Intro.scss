@@ -1,0 +1,39 @@
+.Intro {
+  padding-left: 240px;
+  margin: 0 auto;
+  max-width: 960px;
+  min-height: 100vh;
+  position: relative;
+
+  &__content {
+    border-left: 1px solid black;
+    padding-left: 12px;
+  }
+
+  &__heading {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  &__dictionary {
+    position: absolute;
+    left: -80px;
+    text-align: right;
+    padding-right: 12px;
+    top: 0;
+    width: 320px;
+
+    & > * {
+      display: block;
+    }
+
+    &__title {
+      font-weight: bold;
+    }
+  }
+}
