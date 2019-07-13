@@ -16,7 +16,8 @@ flavorProfile:
   og: 10.85 °P
   yeast: Neutral Ale Yeast
 style:
-  accentDark: '#f37120'
-  accentLight: '#f68a1e'
+  accent: '#37a44e'
+  accentDark: '#269354'
+  accentLight: '#47b648'
 ---
 
