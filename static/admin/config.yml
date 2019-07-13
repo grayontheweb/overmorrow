@@ -162,6 +162,21 @@ collections:
                 name: source
                 widget: string
       -
+        file: data/about.md
+        label: About
+        name: about
+        templateKey: about
+        fields:
+          -
+            label: Introduction
+            name: introduction
+            widget: markdown
+          -
+            default: content
+            label: Content
+            name: content
+            widget: markdown
+      -
         file: data/subscribe.md
         label: Subscribe
         name: subscribe
