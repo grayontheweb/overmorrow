@@ -125,7 +125,6 @@ collections:
         file: data/intro.md
         label: Intro
         name: intro
-        templateKey: intro
         fields:
           -
             default: intro
@@ -165,8 +164,12 @@ collections:
         file: data/about.md
         label: About
         name: about
-        templateKey: about
         fields:
+          -
+            default: about
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
           -
             label: Introduction
             name: introduction
@@ -180,7 +183,6 @@ collections:
         file: data/subscribe.md
         label: Subscribe
         name: subscribe
-        templateKey: subscribe
         fields:
           -
             default: subscribe
