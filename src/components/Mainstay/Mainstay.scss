@@ -6,17 +6,16 @@
   padding-top: 60px;
   position: relative;
 
-  @include breakpoint(desktop) {
+  @include breakpoint(tablet) {
     margin-top: 160px;
     min-height: 100vh;
   }
 
   .container {
-    @include breakpoint(desktop) {
+    @include breakpoint(tablet) {
       display: flex;
-      // margin-bottom: 120px;
       max-width: 932px;
-      padding: 0 20px;
+      padding: 0 25px;
     }
   }
 
@@ -28,9 +27,10 @@
       padding-right: 55px;
     }
 
-    @include breakpoint(desktop) {
-      padding-left: 0;
-      padding-right: 0;
+    @include breakpoint(tablet) {
+      flex: none;
+      padding: 0;
+      width: 525px;
     }
 
     p {
@@ -42,12 +42,12 @@
   &__title {
     height: auto;
     margin-bottom: 35px;
+    max-width: 80%;
     width: 350px;
 
-    // @include breakpoint(tablet) {
-    //   margin-bottom: 35px;
-    //   margin-left: 10px;
-    // }
+    @include breakpoint(tablet) {
+      max-width: none;
+    }
   }
 
   &__introduction {
@@ -73,26 +73,33 @@
     font-size: 16px;
 
     dt {
-      float: left;
+      display: inline;
       font-weight: bold;
       line-height: 1.1;
       margin-right: 5px;
     }
 
     dd {
-      clear: right;
+      display: inline;
       font-weight: bold;
-      line-height: 1.1;
-      margin-bottom:5px;
+      line-height: 1.2;
+      margin-left: 0;
+      padding: 0;
+      white-space: pre-wrap;
+
+      &:after {
+        content: '\A';
+      }
     }
   }
 
   &__bottle-image {
     flex: none;
+    margin-right: -40px;
     overflow: hidden;
     text-align: center;
 
-    @include breakpoint(desktop) {
+    @include breakpoint(tablet) {
       background: none !important;
       margin-top: -400px;
       height: 1052px;
@@ -106,8 +113,9 @@
       margin-top: -525px;
       width: 340px;
 
-      @include breakpoint(desktop) {
+      @include breakpoint(tablet) {
         margin-bottom: 0;
+        margin-right: -40px;
         margin-top: 0;
         height: auto;
         width: 100%;
@@ -115,93 +123,8 @@
     }
   }
 
-
-
-
-  // margin-top: 160px;
-  // min-height: 100vh;
-
-  // p {
-  //   line-height: 1.4;
-  //   margin: 14px 0;
-  // }
-
-
-
-  // .container {
-  //   display: flex;
-  //   margin-bottom: 120px;
-  //   max-width: 932px;
-  //   padding: 0 20px;
-  // }
-
-  // &__bottle-image {
-  //   flex: none;
-  //   height: 1052px;
-  //   width: 340px;
-  //   margin-left: 25px;
-  //   margin-top: -140px;
-
-  //   img {
-  //     width: 100%;
-  //     height: auto;
-  //   }
-  // }
-
-  // &__content {
-  //   flex: none;
-  //   padding-right: 60px;
-  //   width: 600px;
-  // }
-
-  // &__introduction {
-  //   margin: 2px 0 0;
-  //   line-height: 1.2;
-  //   font-size: 28px;
-  // }
-
-  // &__description {
-  //   font-size: 16px;
-  //   margin-top: -4px;
-
-  //   strong {
-  //     font-weight: bold;
-  //   }
-  // }
-
-  // &__aroma-and-taste {
-  //   h4 {
-  //     font-weight: bold;
-  //     margin: 10px 0 0;
-  //     line-height: 1.2;
-  //     font-size: 20px;
-  //   }
-
-  //   p {
-  //     margin-top: 0;
-  //   }
-  // }
-
-  // &__recipe {
-  //   font-size: 16px;
-
-  //   dt {
-  //     float: left;
-  //     font-weight: bold;
-  //     line-height: 1.1;
-  //     margin-right: 5px;
-  //   }
-
-  //   dd {
-  //     clear: right;
-  //     font-weight: bold;
-  //     line-height: 1.1;
-  //     margin-bottom:5px;
-  //   }
-  // }
-
   &__border-bottom {
-    @include breakpoint(desktop) {
+    @include breakpoint(tablet) {
       height: 120px;
       margin-top: -120px;
     }
@@ -209,37 +132,29 @@
 
   &.Mainstay__reverse {
     .container {
-      @include breakpoint(desktop) {
+      @include breakpoint(tablet) {
         flex-direction: row-reverse;
       }
     }
 
     .Mainstay__content {
-      @include breakpoint(desktop) {
+      @include breakpoint(tablet) {
         padding-left: 60px;
         padding-right: 0;
       }
     }
 
     .Mainstay__bottle-image {
-      @include breakpoint(desktop) {
+      @include breakpoint(tablet) {
         margin-left: 0;
         margin-right: 25px;
         margin-top: -140px;
+
+        img {
+          margin-right: 0;
+          margin-left: -40px;
+        }
       }
     }
   }
-
-  // @media screen and (max-width: 1080px) {
-  //   // .Mainstay__content {
-  //   //   fl
-  //   // }
-
-  //   .Mainstay__bottle-image {
-  //     margin-left: 0;
-  //     height: auto;
-  //     width: auto;
-  //     flex: 1;
-  //   }
-  // }
 }
