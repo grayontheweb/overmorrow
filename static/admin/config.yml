@@ -201,7 +201,6 @@ collections:
         file: data/footer.md
         label: Footer
         name: footer
-        templateKey: footer
         fields:
           -
             default: footer
@@ -228,3 +227,22 @@ collections:
             label: "Legal Text"
             name: legalText
             widget: string
+      -
+        file: data/assets.md
+        label: Assets
+        name: assets
+        fields:
+          -
+            default: assets
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: "Text Logo"
+            name: textLogo
+            widget: image
+          -
+            label: "Image Logo"
+            name: imageLogo
+            widget: image
+          - label: "Combined Logo"
