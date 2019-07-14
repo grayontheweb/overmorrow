@@ -245,4 +245,7 @@ collections:
             label: "Image Logo"
             name: imageLogo
             widget: image
-          - label: "Combined Logo"
+          -
+            label: "Combined Logo"
+            name: combinedLogo
+            widget: image
