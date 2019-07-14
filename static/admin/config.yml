@@ -238,14 +238,10 @@ collections:
             name: templateKey
             widget: hidden
           -
-            label: "Text Logo"
-            name: textLogo
+            label: "Horizontal Logo"
+            name: horizontalLogo
             widget: image
           -
-            label: "Image Logo"
-            name: imageLogo
-            widget: image
-          -
-            label: "Combined Logo"
-            name: combinedLogo
+            label: "Stacked Logo"
+            name: stackedLogo
             widget: image
