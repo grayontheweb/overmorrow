@@ -1,12 +1,34 @@
 .Header {
+  min-height: 100vh;
+  margin-top: 85px;
   text-align: center;
 
+  h1 {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    margin: 0 auto;
+    text-indent: -9999px;
+    width: 570px;
+  }
+
   nav {
+    display: none;
+
     ul {
       list-style: none;
 
       li {
         display: inline;
+
+        a {
+          text-decoration: none;
+        }
+
+        &:not(:last-child):after {
+          content: ' | '
+        }
       }
     }
   }

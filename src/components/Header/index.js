@@ -1,11 +1,31 @@
 import React from 'react';
+// import { get } from 'lodash';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import './Header.scss';
 
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      markdownRemark(frontmatter: { templateKey: { eq: "assets" } }) {
+        frontmatter {
+          horizontalLogo
+        }
+      }
+    }
+  `);
+
+  // console.log(data.markdownRemark.frontmatter.horizontalLogo);
+
   return (
     <header className="Header">
-      <h1>Overmorrow</h1>
+      <h1
+        style={{
+          backgroundImage: `url(${data.markdownRemark.frontmatter.horizontalLogo})`,
+        }}
+      >
+        Overmorrow
+      </h1>
 
       <nav>
         <ul>

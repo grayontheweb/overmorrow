@@ -1,0 +1,27 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
+.Mainstays {
+  &__header {
+    background: #000031;
+    color: #ffffff;
+
+    h2 {
+      font-size: 48px;
+      line-height: 1;
+      margin: 0 auto;
+      padding: 60px 25px;
+
+      @include breakpoint(phablet) {
+        max-width: 960px;
+        padding-left: 55px;
+        padding-right: 55px;
+      }
+
+      @include breakpoint(desktop) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
