@@ -2,19 +2,19 @@
   font-family: 'Gotham';
   font-style: normal;
   font-weight: 700;
-  src: local('Gotham Bold'), url('./fonts/GothamBold.woff') format('woff');
+  src: local('VNF-Gotham-Medium'), url('./fonts/VNF-Gotham-Medium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Gotham';
   font-style: normal;
   font-weight: 400;
-  src: local('Gotham Book'), url('./fonts/GothamBook.woff') format('woff');
+  src: local('VNF-Gotham-Book'), url('./fonts/VNF-Gotham-Book.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Gotham';
   font-style: normal;
   font-weight: 200;
-  src: local('Gotham Thin Regular'), url('./fonts/Gotham-Thin.woff') format('woff');
+  src: local('VNF-Gotham-Thin'), url('./fonts/VNF-Gotham-Thin.woff') format('woff');
 }
