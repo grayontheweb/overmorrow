@@ -27,7 +27,7 @@ const Header = () => {
       >
         Overmorrow
       </h1>
-
+      {/*
       <nav>
         <ul>
           <li>
@@ -46,7 +46,7 @@ const Header = () => {
             <a href="#where">Where</a>
           </li>
         </ul>
-      </nav>
+      </nav>*/}
     </header>
   );
 };
