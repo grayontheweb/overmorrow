@@ -6,10 +6,12 @@ html {
 
   & *, & *:after, & *:before {
     box-sizing: inherit;
+    z-index: 1;
   }
 }
 
 body {
+  color: #000031;
   font-family: 'Gotham', sans-serif;
   // font-weight: 400;
 }

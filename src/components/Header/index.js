@@ -1,5 +1,5 @@
 import React from 'react';
-// import { get } from 'lodash';
+import { get } from 'lodash';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import './Header.scss';
@@ -15,13 +15,14 @@ const Header = () => {
     }
   `);
 
-  // console.log(data.markdownRemark.frontmatter.horizontalLogo);
-
   return (
     <header className="Header">
       <h1
         style={{
-          backgroundImage: `url(${data.markdownRemark.frontmatter.horizontalLogo})`,
+          backgroundImage: `url(${get(
+            data,
+            'markdownRemark.frontmatter.horizontalLogo',
+          )})`,
         }}
       >
         Overmorrow

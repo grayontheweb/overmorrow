@@ -2,6 +2,10 @@ import React from 'react';
 import { get } from 'lodash';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import Header from '../Header';
+
+import horizon from './images/horizon.svg';
+
 import './Intro.scss';
 
 const Intro = () => {
@@ -30,6 +34,8 @@ const Intro = () => {
 
   return (
     <div className="Intro">
+      <Header />
+
       <div className="Intro__content">
         <div className="Intro__dictionary">
           <span className="Intro__dictionary__title">
@@ -46,8 +52,14 @@ const Intro = () => {
           </span>
         </div>
 
-        <h2 className="Intro__heading">{intro.heading}</h2>
-        <p className="Intro__description">{intro.description}</p>
+        <div className="Intro__text">
+          <h2 className="Intro__heading">{intro.heading}</h2>
+          <p className="Intro__description">{intro.description}</p>
+        </div>
+      </div>
+
+      <div className="Intro__horizon">
+        <img alt="Horizon" src={horizon} />
       </div>
     </div>
   );
