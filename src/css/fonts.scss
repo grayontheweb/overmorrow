@@ -3,6 +3,13 @@
 @font-face {
   font-family: 'Gotham';
   font-style: normal;
+  font-weight: 900;
+  src: local('VNF-Gotham-Ultra'), url('./fonts/VNF-Gotham-Ultra.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
   font-weight: 700;
   src: local('VNF-Gotham-Medium'), url('./fonts/VNF-Gotham-Medium.woff') format('woff');
 }

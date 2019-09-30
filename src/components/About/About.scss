@@ -4,4 +4,110 @@
 .About {
   background: $very-dark-blue;
   color: $white;
+
+  &__container {
+    padding: 60px 20px;
+
+    @include breakpoint(phablet) {
+      padding: 60px 44px;
+    }
+
+    @include breakpoint(tablet) {
+      align-items: flex-start;
+      display: flex;
+      margin: 0 auto;
+      padding: 156px 44px;
+      max-width: 1024px;
+
+      &__column-left {
+        flex: 1;
+        width: 100%;
+      }
+
+      &__column-right {
+        margin-left: 52px;
+        max-width: 660px;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      padding: 183px 0;
+    }
+  }
+
+  &__dictionary {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 0;
+      text-align: right;
+    }
+
+    &__term {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 0 auto 11px;
+      height: 43px;
+      width: 304px;
+      text-align: left;
+      text-indent: -9999px;
+
+      @include breakpoint(tablet) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &__pronunciation {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 262px;
+      height: 35px;
+      text-align: left;
+      margin: 0 auto 11px;
+      text-indent: -9999px;
+
+      @include breakpoint(tablet) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &__definition, &__source {
+      color: rgba($white, 0.6);
+      display: block;
+      font-family: $font-family-open-sans;
+      line-height: 2.29;
+      font-style: italic;
+    }
+
+    &__definition {
+      font-size: 16px;
+    }
+
+    &__source {
+      font-size: 14px;
+    }
+  }
+
+  &__description {
+    font-family: $font-family-open-sans;
+    font-size: 20px;
+    line-height: normal;
+
+    *:first-child {
+      font-weight: 700;
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
