@@ -10,6 +10,9 @@ const Mainstay = ({ mainstay, reverse = false }) => (
     className={classNames('Mainstay', `Mainstay-${mainstay.id}`, {
       Mainstay__reverse: reverse,
     })}
+    style={{
+      backgroundColor: mainstay.style.accentLight,
+    }}
   >
     {/* Sets the color on the strong tags in the description Markdown */}
     <style

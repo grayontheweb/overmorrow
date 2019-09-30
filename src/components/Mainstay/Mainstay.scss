@@ -2,6 +2,8 @@
 @import 'src/css/mixins';
 
 .Mainstay {
+  background-image: linear-gradient(to top, transparent, transparent 160px, $white 160px, $white);
+  color: $very-dark-blue;
   padding-top: 90px;
 
   &__container {
@@ -19,7 +21,8 @@
 
     &__column-right {
       flex: 1;
-      padding-right: 38px;
+      margin-bottom: 40px;
+      margin-right: 38px;
     }
   }
 
@@ -36,6 +39,7 @@
       font-size: 26px;
       font-weight: 900;
       line-height: 1.23;
+      margin-top: 0;
     }
 
     &__description {
@@ -56,6 +60,7 @@
         font-weight: 900;
         line-height: 1.14;
         margin-bottom: 20px;
+        margin-top: 0;
       }
 
       p {
@@ -64,6 +69,31 @@
         line-height: normal;
       }
     }
+
+    &__recipe {
+      font-family: $font-family-open-sans;
+      font-size: 18px;
+      line-height: normal;
+
+      dt {
+        display: inline;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      dd {
+        color: $very-dark-blue;
+        display: inline;
+        margin-left: 0;
+        padding: 0;
+        white-space: pre-wrap;
+
+        &:after {
+          content: '\A';
+        }
+      }
+    }
+
   }
 
   &__bottle-image {
@@ -76,7 +106,23 @@
     }
   }
 
+  &.Mainstay__reverse {
+    .Mainstay__container {
+      flex-direction: row-reverse;
 
+      &__column-left {
+        margin-left: 0;
+        margin-right: 0;
+        margin-right: 18px;
+      }
+
+      &__column-right {
+        flex: 1;
+        margin-left: 32px;
+        margin-right: 14px;
+      }
+    }
+  }
 }
 
 // .Mainstay {
