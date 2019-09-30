@@ -1,0 +1,36 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
+.Story {
+  padding-top: 520px;
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__content {
+    background-image: linear-gradient(to bottom, rgba($white, 0), rgba($white, 1) 440px, $white);
+    height: 2000px;
+    z-index: 500;
+  }
+
+  &__container {
+    background: $white;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 80px 60px;
+
+    &__column-left {
+      flex: 1;
+    }
+
+    &__column-right {
+      max-width: 600px;
+    }
+  }
+}

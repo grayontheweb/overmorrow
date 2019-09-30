@@ -1,4 +1,6 @@
 .Section {
+  position: relative;
+
   &.fullScreen {
     min-height: 100vh;
   }

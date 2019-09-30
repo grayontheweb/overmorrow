@@ -16,8 +16,8 @@
       align-items: flex-start;
       display: flex;
       margin: 0 auto;
-      padding: 156px 44px;
       max-width: 1024px;
+      padding: 156px 44px;
 
       &__column-left {
         flex: 1;
@@ -41,21 +41,21 @@
 
     @include breakpoint(tablet) {
       display: flex;
-      flex-direction: column;
       align-items: flex-end;
+      flex-direction: column;
       margin-bottom: 0;
       text-align: right;
     }
 
     &__term {
-      background-size: contain;
-      background-repeat: no-repeat;
       background-position: center center;
-      margin: 0 auto 11px;
+      background-repeat: no-repeat;
+      background-size: contain;
       height: 43px;
-      width: 304px;
+      margin: 0 auto 11px;
       text-align: left;
       text-indent: -9999px;
+      width: 304px;
 
       @include breakpoint(tablet) {
         margin-left: 0;
@@ -64,14 +64,14 @@
     }
 
     &__pronunciation {
-      background-size: contain;
-      background-repeat: no-repeat;
       background-position: center center;
-      width: 262px;
+      background-repeat: no-repeat;
+      background-size: contain;
       height: 35px;
-      text-align: left;
       margin: 0 auto 11px;
+      text-align: left;
       text-indent: -9999px;
+      width: 262px;
 
       @include breakpoint(tablet) {
         margin-left: 0;
@@ -83,8 +83,8 @@
       color: rgba($white, 0.6);
       display: block;
       font-family: $font-family-open-sans;
-      line-height: 2.29;
       font-style: italic;
+      line-height: 2.29;
     }
 
     &__definition {
