@@ -1,8 +1,11 @@
 @import './normalize.scss';
 @import './fonts.scss';
+@import './variables.scss';
 
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
   & *, & *:after, & *:before {
     box-sizing: inherit;
@@ -11,9 +14,8 @@ html {
 }
 
 body {
-  color: #000031;
-  font-family: 'Gotham', sans-serif;
-  // font-weight: 400;
+  color: $very-dark-blue;
+  font-family: $font-family-gotham;
 }
 
 .container {

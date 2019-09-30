@@ -2,20 +2,19 @@ import React from 'react';
 
 // import React, { useEffect } from 'react';
 
-// import About from 'src/components/About';
-// import Intro from 'src/components/Intro';
+import About from 'src/components/About';
+import Intro from 'src/components/Intro';
+import Layout from 'src/components/Layout';
+import Story from 'src/components/Story';
 // import Mainstays from 'src/components/Mainstays';
 // import Subscribe from 'src/components/Subscribe';
 
 export default () => {
-  return <div>Hello</div>;
-
-  // return (
-  //   <div>
-  //     <Intro />
-  //     {/*<About />*/}
-  //     {/*<Mainstays />*/}
-  //     {/*<Subscribe />*/}
-  //   </div>
-  // );
+  return (
+    <Layout>
+      <Intro />
+      <About />
+      <Story />
+    </Layout>
+  );
 };

@@ -1,11 +1,7 @@
-.About {
-  background: #000031;
-  color: white;
-  min-height: 100vh;
-  padding-top: 100px;
+@import 'src/css/variables';
+@import 'src/css/mixins';
 
-  &__content {
-    margin: 0 auto;
-    max-width: 960px;
-  }
+.About {
+  background: $very-dark-blue;
+  color: $white;
 }
