@@ -2,159 +2,236 @@
 @import 'src/css/mixins';
 
 .Mainstay {
-  color: $dark-blue;
-  padding-top: 60px;
-  position: relative;
+  padding-top: 90px;
 
-  @include breakpoint(tablet) {
-    margin-top: 160px;
-    min-height: 100vh;
-  }
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1024px;
 
-  .container {
-    @include breakpoint(tablet) {
-      display: flex;
-      max-width: 960px;
-      padding: 0 25px;
+    &__column-left {
+      margin-left: 32px;
+      margin-right: 14px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    &__column-right {
+      flex: 1;
+      padding-right: 38px;
     }
   }
 
   &__content {
-    padding: 0 25px 25px;
+    width: 600px;
 
-    @include breakpoint(phablet) {
-      padding-left: 55px;
-      padding-right: 55px;
+    &__title {
+      height: auto;
+      margin-bottom: 53px;
+      width: 350px;
     }
 
-    @include breakpoint(tablet) {
-      flex: none;
-      padding: 0;
-      width: 525px;
+    &__introduction {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.23;
     }
 
-    p {
-      line-height: 1.4;
-      margin: 14px 0;
-    }
-  }
+    &__description {
+      font-family: $font-family-open-sans;
+      font-size: 16px;
+      line-height: normal;
 
-  &__title {
-    height: auto;
-    margin-bottom: 35px;
-    max-width: 80%;
-    width: 350px;
-
-    @include breakpoint(tablet) {
-      max-width: none;
-    }
-  }
-
-  &__introduction {
-    font-size: 28px;
-    line-height: 1.2;
-    margin: 2px 0 0;
-  }
-
-  &__aroma-and-taste {
-    h4 {
-      font-weight: bold;
-      margin: 10px 0 0;
-      line-height: 1.2;
-      font-size: 20px;
+      strong {
+        font-weight: 900;
+      }
     }
 
-    p {
-      margin-top: 0;
-    }
-  }
+    &__aroma-and-taste {
+      margin-bottom: 20px;
 
-  &__recipe {
-    font-size: 16px;
+      h4 {
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 1.14;
+        margin-bottom: 20px;
+      }
 
-    dt {
-      display: inline;
-      font-weight: bold;
-      line-height: 1.1;
-      margin-right: 5px;
-    }
-
-    dd {
-      display: inline;
-      font-weight: bold;
-      line-height: 1.2;
-      margin-left: 0;
-      padding: 0;
-      white-space: pre-wrap;
-
-      &:after {
-        content: '\A';
+      p {
+        font-family: $font-family-open-sans;
+        font-size: 16px;
+        line-height: normal;
       }
     }
   }
 
   &__bottle-image {
-    flex: none;
-    margin-right: -40px;
-    overflow: hidden;
-    text-align: center;
-
-    @include breakpoint(tablet) {
-      background: none !important;
-      margin-top: -400px;
-      height: 1052px;
-      width: 340px;
-      margin-left: 25px;
-      margin-top: -140px;
-    }
+    height: 1054px;
+    width: 340px;
 
     img {
-      margin-bottom: -30px;
-      margin-top: -525px;
-      width: 340px;
-
-      @include breakpoint(tablet) {
-        margin-bottom: 0;
-        margin-right: -40px;
-        margin-top: 0;
-        height: auto;
-        width: 100%;
-      }
+      height: auto;
+      width: 100%;
     }
   }
 
-  &__border-bottom {
-    @include breakpoint(tablet) {
-      height: 120px;
-      margin-top: -120px;
-    }
-  }
 
-  &.Mainstay__reverse {
-    .container {
-      @include breakpoint(tablet) {
-        flex-direction: row-reverse;
-      }
-    }
-
-    .Mainstay__content {
-      @include breakpoint(tablet) {
-        padding-left: 60px;
-        padding-right: 0;
-      }
-    }
-
-    .Mainstay__bottle-image {
-      @include breakpoint(tablet) {
-        margin-left: 0;
-        margin-right: 25px;
-        margin-top: -140px;
-
-        img {
-          margin-right: 0;
-          margin-left: -40px;
-        }
-      }
-    }
-  }
 }
+
+// .Mainstay {
+//   color: $dark-blue;
+//   padding-top: 60px;
+//   position: relative;
+
+//   @include breakpoint(tablet) {
+//     margin-top: 160px;
+//     min-height: 100vh;
+//   }
+
+//   .container {
+//     @include breakpoint(tablet) {
+//       display: flex;
+//       max-width: 960px;
+//       padding: 0 25px;
+//     }
+//   }
+
+//   &__content {
+//     padding: 0 25px 25px;
+
+//     @include breakpoint(phablet) {
+//       padding-left: 55px;
+//       padding-right: 55px;
+//     }
+
+//     @include breakpoint(tablet) {
+//       flex: none;
+//       padding: 0;
+//       width: 525px;
+//     }
+
+//     p {
+//       line-height: 1.4;
+//       margin: 14px 0;
+//     }
+//   }
+
+//   &__title {
+//     height: auto;
+//     margin-bottom: 35px;
+//     max-width: 80%;
+//     width: 350px;
+
+//     @include breakpoint(tablet) {
+//       max-width: none;
+//     }
+//   }
+
+//   &__introduction {
+//     font-size: 28px;
+//     line-height: 1.2;
+//     margin: 2px 0 0;
+//   }
+
+//   &__aroma-and-taste {
+//     h4 {
+//       font-weight: bold;
+//       margin: 10px 0 0;
+//       line-height: 1.2;
+//       font-size: 20px;
+//     }
+
+//     p {
+//       margin-top: 0;
+//     }
+//   }
+
+//   &__recipe {
+//     font-size: 16px;
+
+//     dt {
+//       display: inline;
+//       font-weight: bold;
+//       line-height: 1.1;
+//       margin-right: 5px;
+//     }
+
+//     dd {
+//       display: inline;
+//       font-weight: bold;
+//       line-height: 1.2;
+//       margin-left: 0;
+//       padding: 0;
+//       white-space: pre-wrap;
+
+//       &:after {
+//         content: '\A';
+//       }
+//     }
+//   }
+
+//   &__bottle-image {
+//     flex: none;
+//     margin-right: -40px;
+//     overflow: hidden;
+//     text-align: center;
+
+//     @include breakpoint(tablet) {
+//       background: none !important;
+//       margin-top: -400px;
+//       height: 1052px;
+//       width: 340px;
+//       margin-left: 25px;
+//       margin-top: -140px;
+//     }
+
+//     img {
+//       margin-bottom: -30px;
+//       margin-top: -525px;
+//       width: 340px;
+
+//       @include breakpoint(tablet) {
+//         margin-bottom: 0;
+//         margin-right: -40px;
+//         margin-top: 0;
+//         height: auto;
+//         width: 100%;
+//       }
+//     }
+//   }
+
+//   &__border-bottom {
+//     @include breakpoint(tablet) {
+//       height: 120px;
+//       margin-top: -120px;
+//     }
+//   }
+
+//   &.Mainstay__reverse {
+//     .container {
+//       @include breakpoint(tablet) {
+//         flex-direction: row-reverse;
+//       }
+//     }
+
+//     .Mainstay__content {
+//       @include breakpoint(tablet) {
+//         padding-left: 60px;
+//         padding-right: 0;
+//       }
+//     }
+
+//     .Mainstay__bottle-image {
+//       @include breakpoint(tablet) {
+//         margin-left: 0;
+//         margin-right: 25px;
+//         margin-top: -140px;
+
+//         img {
+//           margin-right: 0;
+//           margin-left: -40px;
+//         }
+//       }
+//     }
+//   }
+// }

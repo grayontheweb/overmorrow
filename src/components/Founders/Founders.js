@@ -1,11 +1,12 @@
 import React from 'react';
 
+import Section from 'src/components/Section';
 import Founder from 'src/components/Founder';
 
 import './Founders.scss';
 
 const Founders = ({ founders }) => (
-  <div className="Founders">
+  <Section className="Founders" fullScreen>
     <div className="container">
       <h2>The Founders</h2>
 
@@ -18,7 +19,7 @@ const Founders = ({ founders }) => (
         />
       ))}
     </div>
-  </div>
+  </Section>
 );
 
 export default Founders;

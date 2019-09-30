@@ -14,23 +14,58 @@
 
   &__content {
     background-image: linear-gradient(to bottom, rgba($white, 0), rgba($white, 1) 440px, $white);
-    height: 2000px;
     z-index: 500;
   }
 
   &__container {
-    background: $white;
+    background: rgba($white, 0.95);
     display: flex;
     margin: 0 auto;
     max-width: 1024px;
     padding: 80px 60px;
+    position: relative;
 
     &__column-left {
       flex: 1;
+      text-align: right;
     }
 
     &__column-right {
+      margin-left: 52px;
       max-width: 600px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 40px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: blue;
+      z-index: 500;
+    }
+  }
+
+  &__heading {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+  }
+
+  &__description {
+    font-family: $font-family-open-sans;
+    font-size: 16px;
+    line-height: normal;
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    strong {
+      font-weight: bold;
     }
   }
 }

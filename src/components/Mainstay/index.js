@@ -37,52 +37,53 @@ const Mainstay = ({ mainstay, reverse = false }) => (
       }}
     />
 
-    <div className="container">
-      <div className="Mainstay__content">
-        <img
-          alt={mainstay.title}
-          className="Mainstay__title"
-          src={mainstay.nameImage}
-        />
+    <div className="Mainstay__container">
+      <div className="Mainstay__container__column-left">
+        <div className="Mainstay__content">
+          <img
+            alt={mainstay.title}
+            className="Mainstay__content__title"
+            src={mainstay.nameImage}
+          />
 
-        <h3 className="Mainstay__introduction">{mainstay.introduction}</h3>
+          <h3 className="Mainstay__content__introduction">{mainstay.introduction}</h3>
 
-        <Markdown
-          className="Mainstay__description"
-          source={mainstay.description}
-        />
+          <Markdown
+            className="Mainstay__content__description"
+            source={mainstay.description}
+          />
 
-        <div className="Mainstay__aroma-and-taste">
-          <h4>Aroma & Taste</h4>
-          <p>{mainstay.flavorProfile.aromaAndTaste}</p>
+          <div className="Mainstay__content__aroma-and-taste">
+            <h4>Aroma & Taste</h4>
+            <p>{mainstay.flavorProfile.aromaAndTaste}</p>
+          </div>
+
+          <dl className="Mainstay__content__recipe">
+            <dt>Grains</dt>
+            <dd>{mainstay.flavorProfile.grains}</dd>
+
+            <dt>Hops</dt>
+            <dd>{mainstay.flavorProfile.hops}</dd>
+
+            <dt>Yeast</dt>
+            <dd>{mainstay.flavorProfile.yeast}</dd>
+          </dl>
         </div>
-
-        <dl className="Mainstay__recipe">
-          <dt>Grains</dt>
-          <dd>{mainstay.flavorProfile.grains}</dd>
-
-          <dt>Hops</dt>
-          <dd>{mainstay.flavorProfile.hops}</dd>
-
-          <dt>Yeast</dt>
-          <dd>{mainstay.flavorProfile.yeast}</dd>
-        </dl>
       </div>
 
-      <div
-        className="Mainstay__bottle-image"
-        style={{
-          backgroundColor: mainstay.style.accentLight,
-        }}
-      >
-        <img alt={`${mainstay.title} Bottle`} src={mainstay.bottleImage} />
+      <div className="Mainstay__container__column-right">
+        <div
+          className="Mainstay__bottle-image"
+        >
+          <img alt={`${mainstay.title} Bottle`} src={mainstay.bottleImage} />
+        </div>
       </div>
     </div>
 
-    <div
+{/*    <div
       className="Mainstay__border-bottom"
       style={{ backgroundColor: mainstay.style.accentLight }}
-    />
+    />*/}
   </div>
 );
 
