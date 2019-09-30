@@ -7,7 +7,7 @@ import './Mainstays.scss';
 const Mainstays = ({ mainstays }) => (
   <div className="Mainstays">
     <div className="Mainstays__header">
-      <h2>Our Beer</h2>
+      <h2>Our Beers</h2>
     </div>
 
     {mainstays.map((mainstay, index) => (
