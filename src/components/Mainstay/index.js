@@ -46,7 +46,9 @@ const Mainstay = ({ mainstay, reverse = false }) => (
             src={mainstay.nameImage}
           />
 
-          <h3 className="Mainstay__content__introduction">{mainstay.introduction}</h3>
+          <h3 className="Mainstay__content__introduction">
+            {mainstay.introduction}
+          </h3>
 
           <Markdown
             className="Mainstay__content__description"
@@ -72,15 +74,13 @@ const Mainstay = ({ mainstay, reverse = false }) => (
       </div>
 
       <div className="Mainstay__container__column-right">
-        <div
-          className="Mainstay__bottle-image"
-        >
+        <div className="Mainstay__bottle-image">
           <img alt={`${mainstay.title} Bottle`} src={mainstay.bottleImage} />
         </div>
       </div>
     </div>
 
-{/*    <div
+    {/*    <div
       className="Mainstay__border-bottom"
       style={{ backgroundColor: mainstay.style.accentLight }}
     />*/}
