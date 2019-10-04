@@ -6,7 +6,7 @@ import Founder from 'src/components/Founder';
 import './Founders.scss';
 
 const Founders = ({ founders }) => (
-  <Section className="Founders" fullScreen>
+  <Section className="Founders" fullScreen id="founders">
     <div className="container">
       <h2>The Founders</h2>
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { get } from 'lodash';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import Section from 'src/components/Section';
+
 import './Subscribe.scss';
 
 const Subscribe = () => {
@@ -23,14 +25,14 @@ const Subscribe = () => {
   };
 
   return (
-    <div className="Subscribe">
+    <Section className="Subscribe">
       <div className="Subscribe__content">
         <h2>{subscribe.content}</h2>
         <a className="Subscribe__button" href="/subscribe">
           {subscribe.buttonText}
         </a>
       </div>
-    </div>
+    </Section>
   );
 };
 

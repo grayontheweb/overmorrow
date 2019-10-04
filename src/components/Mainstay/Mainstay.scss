@@ -2,37 +2,58 @@
 @import 'src/css/mixins';
 
 .Mainstay {
-  background-image: linear-gradient(to top, transparent, transparent 160px, $white 160px, $white);
+  background-image: linear-gradient(to top, $white);
   color: $very-dark-blue;
-  padding-top: 90px;
+  padding-top: 60px;
+
+  @include breakpoint(phablet) {
+    background-image: linear-gradient(to top, transparent, transparent 160px, $white 160px, $white);
+    padding-top: 90px;
+  }
 
   &__container {
-    display: flex;
-    margin: 0 auto;
-    max-width: 1024px;
+    padding: 0 20px;
+    position: relative;
 
-    &__column-left {
-      margin-left: 32px;
-      margin-right: 14px;
-      max-width: 600px;
-      padding-top: 140px;
-      width: 100%;
-    }
+    @include breakpoint(phablet) {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      max-width: 1024px;
 
-    &__column-right {
-      flex: 1;
-      margin-bottom: 40px;
-      margin-right: 38px;
+      &__column-left {
+        margin-left: 32px;
+        margin-right: 14px;
+        max-width: 600px;
+        padding-top: 140px;
+        width: 100%;
+      }
+
+      &__column-right {
+        flex: 1;
+        margin-bottom: 40px;
+        margin-right: 38px;
+      }
     }
   }
 
   &__content {
-    width: 600px;
+    @include breakpoint(phablet) {
+      width: 600px;
+    }
 
     &__title {
       height: auto;
-      margin-bottom: 53px;
-      width: 350px;
+      display: block;
+      margin: 0 auto 60px;
+
+      width: 337px;
+      z-index: 500;
+
+      @include breakpoint(phablet) {
+        margin: 0 0 53px;
+        width: 350px;
+      }
     }
 
     &__introduction {
@@ -97,16 +118,24 @@
   }
 
   &__bottle-image {
+    display: none;
     height: 1054px;
+    position: relative;
     width: 340px;
+    z-index: -1;
 
     img {
       height: auto;
       width: 100%;
     }
+
+    @include breakpoint(phablet) {
+      display: block;
+    }
   }
 
   &.Mainstay__reverse {
+
     .Mainstay__container {
       flex-direction: row-reverse;
 

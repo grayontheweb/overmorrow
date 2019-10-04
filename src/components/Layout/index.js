@@ -2,53 +2,40 @@ import React from 'react';
 
 import logo from './images/logo.svg';
 
+import LayoutHeader from './Header';
+
 import './Layout.scss';
 
 const Layout = ({ children }) => {
   return (
     <div className="Layout">
-      <header className="Layout__header">
-        <nav className="Layout__header__navigation">
-          <h3
-            className="Layout__header__navigation__logo"
-            style={{
-              backgroundImage: `url(${logo})`,
-            }}
-          >
-            <a href="#intro">Overmorrow</a>
-          </h3>
-
-          <ul>
-            <li>
-              <a href="#about">About Us</a>
-            </li>
-
-            <li>
-              <a href="#founders">The Founders</a>
-            </li>
-
-            <li>
-              <a href="#beers">Our Beers</a>
-            </li>
-
-            <li>
-              <a href="#where">Where</a>
-            </li>
-          </ul>
-        </nav>
-
-        <ul className="Layout__header__language-toggle">
-          <li className="active">
-            <a href="#english">English</a>
-          </li>
-
-          <li>
-            <a href="#viet">Tiếng Việt</a>
-          </li>
-        </ul>
-      </header>
+      <LayoutHeader />
 
       {children}
+
+      <footer className="Layout__footer">
+        <h3
+          className="Layout__footer__navigation__logo"
+          style={{
+            backgroundImage: `url(${logo})`,
+          }}
+        >
+          <a href="#intro">Overmorrow</a>
+        </h3>
+
+        <span>© 2019 Overmorrow Brewing Company</span>
+        <span>
+          Công Ty TNHH Bia Ngày Nối Tiếp • Address: Xã Đông Dư, Gia Lâm, Hà Nội
+        </span>
+
+        <div className="Layout__footer__social">
+          <ul>
+            <li>Email</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 };

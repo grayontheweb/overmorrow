@@ -1,0 +1,200 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
+.LayoutHeader {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  min-height: $header-height;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  max-height: $header-height;
+  z-index: 500;
+  transition: top 0.2s ease-in;
+
+  @include breakpoint(tablet) {
+    align-items: center;
+    flex-direction: row;
+    padding: 0 60px;
+  }
+
+  &--is-fixed {
+    position: fixed;
+    top: 0;
+
+    &:not(.LayoutHeader--is-visible) {
+      top: -$header-height;
+    }
+  }
+
+  &--is-open {
+    max-height: none;
+    top: 0 !important;
+  }
+
+  &--is-visible {
+    background: rgba($white, 0.95);
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 49, 0.12);
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-gotham;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 100px;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      align-items: center;
+      flex-direction: row;
+      padding-top: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &__logo {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;;
+      height: 40px;
+      margin: 0 0 0 30px;
+      position: absolute;
+      text-indent: -9999px;
+      top: 30px;
+      transition: opacity 0.1s linear;
+      width: 40px;
+
+      @include breakpoint(tablet) {
+        margin-left: 0;
+        margin-right: 60px;
+        position: relative;
+        top: unset;
+      }
+    }
+
+    &__logo-horizontal {
+      left: -290px;
+      margin-left: 30px;
+      position: absolute;
+      top: 35px;
+      transition: left 0.05s linear;
+
+      h1 {
+        margin: 0;
+      }
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    &__menu-toggle {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      height: 24px;
+      width: 22px;
+      right: 30px;
+      top: 38px;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @include breakpoint(tablet) {
+        align-items: center;
+        display: flex;
+
+        li:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+
+      li {
+        border-top: 1px solid rgba(0, 0, 49, 0.1);
+        cursor: pointer;
+        padding: 0 20px;
+        text-align: center;
+
+        @include breakpoint(tablet) {
+          border-top: none;
+          line-height: normal;
+          padding: 0;
+          text-align: left;
+        }
+
+        a {
+          display: block;
+          line-height: 3.75;
+        }
+      }
+    }
+  }
+
+  &--is-open .LayoutHeader__navigation {
+    &__logo {
+      opacity: 0;
+    }
+
+    .LayoutHeader__navigation__logo-horizontal {
+      left: 0;
+    }
+  }
+
+  &__language-toggle {
+    border-top: 1px solid rgba(0, 0, 49, 0.1);
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 49, 0.1);
+    display: flex;
+    font-family: $font-family-open-sans;
+    font-size: 16px;
+    justify-content: center;
+    padding: 30px 20px !important;
+    list-style: none;
+    margin: 0;
+
+    @include breakpoint(tablet) {
+      border: none;
+      padding: 0;
+    }
+
+    a {
+      align-items: center;
+      color: inherit;
+      display: inline-flex;
+      height: 28px;
+      justify-content: center;
+      padding: 4px 12px;
+      text-decoration: none;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+
+      &.active {
+        background: $very-dark-blue;
+        border-radius: 2px;
+        color: $white;
+      }
+    }
+  }
+}
