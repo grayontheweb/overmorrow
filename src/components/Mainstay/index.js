@@ -34,7 +34,7 @@ const Mainstay = ({ mainstay, reverse = false }) => (
       }
 
       .Mainstay-${mainstay.id} dl dt {
-        color: ${mainstay.style.accentLight}
+        color: ${mainstay.style.accent}
       }
     `,
       }}

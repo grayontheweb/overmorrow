@@ -2,6 +2,12 @@
 @import 'src/css/mixins';
 
 .Mainstays {
+  padding-top: 60px;
+
+  @include breakpoint(tablet) {
+    padding-top: 140px;
+  }
+
   &__header {
     text-align: center;
 
@@ -9,7 +15,7 @@
       font-family: $font-family-gotham;
       font-size: 48px;
       font-weight: 900;
-      margin-top: 140px;
+      margin-top: 0;
     }
   }
 }

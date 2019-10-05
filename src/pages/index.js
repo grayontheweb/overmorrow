@@ -8,7 +8,6 @@ import Layout from 'src/components/Layout';
 import Story from 'src/components/Story';
 import Founders from 'src/components/Founders';
 import Mainstays from 'src/components/Mainstays';
-import Subscribe from 'src/components/Subscribe';
 
 export default () => {
   return (
@@ -18,7 +17,6 @@ export default () => {
       <Story />
       <Founders />
       <Mainstays />
-      <Subscribe />
     </Layout>
   );
 };

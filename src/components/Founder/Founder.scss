@@ -26,6 +26,7 @@
     height: $image-size;
     overflow: hidden;
     width: $image-size;
+    z-index: 2;
 
     img {
       height: auto;
@@ -39,7 +40,6 @@
     margin-top: -20px;
     padding: 50px 40px 42px;
     width: 100%;
-    z-index: -1;
   }
 
   &__favorites {
