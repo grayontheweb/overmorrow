@@ -2,7 +2,6 @@
 @import 'src/css/mixins';
 
 .LayoutHeader {
-  background: $white;
   display: flex;
   flex-direction: column;
   min-height: $header-height;
@@ -13,7 +12,7 @@
   overflow: hidden;
   max-height: $header-height;
   z-index: 500;
-  transition: top 0.2s ease-in;
+  transition: background 0.3s linear, top 0.2s ease-in;
 
   @include breakpoint(tablet) {
     align-items: center;
@@ -22,6 +21,7 @@
   }
 
   &--is-fixed {
+    $background: rgba($white, 0.95);
     position: fixed;
     top: 0;
 

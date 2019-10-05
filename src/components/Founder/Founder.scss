@@ -1,35 +1,113 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
 .Founder {
-  $image-size: 218px;
+  $image-size: 360px;
+  align-items: center;
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
+  margin: 40px auto 0;
+  max-width: 720px;
+  width: 100%;
+
+  &::first-child {
+    margin-top: 0;
+  }
+
+  @include breakpoint(tablet) {
+    margin: 0 0 80px;
+    max-width: 400px;
+    width: 45%;
+  }
 
   &__image {
     border-radius: $image-size;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 49, 0.4);
     height: $image-size;
-    margin-bottom: 18px;
     overflow: hidden;
     width: $image-size;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
   }
 
-  img {
-    height: auto;
+  &__content {
+    background: $white;
+    color: $very-dark-blue;
+    margin-top: -20px;
+    padding: 50px 40px 42px;
     width: 100%;
+    z-index: -1;
   }
 
-  h4, h6 {
-    line-height: 1;
+  &__favorites {
+    background: $turquoise-blue;
+    list-style: none;
+    display: block;
     margin: 0;
+    padding: 28px 40px 45px;
+    width: 100%;
+
+    dt, dd {
+      font-family: $font-family-open-sans;
+      line-height: normal;
+      margin: 0;
+      padding: 0;
+    }
+
+    dt {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    dd {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        color: $white;
+        display: inline;
+
+        &:not(:last-child):after {
+          content: ', ';
+        }
+
+        a {
+          color: inherit;
+        }
+      }
+    }
   }
 
-  h4 {
-    color: #5A5B62;
+  &__name {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: normal;
+    margin: 0 0 14px;
+  }
+
+  &__title, &__description {
+    font-family: $font-family-open-sans;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 14px;
+  }
+
+  &__title {
     font-size: 20px;
-    margin-bottom: 10px;
+    font-style: italic;
   }
 
-  h6 {
-    color: #5A5B62;
-    font-size: 14px;
+  &__description {
+    font-size: 18px;
   }
 }

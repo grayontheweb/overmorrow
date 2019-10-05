@@ -26,7 +26,11 @@ const Founders = () => {
   `);
 
   const founders = get(data, 'allMarkdownRemark.edges', [])
-    .map((founder) => founder.node.frontmatter)
+    .map((founder) => ({
+      ...founder.node.frontmatter,
+      jobDescription:
+        'Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus hendrerit. Pellen tesque.',
+    }))
     .sort((a, b) => a.position - b.position);
 
   return <FoundersComponent founders={founders} />;

@@ -40,4 +40,14 @@
     top: $header-height / 2;
     will-change: opacity, transform;
   }
+
+  &__horizon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #F37121;
+    z-index: -1;
+  }
 }

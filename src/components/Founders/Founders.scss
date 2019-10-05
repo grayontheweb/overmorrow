@@ -3,5 +3,31 @@
 
 .Founders {
   background: $very-dark-blue;
-  margin-top: -40px;
+  color: $white;
+  padding: 60px 0 0;
+
+  @include breakpoint(tablet) {
+    padding: 118px 62px 146px;
+  }
+
+  h2 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 0 89px;
+  }
+
+  &__container {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    // padding: 0 62px;
+
+
+    @include breakpoint(phablet) {
+      max-width: 960px;
+    }
+  }
 }
