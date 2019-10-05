@@ -9,8 +9,12 @@ import './About.scss';
 
 const About = () => (
   <Section className="About" id="about">
-    {(props) => {
-      const opacity = 1 - props.top / window.innerHeight;
+    {(props = {}) => {
+      let opacity = null;
+
+      if (typeof window !== 'undefined' && props.top) {
+        opacity = 1 - props.top / window.innerHeight;
+      }
 
       return (
         <div

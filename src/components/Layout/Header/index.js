@@ -16,8 +16,14 @@ const LayoutHeader = () => {
   };
 
   const handleScroll = (e) => {
+    let top = null;
     const { height } = headerRef.current.getBoundingClientRect();
-    const top = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      top = window.pageYOffset || document.documentElement.scrollTop;
+    }
+
+    if (!top) return;
 
     if (top > height * 2) {
       setIsFixed(true);
