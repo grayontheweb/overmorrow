@@ -2,8 +2,12 @@
 @import 'src/css/mixins';
 
 .About {
-  background: $very-dark-blue;
-  color: $white;
+  background: transparent;
+
+  &__parallax-container {
+    background: $very-dark-blue;
+    color: $white;
+  }
 
   &__container {
     padding: 60px 20px;

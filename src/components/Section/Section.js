@@ -3,12 +3,13 @@ import classNames from 'classnames';
 
 import './Section.scss';
 
-const Section = ({ children, className, fullScreen, id }) => (
+const Section = ({ children, className, fullScreen, id, sectionRef }) => (
   <div
     className={classNames('Section', className, {
       fullScreen,
     })}
     id={id}
+    ref={sectionRef}
   >
     {children}
   </div>

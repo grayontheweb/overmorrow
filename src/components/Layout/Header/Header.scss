@@ -81,11 +81,13 @@
     }
 
     &__logo-horizontal {
+      height: 26.5px;
       left: -290px;
       margin-left: 30px;
       position: absolute;
       top: 35px;
       transition: left 0.05s linear;
+      width: 260px;
 
       h1 {
         margin: 0;

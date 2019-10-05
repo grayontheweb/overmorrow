@@ -2,14 +2,27 @@
 @import 'src/css/mixins';
 
 .Story {
-  padding-top: 520px;
+  padding-bottom: 60px;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 0;
+    padding-top: 520px;
+  }
 
   &__background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+    img {
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include breakpoint(tablet) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
   }
 
   &__content {
@@ -19,20 +32,33 @@
 
   &__container {
     background: rgba($white, 0.95);
-    display: flex;
     margin: 0 auto;
     max-width: 1024px;
-    padding: 80px 60px;
     position: relative;
 
+    @include breakpoint(tablet) {
+      display: flex;
+      padding: 80px 60px;
+    }
+
     &__column-left {
-      flex: 1;
-      text-align: right;
+      padding: 0 20px;
+
+      @include breakpoint(tablet) {
+        flex: 1;
+        padding: 0;
+        text-align: right;
+      }
     }
 
     &__column-right {
-      margin-left: 52px;
-      max-width: 600px;
+      padding: 0 20px;
+
+      @include breakpoint(tablet) {
+        margin-left: 52px;
+        max-width: 600px;
+        padding: 0;
+      }
     }
 
     &:after {
@@ -51,7 +77,13 @@
     font-size: 48px;
     font-weight: 900;
     line-height: 1;
-    margin: 0;
+    margin: 60px 0 40px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+      text-align: right;
+    }
   }
 
   &__description {

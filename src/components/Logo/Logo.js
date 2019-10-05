@@ -7,13 +7,7 @@ import horizontalLogo from './images/horizontal-logo.svg';
 import './Logo.scss';
 
 const Logo = ({ className, height = null, stacked = false, width = null }) => (
-  <div
-    className={classNames('Logo', className)}
-    style={{
-      height: height ? `${height}px` : null,
-      width: width ? `${width}px` : null,
-    }}
-  >
+  <div className={classNames('Logo', className)}>
     <h1
       style={{
         backgroundImage: `url(${horizontalLogo})`,

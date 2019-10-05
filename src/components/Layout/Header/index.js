@@ -9,7 +9,13 @@ const LayoutHeader = () => {
   const [previousScrollTop, setPreviousScrollTop] = useState(0);
   const headerRef = useRef(null);
 
-  const handleScroll = () => {
+  const handleResize = (e) => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleScroll = (e) => {
     const { height } = headerRef.current.getBoundingClientRect();
     const top = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -19,7 +25,7 @@ const LayoutHeader = () => {
       setIsFixed(false);
     }
 
-    if (top > window.screen.height - height && top < previousScrollTop) {
+    if (top > window.innerHeight - height && top < previousScrollTop) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -33,9 +39,11 @@ const LayoutHeader = () => {
   };
 
   useEffect(() => {
+    window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
   }, [previousScrollTop]);
