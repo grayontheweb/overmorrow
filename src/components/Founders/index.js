@@ -24,7 +24,7 @@ const Founders = ({ locale = 'english' }) => {
           foundersList {
             image
             backgroundColor
-            fullName
+            name
 
             english {
               jobTitle
@@ -40,8 +40,8 @@ const Founders = ({ locale = 'english' }) => {
               beerStyle
 
               breweries {
-                breweryName
-                breweryUrl
+                name
+                url
               }
 
               other {
@@ -62,7 +62,7 @@ const Founders = ({ locale = 'english' }) => {
           foundersList: frontmatter.foundersList.map((founder) => ({
             backgroundColor: founder.backgroundColor,
             favorites: founder.favorites,
-            fullName: founder.fullName,
+            name: founder.name,
             image: founder.image,
             ...founder.english,
           })),
@@ -72,7 +72,7 @@ const Founders = ({ locale = 'english' }) => {
           foundersList: frontmatter.foundersList.map((founder) => ({
             backgroundColor: founder.backgroundColor,
             favorites: founder.favorites,
-            fullName: founder.fullName,
+            name: founder.name,
             image: founder.image,
             ...founder.vietnamese,
           })),

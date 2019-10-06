@@ -21,7 +21,7 @@ const Founder = ({ founder = {} }) => (
         )}
 
         <div className="Founder__content">
-          <h4 className="Founder__name">{founder.fullName}</h4>
+          <h4 className="Founder__name">{founder.name}</h4>
           <h6 className="Founder__title">{founder.jobTitle}</h6>
           <h6 className="Founder__description">{founder.jobDescription}</h6>
         </div>
@@ -41,11 +41,11 @@ const Founder = ({ founder = {} }) => (
               {founder.favorites.breweries.map((brewery, i) => (
                 <li key={i}>
                   <a
-                    href={brewery.breweryUrl}
+                    href={brewery.url}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    {brewery.breweryName}
+                    {brewery.name}
                   </a>
                 </li>
               ))}
