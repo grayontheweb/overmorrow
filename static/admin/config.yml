@@ -307,6 +307,24 @@ collections:
                 required: true
                 widget: string
               -
+                hint: The grains used in the beer, separated by comma.
+                label: Grains
+                name: grains
+                required: true
+                widget: list
+              -
+                hint: The hops used in the beer, separated by comma.
+                label: Hops
+                name: hops
+                required: true
+                widget: list
+              -
+                hint: The yeast used in the beer, separated by comma.
+                label: Yeast
+                name: yeast
+                required: true
+                widget: list
+              -
                 label: English
                 name: english
                 required: true
@@ -330,24 +348,6 @@ collections:
                     name: aromaAndTaste
                     required: true
                     widget: string
-                  -
-                    hint: The grains used in the beer, separated by comma.
-                    label: Grains
-                    name: grains
-                    required: true
-                    widget: list
-                  -
-                    hint: The hops used in the beer, separated by comma.
-                    label: Hops
-                    name: hops
-                    required: true
-                    widget: list
-                  -
-                    hint: The yeast used in the beer, separated by comma.
-                    label: Yeast
-                    name: yeast
-                    required: true
-                    widget: list
               -
                 label: Vietnamese
                 name: vietnamese
@@ -372,21 +372,3 @@ collections:
                     name: aromaAndTaste
                     required: true
                     widget: string
-                  -
-                    hint: The grains used in the beer, separated by comma.
-                    label: Grains
-                    name: grains
-                    required: true
-                    widget: list
-                  -
-                    hint: The hops used in the beer, separated by comma.
-                    label: Hops
-                    name: hops
-                    required: true
-                    widget: list
-                  -
-                    hint: The yeast used in the beer, separated by comma.
-                    label: Yeast
-                    name: yeast
-                    required: true
-                    widget: list
