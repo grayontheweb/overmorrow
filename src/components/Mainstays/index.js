@@ -1,8 +1,8 @@
-import React from 'react';
-import { get } from 'lodash';
-import { graphql, useStaticQuery } from 'gatsby';
+// import React from 'react';
+// import { get } from 'lodash';
+// import { graphql, useStaticQuery } from 'gatsby';
 
-import MainstaysComponent from './Mainstays';
+// import MainstaysComponent from './Mainstays';
 
 const Mainstays = () => {
   // const data = useStaticQuery(graphql`

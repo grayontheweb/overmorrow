@@ -1,8 +1,8 @@
-import React from 'react';
-import { get } from 'lodash';
-import { graphql, useStaticQuery } from 'gatsby';
+// import React from 'react';
+// import { get } from 'lodash';
+// import { graphql, useStaticQuery } from 'gatsby';
 
-import FoundersComponent from './Founders';
+// import FoundersComponent from './Founders';
 
 const Founders = () => {
   // const data = useStaticQuery(graphql`
