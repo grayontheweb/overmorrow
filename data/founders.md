@@ -1,8 +1,12 @@
 ---
 templateKey: founders
 english:
+  favoriteBeerStyleHeading: Favorite Beer Style
+  favoriteBreweriesHeading: Favorite Breweries
   heading: The Founders
 vietnamese:
+  favoriteBeerStyleHeading: Nulla Luctus
+  favoriteBreweriesHeading: Luctus Nulla
   heading: Nulla Luctus
 foundersList:
   - backgroundColor: '#00acda'
@@ -25,8 +29,8 @@ foundersList:
       other:
         classifier: Favorite Horror Monster
         favorite: Dracula
-    name: Chris Jarvis
     image: /img/headshots-square-4.jpg
+    name: Chris Jarvis
     vietnamese:
       jobDescription: >-
         Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
@@ -52,8 +56,8 @@ foundersList:
       other:
         classifier: Favorite Ninja Turtle
         favorite: Leonardo
-    name: Gray Sutherland
     image: /img/headshots-square-3.jpg
+    name: Gray Sutherland
     vietnamese:
       jobDescription: >-
         Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
@@ -73,8 +77,8 @@ foundersList:
       other:
         classifier: Favorite Ninja Turtle
         favorite: Sauteed with Butter & Garlic
-    name: Noah Tanabe
     image: /img/headshots-square.jpg
+    name: Noah Tanabe
     vietnamese:
       jobDescription: >-
         Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
@@ -98,8 +102,8 @@ foundersList:
       other:
         classifier: Favorite Ninja Turtle
         favorite: Alligator Snapping Turtle
-    name: Nam Tran
     image: /img/headshots-square-2.jpg
+    name: Nam Tran
     vietnamese:
       jobDescription: >-
         Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
