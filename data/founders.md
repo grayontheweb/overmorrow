@@ -1,4 +1,5 @@
 ---
+templateKey: founders
 english:
   heading: The Founders
 vietnamese:

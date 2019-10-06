@@ -9,12 +9,12 @@ import Mainstays from 'src/components/Mainstays';
 
 export default () => {
   return (
-    <Layout>
-      <Intro />
-      <About />
-      <Story />
-      <Founders />
-      <Mainstays />
+    <Layout locale="vietnamese">
+      <Intro locale="vietnamese" />
+      <About locale="vietnamese" />
+      <Story locale="vietnamese" />
+      <Founders locale="vietnamese" />
+      <Mainstays locale="vietnamese" />
     </Layout>
   );
 };

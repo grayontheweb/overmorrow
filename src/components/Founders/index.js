@@ -1,41 +1,84 @@
-// import React from 'react';
+import React from 'react';
 // import { get } from 'lodash';
-// import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
-// import FoundersComponent from './Founders';
+import FoundersComponent from './Founders';
 
-const Founders = () => {
-  // const data = useStaticQuery(graphql`
-  //   query FoundersQuery {
-  //     allMarkdownRemark(
-  //       sort: { order: ASC, fields: [frontmatter___position] }
-  //       filter: { frontmatter: { templateKey: { eq: "founder" } } }
-  //     ) {
-  //       edges {
-  //         node {
-  //           frontmatter {
-  //             image
-  //             position
-  //             jobTitle
-  //             title
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+const Founders = ({ locale = 'english' }) => {
+  const {
+    markdownRemark: { frontmatter },
+  } = useStaticQuery(graphql`
+    query FoundersQuery {
+      markdownRemark(frontmatter: { templateKey: { eq: "founders" } }) {
+        id
 
-  // const founders = get(data, 'allMarkdownRemark.edges', [])
-  //   .map((founder) => ({
-  //     ...founder.node.frontmatter,
-  //     jobDescription:
-  //       'Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus hendrerit. Pellen tesque.',
-  //   }))
-  //   .sort((a, b) => a.position - b.position);
+        frontmatter {
+          english {
+            heading
+          }
 
-  // return <FoundersComponent founders={founders} />;
+          vietnamese {
+            heading
+          }
 
-  return null;
+          foundersList {
+            image
+            backgroundColor
+            fullName
+
+            english {
+              jobTitle
+              jobDescription
+            }
+
+            vietnamese {
+              jobTitle
+              jobDescription
+            }
+
+            favorites {
+              beerStyle
+
+              breweries {
+                breweryName
+                breweryUrl
+              }
+
+              other {
+                classifier
+                favorite
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const content =
+    locale !== 'vietnamese'
+      ? {
+          ...frontmatter.english,
+          foundersList: frontmatter.foundersList.map((founder) => ({
+            backgroundColor: founder.backgroundColor,
+            favorites: founder.favorites,
+            fullName: founder.fullName,
+            image: founder.image,
+            ...founder.english,
+          })),
+        }
+      : {
+          ...frontmatter.vietnamese,
+          foundersList: frontmatter.foundersList.map((founder) => ({
+            backgroundColor: founder.backgroundColor,
+            favorites: founder.favorites,
+            fullName: founder.fullName,
+            image: founder.image,
+            ...founder.vietnamese,
+          })),
+        };
+
+  return <FoundersComponent content={content} />;
 };
 
 export default Founders;

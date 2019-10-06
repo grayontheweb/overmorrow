@@ -5,7 +5,7 @@ import Founder from 'src/components/Founder';
 
 import './Founders.scss';
 
-const Founders = ({ founders }) => (
+const Founders = ({ content }) => (
   <Section className="Founders" fullScreen id="founders">
     {(props = {}) => {
       let opacity = null;
@@ -22,17 +22,11 @@ const Founders = ({ founders }) => (
             transform: props.top > 0 ? `translateY(${props.top / 2}px)` : null,
           }}
         >
-          <h2>The Founders</h2>
+          <h2>{content.heading}</h2>
 
           <div className="Founders__container">
-            {founders.map((founder) => (
-              <Founder
-                description={founder.jobDescription}
-                imageUrl={founder.image}
-                key={founder.position}
-                name={founder.title}
-                title={founder.jobTitle}
-              />
+            {content.foundersList.map((founder, i) => (
+              <Founder founder={founder} key={i} />
             ))}
           </div>
         </div>

@@ -10,12 +10,12 @@ collections:
     name: pages
     files:
       -
-        file: data/intro.md
-        label: Intro
-        name: intro
+        file: data/about.md
+        label: About
+        name: about
         fields:
           -
-            default: intro
+            default: about
             label: "Template Key"
             name: templateKey
             widget: hidden
@@ -101,7 +101,7 @@ collections:
                 required: true
                 widget: string
           -
-            label: The Founders
+            label: Founders
             name: foundersList
             widget: list
             fields:

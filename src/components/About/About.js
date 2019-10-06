@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Markdown from 'react-markdown';
 
 import Section from 'src/components/Section';
 
@@ -7,7 +8,7 @@ import termImage from './images/term.svg';
 
 import './About.scss';
 
-const About = () => (
+const About = ({ intro }) => (
   <Section className="About" id="about">
     {(props = {}) => {
       let opacity = null;
@@ -62,22 +63,7 @@ const About = () => (
               </div>
 
               <div className="About__container__column-right">
-                <div className="About__description">
-                  <p>
-                    Inspired by our namesake, an old word to talk about the
-                    future, here at Overmorrow Brewing we craft beers to promote
-                    and honor classic styles throughout history – while updating
-                    them for the present and the future here in Vietnam.
-                  </p>
-
-                  <p>
-                    Just like our founding team, our beers are a mix of
-                    well-traveled styles from around the world with local
-                    Vietnamese flavors and ingredients. We are experimental but
-                    never compromise on quality and never launch anything that
-                    we are not happy to drink ourselves.
-                  </p>
-                </div>
+                <Markdown className="About__description" source={intro} />
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import LayoutHeaderComponent from './Header';
 
-const LayoutHeader = () => {
+const LayoutHeader = ({ locale }) => {
   const [isFixed, setIsFixed] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -60,6 +60,7 @@ const LayoutHeader = () => {
       isFixed={isOpen || isFixed}
       isOpen={isOpen}
       isVisible={isVisible}
+      locale={locale}
       setIsOpen={setIsOpen}
       toggleIsOpen={toggleIsOpen}
     />

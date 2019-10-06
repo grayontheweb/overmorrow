@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Link } from 'react-scroll';
+import { Link } from 'gatsby';
+import ReactScroll from 'react-scroll';
 
 import Logo from 'src/components/Logo';
 
@@ -9,11 +10,14 @@ import logo from '../images/logo.svg';
 
 import './Header.scss';
 
+const { Link: ScrollLink } = ReactScroll;
+
 const LayoutHeader = ({
   headerRef,
   isFixed,
   isOpen,
   isVisible,
+  locale,
   setIsOpen,
   toggleIsOpen,
 }) => (
@@ -51,58 +55,62 @@ const LayoutHeader = ({
 
       <ul>
         <li>
-          <Link
+          <ScrollLink
             duration={500}
             onClick={() => (isOpen ? setIsOpen(false) : null)}
             smooth
             to="about"
           >
             About Us
-          </Link>
+          </ScrollLink>
         </li>
 
         <li>
-          <Link
+          <ScrollLink
             duration={500}
             onClick={() => (isOpen ? setIsOpen(false) : null)}
             smooth
             to="founders"
           >
             The Founders
-          </Link>
+          </ScrollLink>
         </li>
 
         <li>
-          <Link
+          <ScrollLink
             duration={500}
             onClick={() => (isOpen ? setIsOpen(false) : null)}
             smooth
             to="beers"
           >
             Our Beers
-          </Link>
+          </ScrollLink>
         </li>
 
         <li>
-          <Link
+          <ScrollLink
             duration={500}
             onClick={() => (isOpen ? setIsOpen(false) : null)}
             smooth
             to="where"
           >
             Where
-          </Link>
+          </ScrollLink>
         </li>
       </ul>
     </nav>
 
     <ul className="LayoutHeader__language-toggle">
-      <li className="active">
-        <a href="#english">English</a>
+      <li>
+        <Link activeClassName="active" to="/">
+          English
+        </Link>
       </li>
 
       <li>
-        <a href="#viet">Tiếng Việt</a>
+        <Link activeClassName="active" to="/vn">
+          Tiếng Việt
+        </Link>
       </li>
     </ul>
   </header>

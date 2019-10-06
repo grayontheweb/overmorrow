@@ -1,2 +1,3 @@
 ---
+templateKey: beers
 ---

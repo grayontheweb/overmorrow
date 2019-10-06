@@ -5,7 +5,7 @@ import Section from 'src/components/Section';
 
 import './Founder.scss';
 
-const Founder = ({ imageUrl, description, name, title }) => (
+const Founder = ({ founder = {} }) => (
   <Section className="Founder">
     {(props) => (
       <div
@@ -14,42 +14,46 @@ const Founder = ({ imageUrl, description, name, title }) => (
           transform: props.top > 0 ? `translateY(${props.top / 5}px)` : null,
         }}
       >
-        {imageUrl && (
+        {founder.image && (
           <div className="Founder__image">
-            <img alt="beer person" src={imageUrl} />
+            <img alt="beer person" src={founder.image} />
           </div>
         )}
 
         <div className="Founder__content">
-          <h4 className="Founder__name">{name}</h4>
-          <h6 className="Founder__title">{title}</h6>
-          <h6 className="Founder__description">{description}</h6>
+          <h4 className="Founder__name">{founder.fullName}</h4>
+          <h6 className="Founder__title">{founder.jobTitle}</h6>
+          <h6 className="Founder__description">{founder.jobDescription}</h6>
         </div>
 
-        <dl className="Founder__favorites">
+        <dl
+          className="Founder__favorites"
+          style={{
+            backgroundColor: founder.backgroundColor,
+          }}
+        >
           <dt>Favorite Beer Style</dt>
-          <dd>Anything but the Milkshake IPA</dd>
+          <dd>{founder.favorites.beerStyle}</dd>
 
           <dt>Favorite Breweries</dt>
           <dd>
             <ul>
-              <li>
-                <a href="https://www.stonebrewing.com/">Stone Brewing</a>
-              </li>
-              <li>
-                <a href="https://www.dogfish.com/">Dogfish Head</a>
-              </li>
-              <li>
-                <a href="https://www.stonebrewing.com/">Stone Brewing</a>
-              </li>
-              <li>
-                <a href="https://www.dogfish.com/">Dogfish Head</a>
-              </li>
+              {founder.favorites.breweries.map((brewery, i) => (
+                <li key={i}>
+                  <a
+                    href={brewery.breweryUrl}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {brewery.breweryName}
+                  </a>
+                </li>
+              ))}
             </ul>
           </dd>
 
-          <dt>Favorite Ninja Turtle</dt>
-          <dd>Leonardo</dd>
+          <dt>{founder.favorites.other.classifier}</dt>
+          <dd>{founder.favorites.other.favorite}</dd>
         </dl>
       </div>
     )}
