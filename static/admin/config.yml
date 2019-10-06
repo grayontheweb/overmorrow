@@ -1,7 +1,6 @@
 ---
 backend:
-  branch: master
-  name: git-gateway
+  name: test-repo
 media_folder: static/img
 public_folder: /img
 collections:
@@ -33,7 +32,7 @@ collections:
                 hint: The introduction text that displays next to the dictionary definition.
                 label: Intro
                 name: intro
-                widget: string
+                widget: markdown
               -
                 default: Our Story
                 hint: The heading text for the "About Us" section.
@@ -44,7 +43,7 @@ collections:
                 hint: The primary content of the "About Us" section.
                 label: Content
                 name: content
-                widget: string
+                widget: markdown
           -
             label: Vietnamese
             name: vietnamese
@@ -54,7 +53,7 @@ collections:
                 hint: The introduction text that displays next to the dictionary definition.
                 label: Intro
                 name: intro
-                widget: string
+                widget: markdown
               -
                 default: Our Story
                 hint: The heading text for the "About Us" section.
@@ -65,7 +64,7 @@ collections:
                 hint: The primary content of the "About Us" section.
                 label: Content
                 name: content
-                widget: string
+                widget: markdown
       -
         file: data/founders.md
         label: Founders
