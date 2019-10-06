@@ -14,18 +14,18 @@ foundersList:
     favorites:
       beerStyle: Milkshake IPA
       breweries:
-        - breweryName: Stone Brewing
-          breweryUrl: 'https://www.stonebrewing.com/'
-        - breweryName: Stone Brewing
-          breweryUrl: 'https://www.stonebrewing.com/'
-        - breweryName: Stone Brewing
-          breweryUrl: 'https://www.stonebrewing.com/'
-        - breweryName: Stone Brewing
-          breweryUrl: 'https://www.stonebrewing.com/'
+        - name: Stone Brewing
+          url: 'https://www.stonebrewing.com/'
+        - name: Stone Brewing
+          url: 'https://www.stonebrewing.com/'
+        - name: Stone Brewing
+          url: 'https://www.stonebrewing.com/'
+        - name: Stone Brewing
+          url: 'https://www.stonebrewing.com/'
       other:
         classifier: Favorite Horror Monster
         favorite: Dracula
-    fullName: Chris Jarvis
+    name: Chris Jarvis
     image: /img/headshots-square-4.jpg
     vietnamese:
       jobDescription: >-
@@ -41,18 +41,18 @@ foundersList:
     favorites:
       beerStyle: Imperial Ultralight Radler
       breweries:
-        - breweryName: Stone Brewing
-          breweryUrl: 'https://www.stonebrewing.com/'
-        - breweryName: Dogfish Head
-          breweryUrl: 'https://www.dogfish.com/'
-        - breweryName: Victory Brewing Company
-          breweryUrl: 'https://www.victorybeer.com/'
-        - breweryName: Flying Dog Brewery
-          breweryUrl: 'https://www.flyingdog.com/'
+        - name: Stone Brewing
+          url: 'https://www.stonebrewing.com/'
+        - name: Dogfish Head
+          url: 'https://www.dogfish.com/'
+        - name: Victory Brewing Company
+          url: 'https://www.victorybeer.com/'
+        - name: Flying Dog Brewery
+          url: 'https://www.flyingdog.com/'
       other:
         classifier: Favorite Ninja Turtle
         favorite: Leonardo
-    fullName: Gray Sutherland
+    name: Gray Sutherland
     image: /img/headshots-square-3.jpg
     vietnamese:
       jobDescription: >-
@@ -68,12 +68,12 @@ foundersList:
     favorites:
       beerStyle: Oyster Michelada
       breweries:
-        - breweryName: You've Probably Never Heard of Them
-          breweryUrl: 'http://www.google.com'
+        - name: You've Probably Never Heard of Them
+          url: 'http://www.google.com'
       other:
         classifier: Favorite Ninja Turtle
         favorite: Sauteed with Butter & Garlic
-    fullName: Noah Tanabe
+    name: Noah Tanabe
     image: /img/headshots-square.jpg
     vietnamese:
       jobDescription: >-
@@ -89,16 +89,16 @@ foundersList:
     favorites:
       beerStyle: Pumpkin Spice Latte
       breweries:
-        - breweryName: Gasthaus & Gosebrauerei Bayerischer Bahnhof
-          breweryUrl: www.google.com
-        - breweryName: Störtebeker Braumanufaktur
-          breweryUrl: www.google.com
-        - breweryName: 'Königsegger Walderbräu '
-          breweryUrl: google.com
+        - name: Gasthaus & Gosebrauerei Bayerischer Bahnhof
+          url: www.google.com
+        - name: Störtebeker Braumanufaktur
+          url: www.google.com
+        - name: 'Königsegger Walderbräu '
+          url: google.com
       other:
         classifier: Favorite Ninja Turtle
         favorite: Alligator Snapping Turtle
-    fullName: Nam Tran
+    name: Nam Tran
     image: /img/headshots-square-2.jpg
     vietnamese:
       jobDescription: >-

@@ -143,8 +143,8 @@ collections:
                 widget: string
               -
                 hint: The full name of the Founder.
-                label: Full Name
-                name: fullName
+                label: Name
+                name: name
                 required: true
                 widget: string
               -
@@ -205,13 +205,13 @@ collections:
                       -
                         hint: The name of the brewery
                         label: Brewery Name
-                        name: breweryName
+                        name: name
                         required: true
                         widget: string
                       -
                         hint: The url for the brewery's website
                         label: Brewery URL
-                        name: breweryUrl
+                        name: url
                         widget: string
                   -
                     label: Other
