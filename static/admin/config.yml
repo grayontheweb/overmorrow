@@ -88,6 +88,18 @@ collections:
                 name: heading
                 required: true
                 widget: string
+              -
+                hint: The heading text to display for "Favorite Beer Style"
+                label: Favorite Beer Style Heading
+                name: favoriteBeerStyleHeading
+                required: true
+                widget: string
+              -
+                hint: The heading text to display for "Favorite Breweries"
+                label: Favorite Breweries Heading
+                name: favoriteBreweriesHeading
+                required: true
+                widget: string
           -
             label: Vietnamese
             name: vietnamese
@@ -98,6 +110,18 @@ collections:
                 hint: The heading text for the "Founders" section.
                 label: Heading
                 name: heading
+                required: true
+                widget: string
+              -
+                hint: The heading text to display for "Favorite Beer Style"
+                label: Favorite Beer Style Heading
+                name: favoriteBeerStyleHeading
+                required: true
+                widget: string
+              -
+                hint: The heading text to display for "Favorite Breweries"
+                label: Favorite Breweries Heading
+                name: favoriteBreweriesHeading
                 required: true
                 widget: string
           -
