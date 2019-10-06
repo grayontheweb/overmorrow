@@ -2,11 +2,21 @@
 @import 'src/css/mixins';
 
 .About {
-  background: transparent;
+  position: relative;
+
+  &__parallax-background {
+    background-image: linear-gradient(to bottom, transparent, $very-dark-blue 75%, $very-dark-blue);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
 
   &__parallax-container {
     background: $very-dark-blue;
     color: $white;
+    will-change: opacity, transform;
   }
 
   &__container {

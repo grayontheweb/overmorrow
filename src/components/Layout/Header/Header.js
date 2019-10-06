@@ -52,7 +52,7 @@ const LayoutHeader = ({
       <ul>
         <li>
           <Link
-            duration={300}
+            duration={500}
             onClick={() => (isOpen ? setIsOpen(false) : null)}
             smooth
             to="about"
@@ -63,7 +63,7 @@ const LayoutHeader = ({
 
         <li>
           <Link
-            duration={300}
+            duration={500}
             onClick={() => (isOpen ? setIsOpen(false) : null)}
             smooth
             to="founders"
@@ -74,7 +74,7 @@ const LayoutHeader = ({
 
         <li>
           <Link
-            duration={300}
+            duration={500}
             onClick={() => (isOpen ? setIsOpen(false) : null)}
             smooth
             to="beers"
@@ -85,7 +85,7 @@ const LayoutHeader = ({
 
         <li>
           <Link
-            duration={300}
+            duration={500}
             onClick={() => (isOpen ? setIsOpen(false) : null)}
             smooth
             to="where"

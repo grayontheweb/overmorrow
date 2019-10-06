@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './Section.scss';
 
-const Section = ({ children, className, fullScreen, id }) => {
+const Section = ({ children, className, fullScreen, id, style }) => {
   const [boundingClientRect, setBoundingClientRect] = useState({});
   const sectionRef = useRef(null);
 
@@ -31,6 +31,7 @@ const Section = ({ children, className, fullScreen, id }) => {
       })}
       id={id}
       ref={sectionRef}
+      style={style}
     >
       {typeof children === 'function' ? children(boundingClientRect) : children}
     </div>
