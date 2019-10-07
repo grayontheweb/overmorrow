@@ -4,7 +4,7 @@ english:
   aromaAndTasteHeading: Aroma & Taste
   heading: Our Beers
 vietnamese:
-  aromaAndTasteHeading: Ipsum el Valasca
+  aromaAndTasteHeading: Hương Vị
   heading: Lorem Ipsum
 beerList:
   - accentColor: '#36994a'
@@ -52,5 +52,54 @@ beerList:
       intro: Loại bia dễ uống của Scotland với mật mía địa phương
     yeast:
       - Neutral Ale Yeast
+  - accentColor: '#faa41a'
+    bottleImage: /img/overmorrow-bottle-visual-ss-645x2000px.png
+    english:
+      aromaAndTaste: >-
+        Effervescent, with rustic grain flavors and aromas of berries, earth,
+        and Vietnamese pepper.
+      description: >-
+        At sunup, 19th-century French miners would descend deep into the
+        mountain, looking forward only to a rustic beer served by gray-clad
+        women at the end of their sunless shift: “Grisette”. We’ve revived this
+        nearly lost style, a thirst-quenching ale to be enjoyed as the crimson
+        sunset washes over a hard day’s labor.
+
+
+        **Sơnsette** is the marriage of handpicked spices from mountainous
+        Northern Vietnam, international hops, and French farmhouse ale yeast to
+        create a savory yet thirst-quenching beer.
+      intro: >-
+        A Savory and Rustic Belgian-style Grisette Ale with Vietnamese Mountain
+        Spices
+    grains:
+      - Pilsner Malt
+      - Flaked Oats
+      - Wheat Malt
+      - Carahell
+    hops:
+      - Callista
+      - Mosaic
+    name: Sơn Sette
+    nameImage: /img/beer-name_ss.svg
+    vietnamese:
+      aromaAndTaste: Bọt khí với hương vị mộc mạc của các loại dâu dại và hạt tiêu Việt Nam.
+      description: >-
+        Vào lúc hừng đông, những thợ mỏ người Pháp thế kỷ thứ 19 sẽ tiến sâu vào
+        lòng núi, mong chờ không gì hơn ngoài thứ thức uống mộc mạc phục vụ bởi
+        những cô gái bận đồ xám vào cuối ngày làm việc: “Grisette”. Chúng tôi đã
+        đem lại loại bia gần như bị lãng quên, một loại bia giúp dập tắt cơn
+        khát vào lúc hoàng hôn cuối mỗi ngày lao động mệt nhọc.
+
+
+        **Sơn Sette** là sự giao thoa giữa các loại gia vị truyền thống của miền
+        núi phía Bắc Việt Nam với các loại cây hoa bia trên thế giới và men bia
+        tại nông trang Pháp, để tạo nên một loại bia ngọt ngào giúp dập tắt cơn
+        khát.
+      intro: >-
+        Loại bia Grisette Ale của Bỉ với hương vị ngọt và mộc mạc trộn cùng với
+        các loại gia vị của miền núi Việt Nam
+    yeast:
+      - Wallonian Farmhouse Yeast
 ---
 
