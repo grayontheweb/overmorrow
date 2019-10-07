@@ -225,6 +225,11 @@ collections:
                         required: true
                         widget: string
                       -
+                        label: Classifier in Vietnamese
+                        name: classifierVietnamese
+                        required: true
+                        widget: string
+                      -
                         label: favorite
                         name: favorite
                         required: true
