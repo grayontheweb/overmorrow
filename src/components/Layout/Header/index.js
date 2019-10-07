@@ -25,16 +25,16 @@ const LayoutHeader = ({ locale }) => {
 
     if (!top) return;
 
-    if (top > height * 2) {
-      setIsFixed(true);
+    if (top > height * 3) {
+      if (!isFixed) setIsFixed(true);
     } else {
-      setIsFixed(false);
+      if (isFixed) setIsFixed(false);
     }
 
     if (top > window.innerHeight - height && top < previousScrollTop) {
-      setIsVisible(true);
+      if (!isVisible) setIsVisible(true);
     } else {
-      setIsVisible(false);
+      if (isVisible) setIsVisible(false);
     }
 
     setPreviousScrollTop(top);

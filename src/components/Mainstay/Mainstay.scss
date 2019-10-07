@@ -10,6 +10,7 @@
 
   @include breakpoint(tablet) {
     background-image: linear-gradient(to top, transparent, transparent 160px, $white 160px, $white);
+    padding-bottom: 180px;
     padding-top: 90px;
   }
 
@@ -169,25 +170,28 @@
     }
 
     @include breakpoint(tablet) {
+      margin-bottom: -180px;
       position: static;
       width: 340px;
     }
   }
 
-  &.Mainstay__reverse {
-    .Mainstay__container {
-      flex-direction: row-reverse;
+  @include breakpoint(tablet) {
+    &.Mainstay__reverse {
+      .Mainstay__container {
+        flex-direction: row-reverse;
 
-      &__column-left {
-        margin-left: 0;
-        margin-right: 0;
-        margin-right: 18px;
-      }
+        &__column-left {
+          margin-left: 0;
+          margin-right: 0;
+          margin-right: 18px;
+        }
 
-      &__column-right {
-        flex: 1;
-        margin-left: 32px;
-        margin-right: 14px;
+        &__column-right {
+          flex: 1;
+          margin-left: 32px;
+          margin-right: 14px;
+        }
       }
     }
   }

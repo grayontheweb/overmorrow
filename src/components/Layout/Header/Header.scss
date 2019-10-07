@@ -4,18 +4,11 @@
 .LayoutHeader {
   display: flex;
   flex-direction: column;
-  min-height: $header-height;
-  justify-content: space-between;
-  left: 0;
   position: absolute;
-  right: 0;
-  overflow: hidden;
-  max-height: $header-height;
+  width: 100%;
   z-index: 1000;
-  transition: background 0.3s linear, top 0.2s ease-in;
 
   @include breakpoint(tablet) {
-    align-items: center;
     flex-direction: row;
     padding: 0 60px;
   }
@@ -24,6 +17,7 @@
     $background: rgba($white, 0.95);
     position: fixed;
     top: 0;
+    transition: background 0.3s linear, top 0.2s ease-in;
 
     &:not(.LayoutHeader--is-visible) {
       top: -$header-height;
@@ -32,7 +26,7 @@
 
   &--is-open {
     background: rgba($white, 0.95) !important;
-    max-height: none;
+    max-height: 4000px;
     top: 0 !important;
   }
 
@@ -41,24 +35,13 @@
     box-shadow: 0 6px 12px 0 rgba(0, 0, 49, 0.12);
   }
 
-  &__navigation {
-    display: flex;
-    flex-direction: column;
-    font-family: $font-family-gotham;
-    font-size: 16px;
-    font-weight: 700;
-    padding-top: 100px;
+  &__top {
+    height: $header-height;
     position: relative;
 
     @include breakpoint(tablet) {
       align-items: center;
-      flex-direction: row;
-      padding-top: 0;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+      display: flex;
     }
 
     &__logo {
@@ -115,8 +98,35 @@
         display: none;
       }
     }
+  }
 
-    ul {
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-gotham;
+    font-size: 16px;
+    font-weight: 700;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.1s linear;
+
+    @include breakpoint(tablet) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      max-height: none;
+      padding-top: 0;
+      transition: none;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul:first-child {
       list-style: none;
       margin: 0;
       padding: 0;
@@ -151,23 +161,13 @@
     }
   }
 
-  &--is-open .LayoutHeader__navigation {
-    &__logo {
-      opacity: 0;
-    }
-
-    .LayoutHeader__navigation__logo-horizontal {
-      left: 0;
-    }
-  }
-
   &__language-toggle {
     border-top: 1px solid rgba(0, 0, 49, 0.1);
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 49, 0.1);
     display: flex;
     font-family: $font-family-open-sans;
     font-size: 16px;
+    font-weight: normal;
     justify-content: center;
     padding: 30px 20px !important;
     list-style: none;
@@ -175,7 +175,8 @@
 
     @include breakpoint(tablet) {
       border: none;
-      padding: 0;
+      flex: none;
+      padding: 0 !important;
     }
 
     a {
@@ -198,6 +199,20 @@
       &:not(:last-child) {
         margin-right: 4px;
       }
+    }
+  }
+
+  &--is-open {
+    .LayoutHeader__top__logo {
+      opacity: 0;
+    }
+
+    .LayoutHeader__top__logo-horizontal {
+      left: 0;
+    }
+
+    .LayoutHeader__navigation {
+      max-height: 275px;
     }
   }
 }

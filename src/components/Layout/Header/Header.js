@@ -25,13 +25,13 @@ const LayoutHeader = ({
     className={classNames('LayoutHeader', {
       'LayoutHeader--is-fixed': isFixed,
       'LayoutHeader--is-open': isOpen,
-      'LayoutHeader--is-visible': isFixed && isVisible,
+      'LayoutHeader--is-visible': isOpen || (isFixed && isVisible),
     })}
     ref={headerRef}
   >
-    <nav className="LayoutHeader__navigation">
+    <div className="LayoutHeader__top">
       <h3
-        className="LayoutHeader__navigation__logo"
+        className="LayoutHeader__top__logo"
         style={{
           backgroundImage: `url(${logo})`,
         }}
@@ -39,20 +39,22 @@ const LayoutHeader = ({
         <a href="#intro">Overmorrow</a>
       </h3>
 
+      <Logo className="LayoutHeader__top__logo-horizontal" />
+
       <button
-        className="LayoutHeader__navigation__menu-toggle"
+        className="LayoutHeader__top__menu-toggle"
         onClick={toggleIsOpen}
         style={{
           backgroundImage: `url(${hamburger})`,
         }}
       />
+    </div>
 
-      <Logo
-        className="LayoutHeader__navigation__logo-horizontal"
-        height={26.5}
-        width={260}
-      />
-
+    <nav
+      className={classNames('LayoutHeader__navigation', {
+        'LayoutHeader__navigation--is-open': isOpen,
+      })}
+    >
       <ul>
         <li>
           <ScrollLink
@@ -87,6 +89,7 @@ const LayoutHeader = ({
           </ScrollLink>
         </li>
 
+        {/*
         <li>
           <ScrollLink
             duration={500}
@@ -97,22 +100,23 @@ const LayoutHeader = ({
             Where
           </ScrollLink>
         </li>
+        */}
+      </ul>
+
+      <ul className="LayoutHeader__language-toggle">
+        <li>
+          <Link activeClassName="active" to="/">
+            English
+          </Link>
+        </li>
+
+        <li>
+          <Link activeClassName="active" to="/vn">
+            Tiếng Việt
+          </Link>
+        </li>
       </ul>
     </nav>
-
-    <ul className="LayoutHeader__language-toggle">
-      <li>
-        <Link activeClassName="active" to="/">
-          English
-        </Link>
-      </li>
-
-      <li>
-        <Link activeClassName="active" to="/vn">
-          Tiếng Việt
-        </Link>
-      </li>
-    </ul>
   </header>
 );
 

@@ -11,7 +11,7 @@
 
   &__background-image {
     background: $very-dark-blue;
-
+    z-index: 400;
     img {
       display: block;
       height: auto;
@@ -24,7 +24,6 @@
       top: 0;
       left: 0;
       right: 0;
-      z-index: -1;
     }
   }
 

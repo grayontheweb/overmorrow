@@ -27,6 +27,15 @@
     padding: 0 38px;
   }
 
+  &__parallax-background {
+    background-image: linear-gradient(to top, red, transparent);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+  }
+
   &__parallax-container {
     align-items: center;
     background: transparent;
@@ -37,7 +46,7 @@
     position: absolute;
     position: fixed;
     width: 100%;
-    top: $header-height / 2;
+    top: 0;
     will-change: opacity, transform;
   }
 
