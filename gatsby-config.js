@@ -24,6 +24,7 @@ module.exports = {
         path: `${__dirname}/data`,
       },
     },
+    'gatsby-plugin-favicon',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

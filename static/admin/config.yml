@@ -10,6 +10,31 @@ collections:
     name: pages
     files:
       -
+        file: data/meta.md
+        label: Meta
+        name: meta
+        fields:
+          -
+            default: meta
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: Title
+            name: title
+            required: true
+            widget: string
+          -
+            label: Description
+            name: description
+            required: true
+            widget: string
+          -
+            label: Image
+            name: image
+            required: true
+            widget: image
+      -
         file: data/about.md
         label: About
         name: about
