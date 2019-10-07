@@ -7,13 +7,18 @@ import Section from 'src/components/Section';
 
 import './Mainstay.scss';
 
-const Mainstay = ({ mainstay, reverse = false }) => (
+const Mainstay = ({
+  aromaAndTasteHeading = 'Aroma & Taste',
+  index,
+  mainstay,
+  reverse = false,
+}) => (
   <Section
-    className={classNames('Mainstay', `Mainstay-${mainstay.id}`, {
+    className={classNames('Mainstay', `Mainstay-${index}`, {
       Mainstay__reverse: reverse,
     })}
     style={{
-      backgroundColor: mainstay.style.accent,
+      backgroundColor: mainstay.accentColor,
     }}
   >
     {(props) => (
@@ -22,23 +27,23 @@ const Mainstay = ({ mainstay, reverse = false }) => (
         <style
           dangerouslySetInnerHTML={{
             __html: `
-          .Mainstay-${mainstay.id} strong,
-          .Mainstay-${mainstay.id} h1,
-          .Mainstay-${mainstay.id} h2,
-          .Mainstay-${mainstay.id} h3,
-          .Mainstay-${mainstay.id} h4,
-          .Mainstay-${mainstay.id} h5,
-          .Mainstay-${mainstay.id} h6
+          .Mainstay-${index} strong,
+          .Mainstay-${index} h1,
+          .Mainstay-${index} h2,
+          .Mainstay-${index} h3,
+          .Mainstay-${index} h4,
+          .Mainstay-${index} h5,
+          .Mainstay-${index} h6
           {
-            color: ${mainstay.style.accentDark}
+            color: ${mainstay.accentColor}
           }
 
-          .Mainstay-${mainstay.id} dl {
-            color: ${mainstay.style.accent}
+          .Mainstay-${index} dl {
+            color: ${mainstay.accentColor}
           }
 
-          .Mainstay-${mainstay.id} dl dt {
-            color: ${mainstay.style.accent}
+          .Mainstay-${index} dl dt {
+            color: ${mainstay.accentColor}
           }
         `,
           }}
@@ -48,13 +53,13 @@ const Mainstay = ({ mainstay, reverse = false }) => (
           <div className="Mainstay__container__column-left">
             <div className="Mainstay__content">
               <img
-                alt={mainstay.title}
+                alt={mainstay.name}
                 className="Mainstay__content__title"
                 src={mainstay.nameImage}
               />
 
               <h3 className="Mainstay__content__introduction">
-                {mainstay.introduction}
+                {mainstay.intro}
               </h3>
 
               <Markdown
@@ -63,19 +68,19 @@ const Mainstay = ({ mainstay, reverse = false }) => (
               />
 
               <div className="Mainstay__content__aroma-and-taste">
-                <h4>Aroma & Taste</h4>
-                <p>{mainstay.flavorProfile.aromaAndTaste}</p>
+                <h4>{aromaAndTasteHeading}</h4>
+                <p>{mainstay.aromaAndTaste}</p>
               </div>
 
               <dl className="Mainstay__content__recipe">
                 <dt>Grains</dt>
-                <dd>{mainstay.flavorProfile.grains}</dd>
+                <dd>{mainstay.grains.join(', ')}</dd>
 
                 <dt>Hops</dt>
-                <dd>{mainstay.flavorProfile.hops}</dd>
+                <dd>{mainstay.hops.join(', ')}</dd>
 
                 <dt>Yeast</dt>
-                <dd>{mainstay.flavorProfile.yeast}</dd>
+                <dd>{mainstay.yeast.join(', ')}</dd>
               </dl>
             </div>
           </div>
@@ -87,10 +92,7 @@ const Mainstay = ({ mainstay, reverse = false }) => (
                 transform: `translateY(${props.top / 12}px)`,
               }}
             >
-              <img
-                alt={`${mainstay.title} Bottle`}
-                src={mainstay.bottleImage}
-              />
+              <img alt={`${mainstay.name} Bottle`} src={mainstay.bottleImage} />
             </div>
           </div>
         </div>

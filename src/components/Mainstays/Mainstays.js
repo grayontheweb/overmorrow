@@ -5,7 +5,7 @@ import Section from 'src/components/Section';
 
 import './Mainstays.scss';
 
-const Mainstays = ({ mainstays }) => (
+const Mainstays = ({ content }) => (
   <Section className="Mainstays" id="beers">
     {(props) => (
       <div
@@ -16,12 +16,14 @@ const Mainstays = ({ mainstays }) => (
         }}
       >
         <div className="Mainstays__header">
-          <h2>Our Beers</h2>
+          <h2>{content.heading}</h2>
         </div>
 
-        {mainstays.map((mainstay, index) => (
+        {content.beerList.map((mainstay, index) => (
           <Mainstay
-            key={mainstay.id}
+            aromaAndTasteHeading={content.aromaAndTasteHeading}
+            index={index}
+            key={index}
             mainstay={mainstay}
             reverse={index % 2 > 0}
           />
