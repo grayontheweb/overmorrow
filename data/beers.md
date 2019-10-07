@@ -101,5 +101,51 @@ beerList:
         các loại gia vị của miền núi Việt Nam
     yeast:
       - Wallonian Farmhouse Yeast
+  - accentColor: '#00acda'
+    bottleImage: /img/overmorrow-bottle-visual-hw-645x2000px.png
+    english:
+      aromaAndTaste: >-
+        Huge passionfruit, gooseberry, and white grape aromas with a crisp
+        mouthfeel.
+      description: >-
+        The modern arms race of bearded and bespectacled American brewers
+        seeking a crisp canvas to showcase brash IPAs has led to new frontiers
+        in brewing. A bold innovation has come from a California brewer who
+        discovered a new use for an old brewing enzyme to create a style the
+        world had never seen–the Brut IPA.
+
+
+        **Hồ Ly Water** is a truly modern beer, using hops imported from four
+        countries and a backbone of local Bắc Hương rice to fuel the enzymes
+        that create a uniquely dry IPA.
+      intro: A Crisp Brut IPA Brewed With Northern Vietnamese Rice
+    grains:
+      - Pale Malt
+      - Wheat Malt
+    hops:
+      - Hallertau Blanc
+      - Ella
+      - Nelson Sauvin
+      - Centennial
+      - Cascade
+    name: Hồ Ly Water
+    nameImage: /img/beer-name_hw.svg
+    vietnamese:
+      aromaAndTaste: 'Hương chanh dây, cây lý gai và hương nho xanh với nhiều bọt khí.'
+      description: >-
+        Công cuộc cạnh tranh giữa những người Mỹ để đưa ra một loại bia IPA phá
+        cách đã tạo nên một thị trường mới trong ngành ủ bia. Một nhà ủ bia tại
+        California đã tìm ra công dụng mới cho một loại enzim để ủ bia, dẫn tới
+        một sáng chế đầy táo bạo mà chưa ai từng thấy trên thế giới - một loại
+        bia IPA nguyên chất.
+
+
+        **Hồ Ly Water** thực sự là một loại bia của thời kỳ hiện đại, với việc
+        sử dụng cây hoa bia nhập khẩu từ bốn quốc gia trên thế giới và nguyên
+        liệu chính là loại gạo Bắc Hương để tạo ra enzim sản xuất ra loại bia
+        đắng IPA độc nhất vô nhị
+      intro: Một loại bia IPA ủ nguyên chất với gạo từ miền Bắc Việt Nam
+    yeast:
+      - Neutral Ale Yeast
 ---
 
