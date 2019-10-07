@@ -4,6 +4,8 @@ import email from './images/icon-email.svg';
 import facebook from './images/icon-fb.svg';
 import instagram from './images/icon-ig.svg';
 
+import './Social.scss';
+
 const LayoutFooterSocial = () => (
   <div className="LayoutFooterSocial">
     <ul>
@@ -11,9 +13,10 @@ const LayoutFooterSocial = () => (
         <a
           href="https://www.facebook.com/overmorrowbrewingco"
           rel="noopener noreferrer"
+          style={{ backgroundImage: `url(${facebook})` }}
           target="_blank"
         >
-          <img alt="Facebook" src={facebook} />
+          Facebook
         </a>
       </li>
 
@@ -21,15 +24,20 @@ const LayoutFooterSocial = () => (
         <a
           href="https://www.instagram.com/overmorrowbrewingco"
           rel="noopener noreferrer"
+          style={{ backgroundImage: `url(${instagram})` }}
           target="_blank"
         >
-          <img alt="Instagram" src={instagram} />
+          Instagram
         </a>
       </li>
 
       <li>
-        <a href="mailto:info@overmorrow.beer" target="_top">
-          <img alt="Email" src={email} />
+        <a
+          href="mailto:info@overmorrow.beer"
+          style={{ backgroundImage: `url(${email})` }}
+          target="_top"
+        >
+          Email
         </a>
       </li>
     </ul>

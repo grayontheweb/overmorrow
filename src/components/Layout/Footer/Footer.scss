@@ -2,5 +2,105 @@
 @import 'src/css/mixins';
 
 .LayoutFooter {
-  background: blue;
+  align-item: center;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 0 20px;
+
+  @include breakpoint(tablet) {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 60px 28px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__information {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+
+    @include breakpoint(tablet) {
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: row;
+    }
+
+    &__logo {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;;
+      height: 40px;
+      text-indent: -9999px;
+      width: 40px;
+
+      @include breakpoint(tablet) {
+        margin: 0 20px 0 0;
+      }
+    }
+
+    &__legal {
+      position: relative;
+      padding-left: 20px;
+      padding-top: 10px;
+      text-align: center;
+
+      @include breakpoint(tablet) {
+        text-align: left;
+      }
+
+      &__copyright {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: normal;
+        margin-bottom: 30px;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 7px;
+        }
+
+        &:before {
+          content: '\00a9';
+
+          @include breakpoint(tablet) {
+            left: 0;
+            position: absolute;
+          }
+        }
+      }
+
+      &__address {
+        display: block;
+        font-family: $font-family-open-sans;
+        font-size: 14px;
+        line-height: 1.57;
+        margin-bottom: 30px;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 50px;
+        }
+      }
+
+      &__design-services {
+        display: block;
+        font-family: $font-family-open-sans;
+        font-size: 14px;
+        margin-bottom: 30px;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
