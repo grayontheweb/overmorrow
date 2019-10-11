@@ -23,7 +23,7 @@ const LayoutHeader = ({ locale }) => {
       top = window.pageYOffset || document.documentElement.scrollTop;
     }
 
-    if (!top) return;
+    if (typeof top !== 'number') return;
 
     if (top > height * 3) {
       if (!isFixed) setIsFixed(true);
@@ -53,6 +53,16 @@ const LayoutHeader = ({ locale }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [previousScrollTop]);
+
+  // Ensures that the header state gets updated even if the user scrolls around real quick
+  // and the scroll listener bounces
+  useEffect(() => {
+    setInterval(handleScroll, 500);
+
+    return () => {
+      clearInterval(handleScroll, 500);
+    };
+  }, []);
 
   return (
     <LayoutHeaderComponent
