@@ -1,38 +1,43 @@
 import React from 'react';
 
+import ParallaxObserver from 'src/components/ParallaxObserver';
 import Section from 'src/components/Section';
 import Founder from 'src/components/Founder';
 
 import './Founders.scss';
 
 const Founders = ({ content }) => (
-  <Section className="Founders" fullScreen id="founders">
-    {(props = {}) => {
+  <ParallaxObserver>
+    {({ inView, top }) => {
       let opacity = null;
+      const transform = top > 0 ? `translateY(${top / 2}px)` : null;
 
-      if (typeof window !== 'undefined' && props.top) {
-        opacity = (1 - props.top / window.innerHeight) * 1.5;
+      if (typeof window !== 'undefined' && top) {
+        opacity = (1 - top / window.innerHeight) * 1.5;
       }
 
-      return (
-        <div
-          className="Founders__parallax-container"
-          style={{
-            opacity: opacity < 1 ? opacity : null,
-            transform: props.top > 0 ? `translateY(${props.top / 2}px)` : null,
-          }}
-        >
-          <h2>{content.heading}</h2>
+      const style = inView
+        ? {
+            opacity,
+            transform,
+          }
+        : null;
 
-          <div className="Founders__container">
-            {content.foundersList.map((founder, i) => (
-              <Founder founder={founder} key={i} />
-            ))}
+      return (
+        <Section className="Founders" fullScreen id="founders">
+          <div className="Founders__parallax-container" style={style}>
+            <h2>{content.heading}</h2>
+
+            <div className="Founders__container">
+              {content.foundersList.map((founder, i) => (
+                <Founder founder={founder} key={i} />
+              ))}
+            </div>
           </div>
-        </div>
+        </Section>
       );
     }}
-  </Section>
+  </ParallaxObserver>
 );
 
 export default Founders;

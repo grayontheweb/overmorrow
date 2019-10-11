@@ -6,7 +6,7 @@ import './Founder.scss';
 
 const Founder = ({ founder = {} }) => (
   <div className="Founder">
-    <div className="Founder__parallax-background">
+    <div className="Founder__parallax-container">
       {founder.image && (
         <div className="Founder__image">
           <Img alt={founder.name} fixed={founder.image.childImageSharp.fixed} />

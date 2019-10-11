@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Markdown from 'react-markdown';
 
+import ParallaxObserver from 'src/components/ParallaxObserver';
 import Section from 'src/components/Section';
 
 import pronunciationImage from './images/pronunciation.svg';
@@ -9,31 +10,38 @@ import termImage from './images/term.svg';
 import './About.scss';
 
 const About = ({ intro }) => (
-  <Section className="About" id="about">
-    {(props = {}) => {
+  <ParallaxObserver>
+    {({ inView, top }) => {
       let opacity = null;
+      const transform = top > 0 ? `translateY(${top / 2}px)` : null;
 
-      if (typeof window !== 'undefined' && props.top) {
-        opacity = 1 - props.top / window.innerHeight;
+      if (typeof window !== 'undefined' && top) {
+        opacity = 1 - top / window.innerHeight;
       }
 
+      const parallaxBackgroundStyle = inView
+        ? {
+            transform,
+          }
+        : null;
+
+      const parallaxContainerStyle = inView
+        ? {
+            opacity: opacity < 1 ? opacity : null,
+            transform,
+          }
+        : null;
+
       return (
-        <Fragment>
+        <Section className="About" id="about">
           <div
             className="About__parallax-background"
-            style={{
-              transform:
-                props.top > 0 ? `translateY(${props.top / 2}px)` : null,
-            }}
+            style={parallaxBackgroundStyle}
           />
 
           <div
             className="About__parallax-container"
-            style={{
-              opacity: opacity && opacity < 1 ? opacity : null,
-              transform:
-                props.top > 0 ? `translateY(${props.top / 2}px)` : null,
-            }}
+            style={parallaxContainerStyle}
           >
             <div className="About__container">
               <div className="About__container__column-left">
@@ -67,10 +75,10 @@ const About = ({ intro }) => (
               </div>
             </div>
           </div>
-        </Fragment>
+        </Section>
       );
     }}
-  </Section>
+  </ParallaxObserver>
 );
 
 export default About;

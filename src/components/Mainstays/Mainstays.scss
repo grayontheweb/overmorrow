@@ -2,15 +2,11 @@
 @import 'src/css/mixins';
 
 .Mainstays {
-  background: $very-dark-blue;
+  background: $white;
+  padding-top: 60px;
 
-  &__parallax-container {
-    background: $white;
-    padding-top: 60px;
-
-    @include breakpoint(tablet) {
-      padding-top: 140px;
-    }
+  @include breakpoint(tablet) {
+    padding-top: 140px;
   }
 
   &__header {

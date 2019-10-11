@@ -19,7 +19,7 @@ const Section = ({
     ref={sectionRef}
     style={style}
   >
-    {children}
+    {typeof children === 'function' ? children() : children}
   </div>
 );
 

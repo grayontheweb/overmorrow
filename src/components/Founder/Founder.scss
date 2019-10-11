@@ -24,10 +24,11 @@
     border-radius: $image-size;
     box-shadow: 0 8px 24px 0 rgba(0, 0, 49, 0.4);
     height: $image-size;
+    // opacity: 0;
     overflow: hidden;
     margin: 0 auto;
     width: $image-size;
-    z-index: 2;
+    z-index: 200;
 
     img {
       height: auto;

@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Markdown from 'react-markdown';
 import Img from 'gatsby-image';
 
+import ParallaxObserver from 'src/components/ParallaxObserver';
 import Section from 'src/components/Section';
 
 import './Story.scss';
 
 const Story = ({ backgroundImage, content, heading = 'Our Story' }) => (
-  <Section className="Story" fullScreen>
+  <ParallaxObserver>
     {(props) => {
       let opacity = null;
 
@@ -17,7 +18,7 @@ const Story = ({ backgroundImage, content, heading = 'Our Story' }) => (
       }
 
       return (
-        <Fragment>
+        <Section className="Story" fullScreen>
           <div className="Story__background-image">
             <Img
               alt="Overmorrow team"
@@ -43,10 +44,10 @@ const Story = ({ backgroundImage, content, heading = 'Our Story' }) => (
               </div>
             </div>
           </div>
-        </Fragment>
+        </Section>
       );
     }}
-  </Section>
+  </ParallaxObserver>
 );
 
 export default Story;

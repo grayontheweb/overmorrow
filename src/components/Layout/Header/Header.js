@@ -13,11 +13,11 @@ import './Header.scss';
 const { Link: ScrollLink } = ReactScroll;
 
 const LayoutHeader = ({
+  content,
   headerRef,
   isFixed,
   isOpen,
   isVisible,
-  locale,
   setIsOpen,
   toggleIsOpen,
 }) => (
@@ -63,7 +63,7 @@ const LayoutHeader = ({
             smooth
             to="about"
           >
-            About Us
+            {content.aboutUs}
           </ScrollLink>
         </li>
 
@@ -74,7 +74,7 @@ const LayoutHeader = ({
             smooth
             to="founders"
           >
-            The Founders
+            {content.founders}
           </ScrollLink>
         </li>
 
@@ -85,7 +85,7 @@ const LayoutHeader = ({
             smooth
             to="beers"
           >
-            Our Beers
+            {content.ourBeers}
           </ScrollLink>
         </li>
 

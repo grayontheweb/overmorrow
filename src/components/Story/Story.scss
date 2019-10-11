@@ -10,7 +10,7 @@
   }
 
   &__background-image {
-    background: $very-dark-blue;
+    background-image: linear-gradient(to bottom, $very-dark-blue, $very-dark-blue 25%, transparent);
     z-index: 400;
     img {
       display: block;
