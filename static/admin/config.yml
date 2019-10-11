@@ -20,20 +20,111 @@ collections:
             name: templateKey
             widget: hidden
           -
+            hint: The title of the website
             label: Title
             name: title
             required: true
             widget: string
           -
+            hint: The description of the website, for display in search engines and in social media shares
             label: Description
             name: description
             required: true
             widget: string
           -
+            hint: The image to display with the website in social media shares, should be 1200x1200px
             label: Image
             name: image
             required: true
             widget: image
+      -
+        file: data/header.md
+        label: Header
+        name: header
+        fields:
+          -
+            default: header
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: English
+            name: english
+            widget: object
+            fields:
+              -
+                hint: The label for the About Us nav entry
+                label: About Us
+                name: aboutUs
+                required: true
+                widget: string
+              -
+                hint: The label for the Founders nav entry
+                label: Founders
+                name: founders
+                required: true
+                widget: string
+              -
+                hint: The label for the Our Beers nav entry
+                label: Our Beers
+                name: ourBeers
+                required: true
+                widget: string
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                hint: The label for the About Us nav entry
+                label: About Us
+                name: aboutUs
+                required: true
+                widget: string
+              -
+                hint: The label for the Founders nav entry
+                label: Founders
+                name: founders
+                required: true
+                widget: string
+              -
+                hint: The label for the Our Beers nav entry
+                label: Our Beers
+                name: ourBeers
+                required: true
+                widget: string
+      -
+        file: data/intro.md
+        label: Intro
+        name: intro
+        fields:
+          -
+            default: intro
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: English
+            name: english
+            widget: object
+            fields:
+              -
+                hint: The text that appears below the logo on the intro section
+                label: Subtitle
+                name: subtitle
+                required: true
+                widget: string
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                hint: The text that appears below the logo on the intro section
+                label: Subtitle
+                name: subtitle
+                required: true
+                widget: string
       -
         file: data/about.md
         label: About
