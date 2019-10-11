@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import Img from 'gatsby-image';
 import Markdown from 'react-markdown';
 import PropTypes from 'prop-types';
 
@@ -49,11 +50,19 @@ const Mainstay = ({
       <div className="Mainstay__container">
         <div className="Mainstay__container__column-left">
           <div className="Mainstay__content">
-            <img
-              alt={mainstay.name}
-              className="Mainstay__content__title"
-              src={mainstay.nameImage}
-            />
+            {mainstay.nameImage.childImageSharp ? (
+              <Img
+                alt={mainstay.name}
+                className="Mainstay__content__title"
+                fluid={mainstay.nameImage.childImageSharp.fluid}
+              />
+            ) : (
+              <img
+                alt={mainstay.name}
+                className="Mainstay__content__title"
+                src={mainstay.nameImage.publicURL}
+              />
+            )}
 
             <h3 className="Mainstay__content__introduction">
               {mainstay.intro}
@@ -84,7 +93,10 @@ const Mainstay = ({
 
         <div className="Mainstay__container__column-right">
           <div className="Mainstay__bottle-image">
-            <img alt={`${mainstay.name} Bottle`} src={mainstay.bottleImage} />
+            <Img
+              alt={`${mainstay.name} Bottle`}
+              fluid={mainstay.bottleImage.childImageSharp.fluid}
+            />
           </div>
         </div>
       </div>

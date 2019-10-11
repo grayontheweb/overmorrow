@@ -22,9 +22,22 @@ const Founders = ({ locale = 'english' }) => {
           }
 
           foundersList {
-            image
             backgroundColor
             name
+
+            image {
+              id
+              childImageSharp {
+                fixed(
+                  cropFocus: ATTENTION
+                  height: 360
+                  quality: 100
+                  width: 360
+                ) {
+                  ...GatsbyImageSharpFixed_noBase64
+                }
+              }
+            }
 
             english {
               jobTitle

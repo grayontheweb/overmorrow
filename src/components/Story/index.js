@@ -12,7 +12,18 @@ const Story = ({ locale = 'english' }) => {
         id
 
         frontmatter {
-          backgroundImage
+          backgroundImage {
+            childImageSharp {
+              fixed(
+                cropFocus: ATTENTION
+                height: 960
+                quality: 100
+                width: 1440
+              ) {
+                ...GatsbyImageSharpFixed_noBase64
+              }
+            }
+          }
 
           english {
             content

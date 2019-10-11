@@ -24,12 +24,28 @@ const Mainstays = ({ locale = 'english' }) => {
 
           beerList {
             accentColor
-            bottleImage
             grains
             hops
             name
-            nameImage
             yeast
+
+            bottleImage {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 340) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
+
+            nameImage {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 350) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+
+              publicURL
+            }
 
             english {
               intro

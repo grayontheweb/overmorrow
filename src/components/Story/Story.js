@@ -1,9 +1,8 @@
 import React, { Fragment } from 'react';
 import Markdown from 'react-markdown';
+import Img from 'gatsby-image';
 
 import Section from 'src/components/Section';
-
-// import backgroundImage from './images/background.jpg';
 
 import './Story.scss';
 
@@ -20,9 +19,9 @@ const Story = ({ backgroundImage, content, heading = 'Our Story' }) => (
       return (
         <Fragment>
           <div className="Story__background-image">
-            <img
+            <Img
               alt="Overmorrow team"
-              src={backgroundImage}
+              fixed={backgroundImage.childImageSharp.fixed}
               style={{ opacity: opacity < 1 ? opacity : null }}
             />
           </div>
