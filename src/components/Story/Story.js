@@ -22,7 +22,7 @@ const Story = ({ backgroundImage, content, heading = 'Our Story' }) => (
           <div className="Story__background-image">
             <Img
               alt="Overmorrow team"
-              fixed={backgroundImage.childImageSharp.fixed}
+              fluid={backgroundImage.childImageSharp.fluid}
               style={{ opacity: opacity < 1 ? opacity : null }}
             />
           </div>

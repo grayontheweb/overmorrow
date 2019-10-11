@@ -12,33 +12,16 @@ import './About.scss';
 const About = ({ intro }) => (
   <ParallaxObserver>
     {({ inView, top }) => {
-      let opacity = null;
       const transform = top > 0 ? `translateY(${top / 2}px)` : null;
-
-      if (typeof window !== 'undefined' && top) {
-        opacity = 1 - top / window.innerHeight;
-      }
-
-      const parallaxBackgroundStyle = inView
-        ? {
-            transform,
-          }
-        : null;
 
       const parallaxContainerStyle = inView
         ? {
-            opacity: opacity < 1 ? opacity : null,
             transform,
           }
         : null;
 
       return (
         <Section className="About" id="about">
-          <div
-            className="About__parallax-background"
-            style={parallaxBackgroundStyle}
-          />
-
           <div
             className="About__parallax-container"
             style={parallaxContainerStyle}

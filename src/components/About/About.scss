@@ -2,6 +2,7 @@
 @import 'src/css/mixins';
 
 .About {
+  background: $very-dark-blue;
   position: relative;
 
   &__parallax-background {
@@ -14,7 +15,7 @@
   }
 
   &__parallax-container {
-    background: $very-dark-blue;
+
     color: $white;
     will-change: opacity, transform;
   }

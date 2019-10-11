@@ -10,6 +10,30 @@
   position: relative;
   text-align: center;
 
+  &__scroll-icon {
+    background: $very-dark-blue;
+    cursor: pointer;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    z-index: 500;
+
+    a {
+      top: -30px;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 60px;
+      width: 60px;
+    }
+  }
+
   &__logo {
     height: 34px;
     margin: -35px auto 33px;
@@ -25,15 +49,6 @@
     color: rgba(0, 0, 49, 0.5);
     font-size: 19px;
     padding: 0 38px;
-  }
-
-  &__parallax-background {
-    background-image: linear-gradient(to top, red, transparent);
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
   }
 
   &__parallax-container {
