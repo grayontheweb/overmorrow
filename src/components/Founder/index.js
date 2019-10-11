@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Image from 'src/components/Image';
+
 import './Founder.scss';
 
 const Founder = ({ founder = {} }) => (
@@ -8,7 +10,8 @@ const Founder = ({ founder = {} }) => (
     <div className="Founder__parallax-background">
       {founder.image && (
         <div className="Founder__image">
-          <img alt="beer person" src={founder.image} />
+          <img alt="beer person" src={`/static/${founder.image}`} />
+          <Image />
         </div>
       )}
 
