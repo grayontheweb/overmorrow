@@ -90,20 +90,20 @@ foundersList:
       jobDescription: >-
         Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
         hendrerit. Pellen tesque.
-      jobTitle: Has a Fancy Title
+      jobTitle: Cultural Advisor
     favorites:
-      beerStyle: Pumpkin Spice Latte
+      beerStyle: Milk Stout
       breweries:
-        - name: Gasthaus & Gosebrauerei Bayerischer Bahnhof
-          url: www.google.com
-        - name: Störtebeker Braumanufaktur
-          url: www.google.com
-        - name: 'Königsegger Walderbräu '
-          url: google.com
+        - name: Wormtown Brewery
+          url: 'http://wormtownbrewery.com'
+        - name: Clown Shoes Beer
+          url: 'https://clownshoesbeer.com/'
+        - name: Heart of Darkness
+          url: 'http://heartofdarknessbrewery.com/'
       other:
-        classifier: Favorite Ninja Turtle
-        classifierVietnamese: Favorite
-        favorite: Alligator Snapping Turtle
+        classifier: Favorite Pokémon
+        classifierVietnamese: Pokémon Ưa Thích
+        favorite: Shuckle
     image: /img/headshots-square-2.jpg
     name: Nam Tran
     vietnamese:
