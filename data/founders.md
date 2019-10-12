@@ -42,8 +42,9 @@ foundersList:
   - backgroundColor: '#e29a26'
     english:
       jobDescription: >-
-        Official taste tester. Supervises design, branding, and Internet things.
-        Writes emails, signs paperwork, solves problems, and sometimes sleeps
+        Official taste tester. Unofficial  Supervises design, branding, and
+        Internet things. Writes emails, signs paperwork, solves problems, and
+        sometimes sleeps.
       jobTitle: Director of Operations
     favorites:
       beerStyle: Black IPA
