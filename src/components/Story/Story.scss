@@ -92,7 +92,11 @@
   &__description {
     font-family: $font-family-open-sans;
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.5;
+
+    @include breakpoint(tablet) {
+      line-height: normal;
+    }
 
     *:first-child {
       margin-top: 0;
