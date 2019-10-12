@@ -11,7 +11,11 @@ vietnamese:
 foundersList:
   - backgroundColor: '#00acda'
     english:
-      jobDescription: 'Conceives and brews delicious beer. Reads about hops and malt for fun. '
+      jobDescription: >-
+        Delves into all things arcane and obscure. Brewer's yeast nutrition
+        counselor, tri-clamp officionado. Attempts to speak Vietnamese,
+        multitask while pumps are running, and bring excellent beer to the
+        masses.
       jobTitle: Head Brewer
     favorites:
       beerStyle: '"I can''t choose a favorite child."'
@@ -39,7 +43,7 @@ foundersList:
     english:
       jobDescription: >-
         Official taste tester. Supervises design, branding, and Internet things.
-        Writes emails, signs paperwork, solves problems, and sometimes sleeps.
+        Writes emails, signs paperwork, solves problems, and sometimes sleeps
       jobTitle: Director of Operations
     favorites:
       beerStyle: Black IPA
@@ -62,13 +66,13 @@ foundersList:
       jobDescription: >-
         Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
         hendrerit. Pellen tesque.
-      jobTitle: Phasellus la Hendrerit
+      jobTitle: Giám Dốc Điều Hành
   - backgroundColor: '#509a5a'
     english:
       jobDescription: >-
-        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
-        hendrerit. Pellen tesque.
-      jobTitle: Eats Things
+        Drinks good beer, eats good food.  Spends his time creating or searching
+        for the two and will talk about them for as long as you let him.
+      jobTitle: Products and Service Advisor
     favorites:
       beerStyle: Oyster Michelada
       breweries:
