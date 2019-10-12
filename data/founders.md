@@ -14,20 +14,20 @@ foundersList:
       jobDescription: 'Conceives and brews delicious beer. Reads about hops and malt for fun. '
       jobTitle: Head Brewer
     favorites:
-      beerStyle: Milkshake IPA
+      beerStyle: '"I can''t choose a favorite child."'
       breweries:
-        - name: Stone Brewing
-          url: 'https://www.stonebrewing.com/'
-        - name: Stone Brewing
-          url: 'https://www.stonebrewing.com/'
-        - name: Stone Brewing
-          url: 'https://www.stonebrewing.com/'
-        - name: Stone Brewing
-          url: 'https://www.stonebrewing.com/'
+        - name: Victory Brewing Company
+          url: 'https://www.victorybeer.com/'
+        - name: Tröegs Independent Brewing
+          url: 'https://troegs.com/'
+        - name: Crooked Stave Artisan Beer Project
+          url: 'http://www.crookedstave.com/'
+        - name: Brewery Ommegang
+          url: 'https://www.ommegang.com/'
       other:
-        classifier: Favorite Horror Monster
-        classifierVietnamese: Horror Monster Ưa Thích
-        favorite: Dracula
+        classifier: Favorite Serialist Composer
+        classifierVietnamese: '"Serialist Composer" Ưa Thích'
+        favorite: Alban Berg
     image: /img/headshots-square-4.jpg
     name: Chris Jarvis
     vietnamese:
