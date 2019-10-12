@@ -42,16 +42,16 @@ foundersList:
         Writes emails, signs paperwork, solves problems, and sometimes sleeps.
       jobTitle: Director of Operations
     favorites:
-      beerStyle: Imperial Ultralight Radler
+      beerStyle: Black IPA
       breweries:
-        - name: Stone Brewing
-          url: 'https://www.stonebrewing.com/'
         - name: Dogfish Head
           url: 'https://www.dogfish.com/'
-        - name: Victory Brewing Company
-          url: 'https://www.victorybeer.com/'
         - name: Flying Dog Brewery
           url: 'https://www.flyingdog.com/'
+        - name: The Duck-Rabbit Brewery Craft Brewery
+          url: 'https://duckrabbitbrewery.com/'
+        - name: Mikkeller
+          url: 'http://mikkeller.dk/'
       other:
         classifier: Favorite Ninja Turtle
         classifierVietnamese: Favorite
