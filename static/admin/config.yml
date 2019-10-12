@@ -493,3 +493,35 @@ collections:
                     name: aromaAndTaste
                     required: true
                     widget: string
+      -
+        file: data/footer.md
+        label: Footer
+        name: footer
+        fields:
+          -
+            default: footer
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: English
+            name: english
+            widget: object
+            fields:
+              -
+                hint: The text for the attribution of the design
+                label: Design Attribution
+                name: designAttribution
+                required: true
+                widget: string
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                hint: The text for the attribution of the design
+                label: Design Attribution
+                name: designAttribution
+                required: true
+                widget: string
