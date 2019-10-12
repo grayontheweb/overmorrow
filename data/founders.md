@@ -5,15 +5,13 @@ english:
   favoriteBreweriesHeading: Favorite Breweries
   heading: The Founders
 vietnamese:
-  favoriteBeerStyleHeading: Nulla Luctus
-  favoriteBreweriesHeading: Luctus Nulla
-  heading: Nulla Luctus
+  favoriteBeerStyleHeading: Loại Bia Ưa Thích
+  favoriteBreweriesHeading: Xưởng Bia Ưa Thích
+  heading: Những Người Sáng Lập
 foundersList:
   - backgroundColor: '#00acda'
     english:
-      jobDescription: >-
-        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
-        hendrerit. Pellen tesque.
+      jobDescription: 'Conceives and brews delicious beer. Reads about hops and malt for fun. '
       jobTitle: Head Brewer
     favorites:
       beerStyle: Milkshake IPA
@@ -28,6 +26,7 @@ foundersList:
           url: 'https://www.stonebrewing.com/'
       other:
         classifier: Favorite Horror Monster
+        classifierVietnamese: Horror Monster Ưa Thích
         favorite: Dracula
     image: /img/headshots-square-4.jpg
     name: Chris Jarvis
@@ -39,8 +38,8 @@ foundersList:
   - backgroundColor: '#e29a26'
     english:
       jobDescription: >-
-        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
-        hendrerit. Pellen tesque.
+        Official taste tester. Supervises design, branding, and Internet things.
+        Writes emails, signs paperwork, solves problems, and sometimes sleeps.
       jobTitle: Director of Operations
     favorites:
       beerStyle: Imperial Ultralight Radler
@@ -55,6 +54,7 @@ foundersList:
           url: 'https://www.flyingdog.com/'
       other:
         classifier: Favorite Ninja Turtle
+        classifierVietnamese: Favorite
         favorite: Leonardo
     image: /img/headshots-square-3.jpg
     name: Gray Sutherland
@@ -76,6 +76,7 @@ foundersList:
           url: 'http://www.google.com'
       other:
         classifier: Favorite Ninja Turtle
+        classifierVietnamese: Favorite
         favorite: Sauteed with Butter & Garlic
     image: /img/headshots-square.jpg
     name: Noah Tanabe
@@ -101,6 +102,7 @@ foundersList:
           url: google.com
       other:
         classifier: Favorite Ninja Turtle
+        classifierVietnamese: Favorite
         favorite: Alligator Snapping Turtle
     image: /img/headshots-square-2.jpg
     name: Nam Tran
@@ -110,3 +112,4 @@ foundersList:
         hendrerit. Pellen tesque.
       jobTitle: Vietnamese Job Title
 ---
+
