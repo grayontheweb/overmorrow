@@ -5,7 +5,7 @@ english:
   heading: Our Beers
 vietnamese:
   aromaAndTasteHeading: Hương Vị
-  heading: Lorem Ipsum
+  heading: Bia Của Chúng Tôi
 beerList:
   - accentColor: '#36994a'
     bottleImage: /img/overmorrow-bottle-visual-lom-645x2000px.png
