@@ -17,43 +17,52 @@ english:
     we are not happy to drink ourselves.
 vietnamese:
   content: >-
-    Mauris porttitor tellus odio, et pulvinar ipsum imperdiet quis. Mauris non
-    leo viverra justo aliquet interdum. Donec suscipit erat vitae lorem pretium,
-    et posuere mauris posuere. Donec bibendum justo nec est dapibus, ac
-    convallis nulla sagittis. Nunc consectetur egestas nisi non vulputate. Lorem
-    ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod tellus
-    quis eros feugiat, a cursus felis tincidunt. Fusce condimentum dictum ex et
-    fermentum. Integer vulputate tellus eu facilisis pellentesque. Cras laoreet
-    pretium diam sed semper. Cras dapibus interdum diam, vel efficitur dui
-    sagittis et. Proin et porttitor lorem. Etiam et finibus magna, vitae tempus
-    nulla.
+    Hành trình của Overmorrow Brewing bắt đầu từ năm 2008, khi **Chris Jarvis**
+    và **Gray Sutherland** gặp nhau trong khi theo học đại học ở Pittsburgh. Hai
+    người họ kết thân nhau thông qua những sở thích giống nhau như niềm đam mê
+    đối với âm nhạc cổ điển đương đại, sự hứng thú đối với bia và tâm hồn tự do
+    yêu thích khám phá. Sau nhiều năm khám phá các thành phố khác nhau trên thế
+    giơi, theo đuổi những dự án cùng nhau cũng như của bản thân họ (bao gồm cả
+    việc thành lâph một ban nhạc folk-punk Elephant Gazebo với kèn flugabone và
+    đàn guitar), cả hai tách ra, với Chris định cư tại Việt Nam để theo đuổi thứ
+    ngôn ngữ mà anh yêu thích và Gray tiếp tục hành trình du lịch và phát nghề
+    nghiệp của mình. Dẫu vậy, hai người bạn hẹn gặp nhau tại các thành phố khác
+    nhau trên khắp ba lục địa, để thưởng thức bất cứ loại đặc sản và thức uống
+    nào mà địa phương đó có.
 
 
-    Morbi gravida urna urna, eu congue urna accumsan sed. Donec in orci vel
-    ligula malesuada sagittis ac in lacus. Vivamus malesuada dolor a nulla
-    vestibulum dictum. Etiam faucibus neque odio, quis mattis nisi hendrerit
-    eget. Phasellus nisl lectus, consequat at quam ut, aliquet eleifend leo. Sed
-    lorem sem, egestas vel ipsum a, blandit fermentum ipsum. Pellentesque sit
-    amet semper est. Suspendisse nec magna pharetra eros commodo dapibus. 
+    Vào năm 2015, họ nhận ra rằng Việt Nam và bia, hai niềm đam mê lớn nhất của
+    Chris có thể kế thợp với nhau và từ đó, kế hoạch thành lập một nhà máy bia
+    tại chính thủ đo Hà Nôi dần dần hình thành. Sau nhiều năm tư vấn phát triển
+    các trang web, Gray bắt đầu hướng tới các thử thách mới và cộng tác với
+    Chris để thực hiện dự án mới của hai người. Cùng với họ là **Trần Nam** và
+    **Noah Tanabe**, hai người bạn với xuất thân từ Việt Nam, Nhật Bản và cả Mỹ,
+    những người này là sự kết hợp của yếu tố nước ngoài với những tinh hoa Việt
+    Nam và mong muốn được tạo ra một loại bia tuyệt hảo để thể hiện tất cả những
+    điều đó.
 
 
-    Fusce consequat consectetur turpis sit amet porta. Phasellus euismod lacus a
-    neque accumsan porttitor. Ut accumsan tortor quis magna tempor, eu maximus
-    nulla pharetra. Proin sit amet lectus condimentum, sagittis urna id,
-    facilisis urna. Sed nisl risus, volutpat eget malesuada id, tristique in
-    enim. Pellentesque gravida at eros vel accumsan. Aenean nec tortor pretium,
-    ullamcorper mauris id, accumsan neque. Nulla porttitor ac velit a lobortis.
-  heading: Ut Faucibus
+    Sản phẩm của chúng tôi là hành trình vượt địa lý và thời gian, từ những bến
+    cảng của đất nước Scotland thời xưa, những hầm mỏ trong lòng núi tại vùng
+    quê nước Pháp cho tới những cánh rừng và cánh đồng hoa bia của Bờ Tây nước
+    Mỹ. Tại đây, các loại bia được kết hợp với nguyên liệu từ chính những cây
+    mía, đồng ruộng và trên những sường đồi của Việt Nam. Chúng tôi hy vọng đã
+    đưa vào thêm một thứ gì đó đặc biệt cho những loại bia cổ điển nói trên 
+    thông qua sự kết hợp này , cũng giống như hành trình của chúng tôi đến với
+    Overmorrow. Cùng nhau, chúng tôi đã xây dựng nên một tổ ấm tại Việt Nam
+  heading: Câu Chuyện Của Chúng Tôi
   intro: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia, arcu
-    eget mollis malesuada, dolor dolor rutrum dui, eu cursus urna urna nec odio.
-    Donec aliquam sodales erat, at laoreet est posuere ut. 
+    **Với cái tên được lấy cảm hứng từ một từ cổ để chỉ tương lai, công ty bia
+    Overmorrow Brewing đi vào hoạt động nhằm quảng bá và tôn vinh những loại bia
+    cổ điển xuyên suốt lịch sử, đồng thời đưa vào đó những giá trị của thời hiện
+    đại cũng như tương lai ở Việt Nam.** 
 
 
-    Curabitur neque enim, faucibus ac hendrerit ut, porta nec nulla. Cras non ex
-    eros. Morbi fermentum lorem nec enim efficitur tempus. Ut faucibus neque nec
-    arcu cursus lacinia. Ut eu dolor dui. Quisque nisi diam, blandit at risus
-    vel, auctor commodo odio. Ut vestibulum nulla luctus felis consectetur
-    dictum.
+    Cũng giống như đội ngũ sáng lập ra công ty, sản phẩm của chúng tôi là những
+    loại bia nổi tiếng trên thế giới, được kết hợp với các hương vị và nguyên
+    liệu đặc trưng của Việt Nam. Mặc dù vẫn đang trong giai đoạn phát triển,
+    nhưng một điều chắc chắn rằng, chất lượng sẽ không bao giờ bị ảnh hưởng và
+    sẽ không bao giờ đưa ra những sản phẩm mà bản thân chúng tôi cũng không hài
+    lòng.
 ---
 
