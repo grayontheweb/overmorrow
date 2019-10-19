@@ -18,9 +18,12 @@ const Layout = ({ children, locale = 'english', meta }) => (
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
       <meta property="og:image" content={meta.imageUrl} />
+      <meta property="og:image:alt" content="Overmorrow Brewing Company" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="1200" />
 
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://metatags.io/" />
+      <meta property="twitter:url" content={meta.url} />
       <meta property="twitter:title" content={meta.title} />
       <meta property="twitter:description" content={meta.description} />
       <meta property="twitter:image" content={meta.imageUrl} />

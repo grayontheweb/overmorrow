@@ -3,7 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import LayoutComponent from './Layout';
 
-const Layout = ({ children, locale = 'english', location }) => {
+const Layout = (props) => {
+  const { children, locale = 'english', location } = props;
   const {
     markdownRemark: { frontmatter },
   } = useStaticQuery(graphql`
@@ -35,8 +36,11 @@ const Layout = ({ children, locale = 'english', location }) => {
       locale !== 'vietnamese'
         ? frontmatter.description
         : frontmatter.vnDescription,
-    imageUrl: `${location.origin}/img/${frontmatter.image.relativePath}`,
-    url: location.href,
+    imageUrl: `${
+      location.origin ? location.origin : 'https://www.overmorrow.beer'
+    }/img/${frontmatter.image.relativePath}`,
+    locale: locale !== 'vietnamese' ? 'en_US' : 'vi_VN',
+    url: location.href || 'https://www.overmorrow.beer',
   };
 
   return <LayoutComponent children={children} locale={locale} meta={meta} />;
