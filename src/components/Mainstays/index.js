@@ -1,41 +1,62 @@
 import React from 'react';
-import { get } from 'lodash';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import MainstaysComponent from './Mainstays';
 
-const Mainstays = () => {
-  const data = useStaticQuery(graphql`
+const Mainstays = ({ locale = 'english' }) => {
+  const {
+    markdownRemark: { frontmatter },
+  } = useStaticQuery(graphql`
     query MainstaysQuery {
-      allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___position] }
-        filter: { frontmatter: { templateKey: { eq: "mainstay" } } }
-      ) {
-        edges {
-          node {
-            id
-            frontmatter {
-              bottleImage
+      markdownRemark(frontmatter: { templateKey: { eq: "beers" } }) {
+        id
+
+        frontmatter {
+          english {
+            aromaAndTasteHeading
+            heading
+          }
+
+          vietnamese {
+            aromaAndTasteHeading
+            heading
+          }
+
+          beerList {
+            accentColor
+            grains
+            hops
+            name
+            yeast
+
+            bottleImage {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 340) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
+
+            nameImage {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 350) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+
+              publicURL
+            }
+
+            english {
+              intro
+              aromaAndTaste
               description
-              introduction
-              nameImage
-              position
-              title
+            }
 
-              flavorProfile {
-                abv
-                aromaAndTaste
-                grains
-                hops
-                og
-                yeast
-              }
-
-              style {
-                accent
-                accentDark
-                accentLight
-              }
+            vietnamese {
+              aromaAndTaste
+              description
+              intro
             }
           }
         }
@@ -43,11 +64,36 @@ const Mainstays = () => {
     }
   `);
 
-  const mainstays = get(data, 'allMarkdownRemark.edges', [])
-    .map((mainstay) => ({ id: mainstay.node.id, ...mainstay.node.frontmatter }))
-    .sort((a, b) => a.position - b.position);
+  const content =
+    locale !== 'vietnamese'
+      ? {
+          ...frontmatter.english,
+          beerList: frontmatter.beerList.map((beer) => ({
+            accentColor: beer.accentColor,
+            bottleImage: beer.bottleImage,
+            grains: beer.grains,
+            hops: beer.hops,
+            name: beer.name,
+            nameImage: beer.nameImage,
+            yeast: beer.yeast,
+            ...beer.english,
+          })),
+        }
+      : {
+          ...frontmatter.vietnamese,
+          beerList: frontmatter.beerList.map((beer) => ({
+            accentColor: beer.accentColor,
+            bottleImage: beer.bottleImage,
+            grains: beer.grains,
+            hops: beer.hops,
+            name: beer.name,
+            nameImage: beer.nameImage,
+            yeast: beer.yeast,
+            ...beer.vietnamese,
+          })),
+        };
 
-  return <MainstaysComponent mainstays={mainstays} />;
+  return <MainstaysComponent content={content} />;
 };
 
 export default Mainstays;

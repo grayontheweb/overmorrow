@@ -1,11 +1,129 @@
-.About {
-  background: #000031;
-  color: white;
-  min-height: 100vh;
-  padding-top: 100px;
+@import 'src/css/variables';
+@import 'src/css/mixins';
 
-  &__content {
-    margin: 0 auto;
-    max-width: 960px;
+.About {
+  background: $very-dark-blue;
+  position: relative;
+
+  &__parallax-background {
+    background-image: linear-gradient(to bottom, transparent, $very-dark-blue 75%, $very-dark-blue);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__parallax-container {
+    color: $white;
+    opacity: 0;
+    transition: opacity 0.05s linear;
+    will-change: opacity, transform;
+  }
+
+  &__container {
+    padding: 60px 20px;
+
+    @include breakpoint(phablet) {
+      padding: 60px 44px;
+    }
+
+    @include breakpoint(tablet) {
+      align-items: flex-start;
+      display: flex;
+      margin: 0 auto;
+      max-width: 1024px;
+      padding: 156px 44px;
+
+      &__column-left {
+        flex: 1;
+        width: 100%;
+      }
+
+      &__column-right {
+        margin-left: 52px;
+        max-width: 660px;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      padding: 183px 0;
+    }
+  }
+
+  &__dictionary {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      margin-bottom: 0;
+      text-align: right;
+    }
+
+    &__term {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 43px;
+      margin: 0 auto 11px;
+      text-align: left;
+      text-indent: -9999px;
+      width: 304px;
+
+      @include breakpoint(tablet) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &__pronunciation {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 35px;
+      margin: 0 auto 11px;
+      text-align: left;
+      text-indent: -9999px;
+      width: 262px;
+
+      @include breakpoint(tablet) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &__definition, &__source {
+      color: rgba($white, 0.6);
+      display: block;
+      font-family: $font-family-open-sans;
+      font-style: italic;
+      line-height: 2.29;
+    }
+
+    &__definition {
+      font-size: 16px;
+    }
+
+    &__source {
+      font-size: 14px;
+    }
+  }
+
+  &__description {
+    font-family: $font-family-open-sans;
+    font-size: 20px;
+    line-height: normal;
+
+    *:first-child {
+      font-weight: 700;
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
   }
 }

@@ -1,88 +1,108 @@
 import React from 'react';
 import classNames from 'classnames';
+import Img from 'gatsby-image';
 import Markdown from 'react-markdown';
 import PropTypes from 'prop-types';
 
 import './Mainstay.scss';
 
-const Mainstay = ({ mainstay, reverse = false }) => (
+const Mainstay = ({
+  aromaAndTasteHeading = 'Aroma & Taste',
+  index,
+  mainstay,
+  reverse = false,
+}) => (
   <div
-    className={classNames('Mainstay', `Mainstay-${mainstay.id}`, {
+    className={classNames('Mainstay', `Mainstay-${index}`, {
       Mainstay__reverse: reverse,
     })}
+    style={{
+      backgroundColor: mainstay.accentColor,
+    }}
   >
-    {/* Sets the color on the strong tags in the description Markdown */}
-    <style
-      dangerouslySetInnerHTML={{
-        __html: `
-      .Mainstay-${mainstay.id} strong,
-      .Mainstay-${mainstay.id} h1,
-      .Mainstay-${mainstay.id} h2,
-      .Mainstay-${mainstay.id} h3,
-      .Mainstay-${mainstay.id} h4,
-      .Mainstay-${mainstay.id} h5,
-      .Mainstay-${mainstay.id} h6
-      {
-        color: ${mainstay.style.accentDark}
-      }
+    <div className="Mainstay__parallax-container">
+      {/* Sets the color on the strong tags in the description Markdown */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          .Mainstay-${index} strong,
+          .Mainstay-${index} h1,
+          .Mainstay-${index} h2,
+          .Mainstay-${index} h3,
+          .Mainstay-${index} h4,
+          .Mainstay-${index} h5,
+          .Mainstay-${index} h6
+          {
+            color: ${mainstay.accentColor}
+          }
 
-      .Mainstay-${mainstay.id} dl {
-        color: ${mainstay.style.accent}
-      }
+          .Mainstay-${index} dl {
+            color: ${mainstay.accentColor}
+          }
 
-      .Mainstay-${mainstay.id} dl dt {
-        color: ${mainstay.style.accentLight}
-      }
-    `,
-      }}
-    />
+          .Mainstay-${index} dl dt {
+            color: ${mainstay.accentColor}
+          }
+        `,
+        }}
+      />
 
-    <div className="container">
-      <div className="Mainstay__content">
-        <img
-          alt={mainstay.title}
-          className="Mainstay__title"
-          src={mainstay.nameImage}
-        />
+      <div className="Mainstay__container">
+        <div className="Mainstay__container__column-left">
+          <div className="Mainstay__content">
+            {mainstay.nameImage.childImageSharp ? (
+              <Img
+                alt={mainstay.name}
+                className="Mainstay__content__title"
+                fluid={mainstay.nameImage.childImageSharp.fluid}
+                loading="eager"
+              />
+            ) : (
+              <img
+                alt={mainstay.name}
+                className="Mainstay__content__title"
+                src={mainstay.nameImage.publicURL}
+              />
+            )}
 
-        <h3 className="Mainstay__introduction">{mainstay.introduction}</h3>
+            <h3 className="Mainstay__content__introduction">
+              {mainstay.intro}
+            </h3>
 
-        <Markdown
-          className="Mainstay__description"
-          source={mainstay.description}
-        />
+            <Markdown
+              className="Mainstay__content__description"
+              source={mainstay.description}
+            />
 
-        <div className="Mainstay__aroma-and-taste">
-          <h4>Aroma & Taste</h4>
-          <p>{mainstay.flavorProfile.aromaAndTaste}</p>
+            <div className="Mainstay__content__aroma-and-taste">
+              <h4>{aromaAndTasteHeading}</h4>
+              <p>{mainstay.aromaAndTaste}</p>
+            </div>
+
+            <dl className="Mainstay__content__recipe">
+              <dt>Grains</dt>
+              <dd>{mainstay.grains.join(', ')}</dd>
+
+              <dt>Hops</dt>
+              <dd>{mainstay.hops.join(', ')}</dd>
+
+              <dt>Yeast</dt>
+              <dd>{mainstay.yeast.join(', ')}</dd>
+            </dl>
+          </div>
         </div>
 
-        <dl className="Mainstay__recipe">
-          <dt>Grains</dt>
-          <dd>{mainstay.flavorProfile.grains}</dd>
-
-          <dt>Hops</dt>
-          <dd>{mainstay.flavorProfile.hops}</dd>
-
-          <dt>Yeast</dt>
-          <dd>{mainstay.flavorProfile.yeast}</dd>
-        </dl>
-      </div>
-
-      <div
-        className="Mainstay__bottle-image"
-        style={{
-          backgroundColor: mainstay.style.accentLight,
-        }}
-      >
-        <img alt={`${mainstay.title} Bottle`} src={mainstay.bottleImage} />
+        <div className="Mainstay__container__column-right">
+          <div className="Mainstay__bottle-image">
+            <Img
+              alt={`${mainstay.name} Bottle`}
+              fluid={mainstay.bottleImage.childImageSharp.fluid}
+              loading="eager"
+            />
+          </div>
+        </div>
       </div>
     </div>
-
-    <div
-      className="Mainstay__border-bottom"
-      style={{ backgroundColor: mainstay.style.accentLight }}
-    />
   </div>
 );
 

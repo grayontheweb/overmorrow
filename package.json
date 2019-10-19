@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "overmorrow",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "The home page for Overmorrow Brewing Company",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -16,6 +16,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "2.12.0",
+    "gatsby-image": "^2.2.27",
+    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-netlify": "^2.1.0",
     "gatsby-plugin-netlify-cms": "^4.1.1",
     "gatsby-plugin-purgecss": "^4.0.0",
@@ -38,7 +40,9 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-markdown": "^4.1.0"
+    "react-intersection-observer": "^8.24.2",
+    "react-markdown": "^4.1.0",
+    "react-scroll": "^1.7.14"
   },
   "devDependencies": {
     "eslint-config-react-app": "^3.0.6",

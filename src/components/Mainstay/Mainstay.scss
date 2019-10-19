@@ -2,157 +2,195 @@
 @import 'src/css/mixins';
 
 .Mainstay {
-  color: $dark-blue;
-  padding-top: 60px;
+  background-image: linear-gradient(to top, $white);
+  color: $very-dark-blue;
+  padding-top: 1154px;
   position: relative;
+  z-index: 300;
 
   @include breakpoint(tablet) {
-    margin-top: 160px;
-    min-height: 100vh;
+    background-image: linear-gradient(to top, transparent, transparent 160px, $white 160px, $white);
+    padding-bottom: 180px;
+    padding-top: 90px;
   }
 
-  .container {
+  &__container {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 100%;
+    padding: 0 20px;
+    z-index: 5000000;
+
     @include breakpoint(tablet) {
-      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
       max-width: 960px;
-      padding: 0 25px;
+
+      &__column-left {
+        margin-left: 32px;
+        margin-right: 14px;
+        max-width: 600px;
+        min-width: 500px;
+        flex: 1;
+        padding-top: 140px;
+        width: 100%;
+      }
+
+      &__column-right {
+        flex: none;
+        margin-bottom: 40px;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      max-width: 1024px;
+
+      &__column-left {
+        flex: none;
+      }
+
+      &__column-right {
+        margin-right: 38px;
+      }
     }
   }
 
   &__content {
-    padding: 0 25px 25px;
+    &__title {
+      height: auto;
+      display: block;
+      margin: 0 auto 60px;
+      position: absolute;
+      width: 337px;
+      z-index: 500;
+      top: 336px;
+      left: 0;
+      right: 0;
 
-    @include breakpoint(phablet) {
-      padding-left: 55px;
-      padding-right: 55px;
-    }
 
-    @include breakpoint(tablet) {
-      flex: none;
-      padding: 0;
-      width: 525px;
-    }
-
-    p {
-      line-height: 1.4;
-      margin: 14px 0;
-    }
-  }
-
-  &__title {
-    height: auto;
-    margin-bottom: 35px;
-    max-width: 80%;
-    width: 350px;
-
-    @include breakpoint(tablet) {
-      max-width: none;
-    }
-  }
-
-  &__introduction {
-    font-size: 28px;
-    line-height: 1.2;
-    margin: 2px 0 0;
-  }
-
-  &__aroma-and-taste {
-    h4 {
-      font-weight: bold;
-      margin: 10px 0 0;
-      line-height: 1.2;
-      font-size: 20px;
-    }
-
-    p {
-      margin-top: 0;
-    }
-  }
-
-  &__recipe {
-    font-size: 16px;
-
-    dt {
-      display: inline;
-      font-weight: bold;
-      line-height: 1.1;
-      margin-right: 5px;
-    }
-
-    dd {
-      display: inline;
-      font-weight: bold;
-      line-height: 1.2;
-      margin-left: 0;
-      padding: 0;
-      white-space: pre-wrap;
-
-      &:after {
-        content: '\A';
+      @include breakpoint(tablet) {
+        margin: 0 0 53px;
+        position: static;
+        width: 350px;
       }
     }
+
+    &__introduction {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.23;
+      margin-top: 0;
+    }
+
+    &__description {
+      font-family: $font-family-open-sans;
+      font-size: 16px;
+      line-height: normal;
+
+      strong {
+        font-weight: 900;
+      }
+    }
+
+    &__aroma-and-taste {
+      margin-bottom: 20px;
+
+      h4 {
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 1.14;
+        margin-bottom: 20px;
+        margin-top: 0;
+      }
+
+      p {
+        font-family: $font-family-open-sans;
+        font-size: 16px;
+        line-height: normal;
+      }
+    }
+
+    &__recipe {
+      font-family: $font-family-open-sans;
+      font-size: 18px;
+      line-height: normal;
+
+      dt {
+        display: inline;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      dd {
+        color: $very-dark-blue;
+        display: inline;
+        margin-left: 0;
+        padding: 0;
+        white-space: pre-wrap;
+
+        &:after {
+          content: '\A';
+        }
+      }
+    }
+
   }
 
   &__bottle-image {
-    flex: none;
-    margin-right: -40px;
-    overflow: hidden;
-    text-align: center;
+    height: 1054px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 375px;
+    z-index: -1;
 
-    @include breakpoint(tablet) {
-      background: none !important;
-      margin-top: -400px;
-      height: 1052px;
-      width: 340px;
-      margin-left: 25px;
-      margin-top: -140px;
+    &:after {
+      background-image: linear-gradient(to top, rgba($white, 0), rgba($white, 0.83) 38%, $white);
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;;
+      z-index: 1;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
     }
 
     img {
-      margin-bottom: -30px;
-      margin-top: -525px;
-      width: 340px;
-
-      @include breakpoint(tablet) {
-        margin-bottom: 0;
-        margin-right: -40px;
-        margin-top: 0;
-        height: auto;
-        width: 100%;
-      }
+      max-height: 100%;
+      height: auto;
+      width: 100%;
+      z-index: -1 !important;
     }
-  }
 
-  &__border-bottom {
     @include breakpoint(tablet) {
-      height: 120px;
-      margin-top: -120px;
+      margin-bottom: -180px;
+      position: static;
+      width: 340px;
     }
   }
 
-  &.Mainstay__reverse {
-    .container {
-      @include breakpoint(tablet) {
+  @include breakpoint(tablet) {
+    &.Mainstay__reverse {
+      .Mainstay__container {
         flex-direction: row-reverse;
-      }
-    }
 
-    .Mainstay__content {
-      @include breakpoint(tablet) {
-        padding-left: 60px;
-        padding-right: 0;
-      }
-    }
-
-    .Mainstay__bottle-image {
-      @include breakpoint(tablet) {
-        margin-left: 0;
-        margin-right: 25px;
-        margin-top: -140px;
-
-        img {
+        &__column-left {
+          margin-left: 0;
           margin-right: 0;
-          margin-left: -40px;
+          margin-right: 18px;
+        }
+
+        &__column-right {
+          flex: 1;
+          margin-left: 32px;
+          margin-right: 14px;
         }
       }
     }

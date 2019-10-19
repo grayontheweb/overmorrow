@@ -2,166 +2,76 @@
 @import 'src/css/mixins';
 
 .Intro {
-  // background-color: #F37121;
-  margin: 0 auto;
-  min-height: 100vh;
-  overflow: hidden;
-  padding-top: 50px;
-  height: 100%;
-  text-align: left;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Gotham' !important;
+  padding-top: 100px;
+  position: relative;
+  text-align: center;
 
-  // &:after {
-  //   background: radial-gradient(#FAA61A, #FAA61A 33.333333%, #F68B1F 33.333333%, #F68B1F 66.666666%, transparent 66.666666%);
-  //   content: '';
-  //   display: block;
-  //   width: 100vw;
-  //   height: 100vw;
-  //   position: absolute;
-  //   top: 0;
-  //   z-index: 0;
-  //   left: -725px;
-  //   // left: 0;
-  //   margin: auto;
-  //   // bottom: 0;
-  //   right: 0;
-  // }
+  &__scroll-icon {
+    background: $very-dark-blue;
+    cursor: pointer;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    z-index: 500;
 
-  @include breakpoint(desktop) {
-    padding-top: 80px;
-  }
-
-  &__content {
-    display: flex;
-    max-width: 1050px;
-    margin: 0 auto;
-    position: relative;
-  }
-
-  &__dictionary {
-    border-right: 1px solid #000031;
-    flex: none;
-    font-size: 18px;
-    padding-right: 15px;
-    text-align: right;
-    width: 270px;
-
-    & > * {
+    a {
+      top: -30px;
       display: block;
-    }
-
-    &__title, &__phonetic {
-      font-family: Arial, sans-serif;
-      font-style: italic;
-    }
-
-    &__title {
-      font-weight: bold;
-    }
-
-    &__definition, &__source {
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    &__definition {
-      font-size: 14px;
-    }
-
-    &__source {
-      font-size: 12px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 60px;
+      width: 60px;
     }
   }
 
-  &__text {
-    padding-left: 15px;
+  &__logo {
+    height: 34px;
+    margin: -35px auto 33px;
+    width: 336px;
+
+    @include breakpoint(phablet) {
+      height: 54px;
+      width: 540px;
+    }
   }
 
-  &__heading {
-    font-size: 28px;
-    line-height: 33.6px;
-    padding-top: 10px;
+  h2 {
+    color: rgba(0, 0, 49, 0.5);
+    font-size: 19px;
+    padding: 0 38px;
   }
 
-  &__description {
-    font-size: 18px;
-    line-height: 24px;
-    padding-bottom: 10px;
+  &__parallax-container {
+    align-items: center;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin-top: -50px;
+    top: 0;
+    transform: translateY(0px);
+    width: 100%;
+    will-change: opacity, transform;
   }
 
   &__horizon {
-    background: red;
-    bottom: -336px;
-    height: 336px;
-    left: -725px;
-    margin: auto;
     position: absolute;
+    top: 0;
     right: 0;
-    transform: translateY(-50%);
-    width: 336px;
-
-    &:before {
-      background: #F68B1F;
-      border-radius: 1614px;
-      content: '';
-      display: block;
-      height: 1614px;
-      position: absolute;
-      width: 1614px;
-      z-index: -1;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    &:after {
-      background: #FAA61A;
-      border-radius: 890px;
-      content: '';
-      display: block;
-      height: 890px;
-      position: absolute;
-      width: 890px;
-      z-index: -1;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
+    bottom: 0;
+    left: 0;
+    background: #F37121;
+    z-index: -1;
   }
-
-
-  // padding-left: 240px;
-  // margin: 0 auto;
-  // max-width: 960px;
-  // position: relative;
-
-  // &__content {
-  //   border-left: 1px solid black;
-  //   padding-left: 12px;
-  // }
-
-  // &__heading {
-  //   font-size: 32px;
-  //   font-weight: bold;
-  // }
-
-  // &__description {
-  //   font-size: 20px;
-  //   line-height: 1.4;
-  // }
-
-  // &__dictionary {
-  //   position: absolute;
-  //   left: -80px;
-  //   text-align: right;
-  //   padding-right: 12px;
-  //   top: 0;
-  //   width: 320px;
-
-  //   & > * {
-  //     display: block;
-  //   }
-
-  //   &__title {
-  //     font-weight: bold;
-  //   }
-  // }
 }

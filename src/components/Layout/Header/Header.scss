@@ -1,0 +1,218 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
+.LayoutHeader {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    padding: 0 60px;
+  }
+
+  &--is-fixed {
+    $background: rgba($white, 0.95);
+    position: fixed;
+    top: 0;
+    transition: background 0.3s linear, top 0.2s ease-in;
+
+    &:not(.LayoutHeader--is-visible) {
+      top: -$header-height;
+    }
+  }
+
+  &--is-open {
+    background: rgba($white, 0.95) !important;
+    max-height: 4000px;
+    top: 0 !important;
+  }
+
+  &--is-visible {
+    background: rgba($white, 0.95);
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 49, 0.12);
+  }
+
+  &__top {
+    height: $header-height;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      align-items: center;
+      display: flex;
+    }
+
+    &__logo {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;;
+      height: 40px;
+      margin: 0 0 0 30px;
+      position: absolute;
+      text-indent: -9999px;
+      top: 30px;
+      transition: opacity 0.1s linear;
+      width: 40px;
+
+      @include breakpoint(tablet) {
+        margin-left: 0;
+        margin-right: 60px;
+        position: relative;
+        top: unset;
+      }
+    }
+
+    &__logo-horizontal {
+      height: 26.5px;
+      left: -290px;
+      margin-left: 30px;
+      position: absolute;
+      top: 35px;
+      transition: left 0.05s linear;
+      width: 260px;
+
+      h1 {
+        margin: 0;
+      }
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    &__menu-toggle {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      height: 24px;
+      width: 22px;
+      right: 30px;
+      top: 38px;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-gotham;
+    font-size: 16px;
+    font-weight: 700;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.1s linear;
+
+    @include breakpoint(tablet) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      max-height: none;
+      padding-top: 0;
+      transition: none;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul:first-child {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @include breakpoint(tablet) {
+        align-items: center;
+        display: flex;
+
+        li:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+
+      li {
+        border-top: 1px solid rgba(0, 0, 49, 0.1);
+        cursor: pointer;
+        padding: 0 20px;
+        text-align: center;
+
+        @include breakpoint(tablet) {
+          border-top: none;
+          line-height: normal;
+          padding: 0;
+          text-align: left;
+        }
+
+        a {
+          display: block;
+          line-height: 3.75;
+        }
+      }
+    }
+  }
+
+  &__language-toggle {
+    border-top: 1px solid rgba(0, 0, 49, 0.1);
+    align-items: center;
+    display: flex;
+    font-family: $font-family-open-sans;
+    font-size: 16px;
+    font-weight: normal;
+    justify-content: center;
+    padding: 30px 20px !important;
+    list-style: none;
+    margin: 0;
+
+    @include breakpoint(tablet) {
+      border: none;
+      flex: none;
+      padding: 0 !important;
+    }
+
+    a {
+      align-items: center;
+      color: inherit;
+      display: inline-flex;
+      height: 28px;
+      justify-content: center;
+      padding: 4px 12px;
+      text-decoration: none;
+
+      &.active {
+        background: $very-dark-blue;
+        border-radius: 2px;
+        color: $white;
+      }
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &--is-open {
+    .LayoutHeader__top__logo {
+      opacity: 0;
+    }
+
+    .LayoutHeader__top__logo-horizontal {
+      left: 0;
+    }
+
+    .LayoutHeader__navigation {
+      max-height: 275px;
+    }
+  }
+}

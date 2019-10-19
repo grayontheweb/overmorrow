@@ -1,24 +1,22 @@
 import React from 'react';
 
+import Section from 'src/components/Section';
 import Founder from 'src/components/Founder';
 
 import './Founders.scss';
 
-const Founders = ({ founders }) => (
-  <div className="Founders">
-    <div className="container">
-      <h2>The Founders</h2>
+const Founders = ({ content }) => (
+  <Section className="Founders" fullScreen id="founders">
+    <div className="Founders__parallax-container">
+      <h2>{content.heading}</h2>
 
-      {founders.map((founder) => (
-        <Founder
-          imageUrl={founder.image}
-          key={founder.position}
-          name={founder.title}
-          title={founder.jobTitle}
-        />
-      ))}
+      <div className="Founders__container">
+        {content.foundersList.map((founder, i) => (
+          <Founder founder={founder} key={i} />
+        ))}
+      </div>
     </div>
-  </div>
+  </Section>
 );
 
 export default Founders;

@@ -1,36 +1,41 @@
 import React from 'react';
-import Markdown from 'react-markdown';
-import { get } from 'lodash';
 import { graphql, useStaticQuery } from 'gatsby';
+
+import AboutComponent from './About';
 
 import './About.scss';
 
-const About = () => {
-  const data = useStaticQuery(graphql`
+const About = ({ locale = 'english' }) => {
+  const {
+    markdownRemark: { frontmatter },
+  } = useStaticQuery(graphql`
     query AboutQuery {
       markdownRemark(frontmatter: { templateKey: { eq: "about" } }) {
         id
+
         frontmatter {
-          introduction
-          content
+          english {
+            intro
+          }
+
+          vietnamese {
+            intro
+          }
         }
       }
     }
   `);
 
-  const about = {
-    id: get(data, 'markdownRemark.id'),
-    ...get(data, 'markdownRemark.frontmatter'),
-  };
+  const content =
+    locale !== 'vietnamese'
+      ? {
+          ...frontmatter.english,
+        }
+      : {
+          ...frontmatter.vietnamese,
+        };
 
-  return (
-    <div className="About" id="about-us">
-      <div className="About__content">
-        <Markdown source={about.introduction} />
-        <Markdown source={about.content} />
-      </div>
-    </div>
-  );
+  return <AboutComponent intro={content.intro} />;
 };
 
 export default About;

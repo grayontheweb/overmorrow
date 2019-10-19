@@ -1,0 +1,117 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
+.Story {
+  padding-bottom: 60px;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 0;
+    padding-top: 520px;
+  }
+
+  &__background-image {
+    background-image: linear-gradient(to bottom, $very-dark-blue, $very-dark-blue 25%, transparent);
+    z-index: 400;
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include breakpoint(tablet) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__content {
+    background-image: linear-gradient(to bottom, rgba($white, 0), rgba($white, 1) 440px, $white);
+    z-index: 500;
+  }
+
+  &__container {
+    background: rgba($white, 0.95);
+    margin: 0 auto;
+    max-width: 1024px;
+    position: relative;
+    z-index: 500;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      padding: 80px 44px;
+    }
+
+    &__column-left {
+      padding: 0 20px;
+
+      @include breakpoint(phablet) {
+        padding: 0 44px;
+      }
+
+      @include breakpoint(tablet) {
+        flex: 1;
+        padding: 0;
+        text-align: right;
+      }
+    }
+
+    &__column-right {
+      padding: 0 20px;
+
+      @include breakpoint(phablet) {
+        padding: 0 44px;
+      }
+
+      @include breakpoint(tablet) {
+        margin-left: 52px;
+        max-width: 600px;
+        padding: 0;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 40px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+    }
+  }
+
+  &__heading {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 60px 0 40px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+      text-align: right;
+    }
+  }
+
+  &__description {
+    font-family: $font-family-open-sans;
+    font-size: 16px;
+    line-height: 1.8;
+
+    @include breakpoint(tablet) {
+      line-height: normal;
+    }
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}

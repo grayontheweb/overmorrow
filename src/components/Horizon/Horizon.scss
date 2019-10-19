@@ -1,0 +1,15 @@
+.Horizon {
+  background: radial-gradient(#FAA61A, #FAA61A 33.333333%, #F68B1F 33.333333%, #F68B1F 66.666666%, transparent 66.666666%);
+  content: '';
+  display: block;
+  width: 100vw;
+  height: 100vw;
+  position: fixed;
+  top: 75vh;
+  z-index: 0;
+  left: 0;
+  // left: 0;
+  margin: auto;
+  // bottom: 0;
+  right: 0;
+}
