@@ -14,6 +14,7 @@ const Layout = ({ children, locale = 'english' }) => {
         frontmatter {
           description
           title
+          vnDescription
 
           image {
             childImageSharp {
@@ -27,16 +28,15 @@ const Layout = ({ children, locale = 'english' }) => {
     }
   `);
 
-  return (
-    <LayoutComponent
-      children={children}
-      locale={locale}
-      meta={{
-        ...frontmatter,
-        imageUrl: `http://www.overmorrow.beer${frontmatter.image.childImageSharp.fixed.src}`,
-      }}
-    />
-  );
+  const meta = {
+    ...frontmatter,
+    description:
+      locale !== 'vietnamese'
+        ? frontmatter.description
+        : frontmatter.vnDescription,
+  };
+
+  return <LayoutComponent children={children} locale={locale} meta={meta} />;
 };
 
 export default Layout;
