@@ -10,19 +10,26 @@ const Layout = ({ children, locale = 'english', meta }) => (
   <div className="Layout">
     <Helmet defer={false}>
       <title>{meta.title}</title>
-      <meta content={meta.description} name="description" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="title" content={meta.title} />
+      <meta name="description" content={meta.description} />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.overmorrow.beer" />
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
       <meta
         property="og:image"
         content="https://www.overmorrow.beer/img/meta-image.jpg"
       />
-      <meta property="og:url" content="http://overmorrow.beer" />
-      <meta name="twitter:title" content={meta.title} />
-      <meta name="twitter:description" content={meta.description} />
-      <meta name="twitter:image" content={meta.imageUrl} />
-      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://metatags.io/" />
+      <meta property="twitter:title" content={meta.title} />
+      <meta property="twitter:description" content={meta.description} />
+      <meta
+        property="twitter:image"
+        content="https://www.overmorrow.beer/img/meta-image.jpg"
+      />
     </Helmet>
 
     <LayoutHeader locale={locale} />

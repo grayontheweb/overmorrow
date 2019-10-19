@@ -50,11 +50,11 @@
 
     &__legal {
       position: relative;
-      padding-left: 20px;
       padding-top: 10px;
       text-align: center;
 
       @include breakpoint(tablet) {
+        padding-left: 20px;
         text-align: left;
       }
 
