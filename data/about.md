@@ -17,52 +17,52 @@ english:
     we are not happy to drink ourselves.
 vietnamese:
   content: >-
-    Hành trình của Overmorrow Brewing bắt đầu từ năm 2008, khi **Chris Jarvis**
-    và **Gray Sutherland** gặp nhau trong khi theo học đại học ở Pittsburgh. Hai
-    người họ kết thân nhau thông qua những sở thích giống nhau như niềm đam mê
-    đối với âm nhạc cổ điển đương đại, sự hứng thú đối với bia và tâm hồn tự do
-    yêu thích khám phá. Sau nhiều năm khám phá các thành phố khác nhau trên thế
-    giơi, theo đuổi những dự án cùng nhau cũng như của bản thân họ (bao gồm cả
-    việc thành lâph một ban nhạc folk-punk Elephant Gazebo với kèn flugabone và
-    đàn guitar), cả hai tách ra, với Chris định cư tại Việt Nam để theo đuổi thứ
-    ngôn ngữ mà anh yêu thích và Gray tiếp tục hành trình du lịch và phát nghề
-    nghiệp của mình. Dẫu vậy, hai người bạn hẹn gặp nhau tại các thành phố khác
-    nhau trên khắp ba lục địa, để thưởng thức bất cứ loại đặc sản và thức uống
-    nào mà địa phương đó có.
+    Hành trình của Overmorrow Brewing bắt đầu từ năm 2008, khi Chris Jarvis và
+    Gray Sutherland gặp nhau trong khi theo học đại học ở Pittsburgh. Hai người
+    kết thân thông qua những sở thích giống nhau như niềm đam mê đối với âm nhạc
+    cổ điển đương đại, niềm say mê bia và cùng chung một tâm hồn tự do du
+    ngoạn. Sau nhiều năm khám phá các thành phố khác nhau trên thế giới, theo
+    đuổi những đam mê cả chung lần riêng (bao gồm việc thành lập một ban
+    nhạc folk-punk, “Elephant Gazebo” với kèn flugabone và đàn guitar), cả hai
+    tách ra, với Chris định cư tại Việt Nam để theo đuổi tiếng Việt mà mình
+    yêu thích từ lâu; còn Gray tiếp tục hành trình du lịch và phát nghề nghiệp
+    của mình. Dẫu vậy, hai người bạn hẹn gặp nhau tại các thành phố khác nhau
+    trên khắp ba lục địa để thưởng thức các đặc sản địa phương.
 
 
-    Vào năm 2015, họ nhận ra rằng Việt Nam và bia, hai niềm đam mê lớn nhất của
-    Chris có thể kế thợp với nhau và từ đó, kế hoạch thành lập một nhà máy bia
-    tại chính thủ đo Hà Nôi dần dần hình thành. Sau nhiều năm tư vấn phát triển
-    các trang web, Gray bắt đầu hướng tới các thử thách mới và cộng tác với
-    Chris để thực hiện dự án mới của hai người. Cùng với họ là **Trần Nam** và
-    **Noah Tanabe**, hai người bạn với xuất thân từ Việt Nam, Nhật Bản và cả Mỹ,
-    những người này là sự kết hợp của yếu tố nước ngoài với những tinh hoa Việt
-    Nam và mong muốn được tạo ra một loại bia tuyệt hảo để thể hiện tất cả những
-    điều đó.
+    Vào năm 2015, họ nhận ra rằng hai niềm đam mê chính của Chris: Việt Nam
+    và bia, có thể kết hợp với nhau và từ đó, họ lên kế hoạch thành lập một
+    xưởng bia ngay tại Hà Thành. Sau nhiều năm làm nghề tư vấn phát triển
+    web, Gray bắt đầu hướng tới các thử thách mới và cộng tác với Chris để thực
+    hiện dự án mới của hai người. Cùng với họ là Trần Nam và Noah Tanabe, hai
+    người bạn với xuất thân từ Việt Nam, Nhật Bản và Mỹ. Đội sáng lập của
+    Overmorrow là sự kết hợp của những tinh hoa Việt Nam và những tinh thần
+    quốc tế, với một mong muốn được nấu những mẻ bia tuyệt hảo, thấm
+    nhuần những đặc tính đó.
 
 
-    Sản phẩm của chúng tôi là hành trình vượt địa lý và thời gian, từ những bến
-    cảng của đất nước Scotland thời xưa, những hầm mỏ trong lòng núi tại vùng
-    quê nước Pháp cho tới những cánh rừng và cánh đồng hoa bia của Bờ Tây nước
-    Mỹ. Tại đây, các loại bia được kết hợp với nguyên liệu từ chính những cây
-    mía, đồng ruộng và trên những sường đồi của Việt Nam. Chúng tôi hy vọng đã
-    đưa vào thêm một thứ gì đó đặc biệt cho những loại bia cổ điển nói trên 
-    thông qua sự kết hợp này , cũng giống như hành trình của chúng tôi đến với
-    Overmorrow. Cùng nhau, chúng tôi đã xây dựng nên một tổ ấm tại Việt Nam
+    Sản phẩm của chúng tôi là một hành trình vượt thời gian và biển cả, từ
+    những bến cảng của đất nước Scotland cổ xưa, những hầm mỏ nằm trong lòng
+    núi tại vùng quê nước Pháp, cho tới những cánh rừng và cánh đồng hoa bia
+    bạt ngàn của Bờ Tây nước Mỹ. Tại đây, các loại bia được kết hợp với nguyên
+    liệu dân giã, từ chính những ruộng mía, ruộng lúa và trên những sườn
+    đồi của Việt Nam. Chúng tôi hy vọng mình đã đóng góp đôi chút cho những
+    loại bia cổ điển này, thổi hồn tương lai vào những giá trị từ lâu
+    đời, cũng giống như hành trình của chúng tôi đến với Overmorrow. Cùng nhau,
+    chúng tôi đã xây dựng nên một tổ ấm tại Việt Nam.
   heading: Câu Chuyện Của Chúng Tôi
   intro: >-
     **Với cái tên được lấy cảm hứng từ một từ cổ để chỉ tương lai, công ty bia
     Overmorrow Brewing đi vào hoạt động nhằm quảng bá và tôn vinh những loại bia
-    cổ điển xuyên suốt lịch sử, đồng thời đưa vào đó những giá trị của thời hiện
-    đại cũng như tương lai ở Việt Nam.** 
+    cổ điển xuyên suốt lịch sử, đồng thời đưa vào đó những giá trị đương đại
+    cũng như tương lai ở Việt Nam.**
 
 
-    Cũng giống như đội ngũ sáng lập ra công ty, sản phẩm của chúng tôi là những
-    loại bia nổi tiếng trên thế giới, được kết hợp với các hương vị và nguyên
-    liệu đặc trưng của Việt Nam. Mặc dù vẫn đang trong giai đoạn phát triển,
-    nhưng một điều chắc chắn rằng, chất lượng sẽ không bao giờ bị ảnh hưởng và
-    sẽ không bao giờ đưa ra những sản phẩm mà bản thân chúng tôi cũng không hài
-    lòng.
+    Giống như đội ngũ sáng lập, sản phẩm của chúng tôi là sự kết hợp tinh
+    tế giữa những loại bia trên khắp thế giới, và những hương vị, nguyên
+    liệu đặc trưng của Việt Nam. Chúng tôi luôn luôn tìm tòi và thử nghiệm
+    những dòng bia mới, nhưng một điều chắc chắn rằng chúng tôi luôn luôn
+    đặt chất lượng bia hàng đầu và sẽ không bao giờ đưa ra những sản phẩm
+    mà bản thân chúng tôi cũng không hài lòng.
 ---
 
