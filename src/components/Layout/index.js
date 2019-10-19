@@ -30,17 +30,19 @@ const Layout = (props) => {
     }
   `);
 
+  const host = location.origin
+    ? location.origin
+    : 'https://www.overmorrow.beer';
+
   const meta = {
     ...frontmatter,
     description:
       locale !== 'vietnamese'
         ? frontmatter.description
         : frontmatter.vnDescription,
-    imageUrl: `${
-      location.origin ? location.origin : 'https://www.overmorrow.beer'
-    }/img/${frontmatter.image.relativePath}`,
+    imageUrl: `${host}/img/${frontmatter.image.relativePath}`,
     locale: locale !== 'vietnamese' ? 'en_US' : 'vi_VN',
-    url: location.href || 'https://www.overmorrow.beer',
+    url: `${host}${props.location.pathname}`,
   };
 
   return <LayoutComponent children={children} locale={locale} meta={meta} />;
