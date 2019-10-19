@@ -1,32 +1,39 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import IntroComponent from './Intro';
 
-const Intro = () => {
-  // const data = useStaticQuery(graphql`
-  //   query IntroQuery {
-  //     markdownRemark(frontmatter: { templateKey: { eq: "intro" } }) {
-  //       id
-  //       frontmatter {
-  //         description
-  //         heading
-  //         dictionary {
-  //           definition
-  //           phonetic
-  //           source
-  //           title
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+const Intro = ({ locale }) => {
+  const {
+    markdownRemark: { frontmatter },
+  } = useStaticQuery(graphql`
+    query IntroQuery {
+      markdownRemark(frontmatter: { templateKey: { eq: "intro" } }) {
+        id
 
-  // const intro = {
-  //   id: get(data, 'markdownRemark.id'),
-  //   ...get(data, 'markdownRemark.frontmatter'),
-  // };
+        frontmatter {
+          english {
+            subtitle
+          }
 
-  return <IntroComponent />;
+          vietnamese {
+            subtitle
+          }
+        }
+      }
+    }
+  `);
+
+  const content =
+    locale !== 'vietnamese'
+      ? {
+          ...frontmatter.english,
+        }
+      : {
+          ...frontmatter.vietnamese,
+        };
+
+  return <IntroComponent content={content} />;
 };
 
 export default Intro;

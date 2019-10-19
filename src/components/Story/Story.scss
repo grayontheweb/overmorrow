@@ -41,11 +41,15 @@
 
     @include breakpoint(tablet) {
       display: flex;
-      padding: 80px 60px;
+      padding: 80px 44px;
     }
 
     &__column-left {
       padding: 0 20px;
+
+      @include breakpoint(phablet) {
+        padding: 0 44px;
+      }
 
       @include breakpoint(tablet) {
         flex: 1;
@@ -56,6 +60,10 @@
 
     &__column-right {
       padding: 0 20px;
+
+      @include breakpoint(phablet) {
+        padding: 0 44px;
+      }
 
       @include breakpoint(tablet) {
         margin-left: 52px;
@@ -92,7 +100,7 @@
   &__description {
     font-family: $font-family-open-sans;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.8;
 
     @include breakpoint(tablet) {
       line-height: normal;

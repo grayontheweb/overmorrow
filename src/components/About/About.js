@@ -4,8 +4,8 @@ import Markdown from 'react-markdown';
 import ParallaxObserver from 'src/components/ParallaxObserver';
 import Section from 'src/components/Section';
 
-import pronunciationImage from './images/pronunciation.svg';
-import termImage from './images/term.svg';
+import pronunciationImage from './images/pronunciation.png';
+import termImage from './images/term.png';
 
 import './About.scss';
 
@@ -16,6 +16,7 @@ const About = ({ intro }) => (
 
       const parallaxContainerStyle = inView
         ? {
+            opacity: 1,
             transform,
           }
         : null;

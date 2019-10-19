@@ -9,7 +9,11 @@ const Founder = ({ founder = {} }) => (
     <div className="Founder__parallax-container">
       {founder.image && (
         <div className="Founder__image">
-          <Img alt={founder.name} fixed={founder.image.childImageSharp.fixed} />
+          <Img
+            alt={founder.name}
+            fixed={founder.image.childImageSharp.fixed}
+            loading="eager"
+          />
         </div>
       )}
 

@@ -23,6 +23,7 @@ const Story = ({ backgroundImage, content, heading = 'Our Story' }) => (
             <Img
               alt="Overmorrow team"
               fluid={backgroundImage.childImageSharp.fluid}
+              loading="eager"
               style={{ opacity: opacity < 1 ? opacity : null }}
             />
           </div>

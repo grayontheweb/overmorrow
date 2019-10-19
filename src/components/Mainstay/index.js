@@ -55,6 +55,7 @@ const Mainstay = ({
                 alt={mainstay.name}
                 className="Mainstay__content__title"
                 fluid={mainstay.nameImage.childImageSharp.fluid}
+                loading="eager"
               />
             ) : (
               <img
@@ -96,6 +97,7 @@ const Mainstay = ({
             <Img
               alt={`${mainstay.name} Bottle`}
               fluid={mainstay.bottleImage.childImageSharp.fluid}
+              loading="eager"
             />
           </div>
         </div>

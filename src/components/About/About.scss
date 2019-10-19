@@ -15,8 +15,9 @@
   }
 
   &__parallax-container {
-
     color: $white;
+    opacity: 0;
+    transition: opacity 0.05s linear;
     will-change: opacity, transform;
   }
 

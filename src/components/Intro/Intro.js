@@ -9,15 +9,13 @@ import scrollIcon from './images/icon-down.svg';
 
 import './Intro.scss';
 
-const Intro = () => (
+const Intro = ({ content }) => (
   <ParallaxObserver>
     {({ bottom, height, inView, top }) => {
       const opacity = bottom ? bottom / height : null;
-      const transform = top ? `translateY(${top / 2}px)` : null;
+      const transform = top ? `translateY(${Math.abs(top) / 2}px)` : null;
 
-      const parallaxContainerStyle = inView
-        ? { opacity, position: 'fixed', transform }
-        : null;
+      const parallaxContainerStyle = inView ? { opacity, transform } : null;
 
       return (
         <Section className="Intro" fullScreen>
@@ -37,9 +35,7 @@ const Intro = () => (
           >
             <Logo className="Intro__logo" />
 
-            <h2 className="Intro__subtitle">
-              Craft beer for today, tomorrow, and the day after
-            </h2>
+            <h2 className="Intro__subtitle">{content.subtitle}</h2>
           </div>
         </Section>
       );
