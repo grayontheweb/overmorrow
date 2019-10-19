@@ -32,6 +32,12 @@ collections:
             required: true
             widget: string
           -
+            hint: The Vietnamese description of the website, for display in search engines and in social media shares
+            label: Vietnamese Description
+            name: vnDescription
+            required: true
+            widget: string
+          -
             hint: The image to display with the website in social media shares, should be 1200x1200px
             label: Image
             name: image
@@ -503,6 +509,16 @@ collections:
             label: "Template Key"
             name: templateKey
             widget: hidden
+          -
+            hint: The name of the design agency providing the design
+            label: Designer Name
+            name: designerName
+            widget: String
+          -
+            hint: The url for the design agency providing the design
+            label: Designer Url
+            name: designerUrl
+            widget: String
           -
             label: English
             name: english
