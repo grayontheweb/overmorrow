@@ -36,9 +36,11 @@ foundersList:
     name: Chris Jarvis
     vietnamese:
       jobDescription: >-
-        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
-        hendrerit. Pellen tesque.
-      jobTitle: Phasellus la Hendrerit
+        Vùi đầu vào những thứ phức tạp và rối rắm. Cố vấn dinh dưỡng men bia, và
+        những cái kẹp ba cạnh ở xưởng. Cố gắng nói tiếng Việt, làm việc đa nhiệm
+        khi bơm đang chạy, và mang đến cho công chúng những cốc bia hoàn hảo
+        nhất.
+      jobTitle: Giám Đốc Sản Xuất
   - backgroundColor: '#e29a26'
     english:
       jobDescription: >-
@@ -47,7 +49,7 @@ foundersList:
         sometimes sleeps.
       jobTitle: Director of Operations
     favorites:
-      beerStyle: Black IPA
+      beerStyle: 'Black IPA, Anything Aged in a Bourbon Barrel'
       breweries:
         - name: Dogfish Head
           url: 'https://www.dogfish.com/'
@@ -58,16 +60,17 @@ foundersList:
         - name: Mikkeller
           url: 'http://mikkeller.dk/'
       other:
-        classifier: Favorite Ninja Turtle
-        classifierVietnamese: Favorite
-        favorite: Leonardo
+        classifier: Favorite Progressive Rock Band
+        classifierVietnamese: '"Progressive Rock Band" Ưa Thích'
+        favorite: King Crimson
     image: /img/headshots-square-3.jpg
     name: Gray Sutherland
     vietnamese:
       jobDescription: >-
-        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
-        hendrerit. Pellen tesque.
-      jobTitle: Giám Dốc Điều Hành
+        Chuyên thử sản phẩm. Quản lý thiết kế, nhãn hiệu và tất thảy về
+        internet. Viết email, ký giấy tờ, giải quyết vấn đề, và thi thoảng được
+        ngủ.
+      jobTitle: Giám Đốc Điều Hành
   - backgroundColor: '#509a5a'
     english:
       jobDescription: >-
@@ -75,26 +78,31 @@ foundersList:
         for the two and will talk about them for as long as you let him.
       jobTitle: Products and Service Advisor
     favorites:
-      beerStyle: Oyster Michelada
+      beerStyle: 'West Coast IPA, Imperial Stout'
       breweries:
-        - name: You've Probably Never Heard of Them
-          url: 'http://www.google.com'
+        - name: Black Raven Brewing
+          url: 'http://www.blackravenbrewing.com'
+        - name: Stone Brewing
+          url: 'http://www.stonebrewing.com'
+        - name: Stoup Brewing
+          url: 'http://www.stoupbrewing.com'
       other:
         classifier: Favorite Ninja Turtle
-        classifierVietnamese: Favorite
-        favorite: Sauteed with Butter & Garlic
+        classifierVietnamese: '"Ninja Turtle" Ưa Thích'
+        favorite: Raphael
     image: /img/headshots-square.jpg
     name: Noah Tanabe
     vietnamese:
       jobDescription: >-
-        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
-        hendrerit. Pellen tesque.
-      jobTitle: Vietnamese Job Title
+        Ăn đồ ăn ngon, uống bia ngon. Dành thời gian tự làm hoặc tìm kiếm về đồ
+        ăn và thức uống, và sẽ nói không ngừng nếu bạn cho anh ấy nói.
+      jobTitle: Cố Vấn Sản Phẩm Và Dịch Vụ
   - backgroundColor: '#c74548'
     english:
       jobDescription: >-
-        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
-        hendrerit. Pellen tesque.
+        Official Vietnamese-speaker. Unpaid translator. Corrects Chris'
+        Vietnamese and annoys others with random cultural facts. Constantly on
+        the lookout for local but weird ingredients to put in beer.
       jobTitle: Cultural Advisor
     favorites:
       beerStyle: Milk Stout
@@ -107,14 +115,16 @@ foundersList:
           url: 'http://heartofdarknessbrewery.com/'
       other:
         classifier: Favorite Pokémon
-        classifierVietnamese: Pokémon Ưa Thích
+        classifierVietnamese: '"Pokémon" Ưa Thích'
         favorite: Shuckle
     image: /img/headshots-square-2.jpg
     name: Nam Tran
     vietnamese:
       jobDescription: >-
-        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit. Phasellus
-        hendrerit. Pellen tesque.
-      jobTitle: Vietnamese Job Title
+        Phát ngôn viên tiếng Việt chính thức. Làm việc không công. Sửa tiếng
+        Việt của Chris và làm phiền những người còn lại với những lý lẽ ngẫu
+        nhiên về văn hoá. Luôn luôn lùng sục những nguyên liệu địa phương mới lạ
+        để nấu cùng bia.
+      jobTitle: Cố Vấn Văn Hoá
 ---
 
