@@ -7,9 +7,9 @@ import Story from 'src/components/Story';
 import Founders from 'src/components/Founders';
 import Mainstays from 'src/components/Mainstays';
 
-export default () => {
+export default (props) => {
   return (
-    <Layout>
+    <Layout location={props.location}>
       <Intro />
       <About />
       <Story />

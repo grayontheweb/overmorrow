@@ -7,9 +7,9 @@ import Story from 'src/components/Story';
 import Founders from 'src/components/Founders';
 import Mainstays from 'src/components/Mainstays';
 
-export default () => {
+export default (props) => {
   return (
-    <Layout locale="vietnamese">
+    <Layout location={props.location} locale="vietnamese">
       <Intro locale="vietnamese" />
       <About locale="vietnamese" />
       <Story locale="vietnamese" />
