@@ -3,10 +3,11 @@
 
 .Founders {
   color: $white;
+  margin-top: -20px;
 
   &__parallax-container {
     background: $very-dark-blue;
-    padding: 60px 0 0;
+    padding: 60px 0 60px;
 
     @include breakpoint(tablet) {
       padding: 118px 62px 146px;

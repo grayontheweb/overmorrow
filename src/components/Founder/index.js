@@ -4,7 +4,11 @@ import Img from 'gatsby-image';
 
 import './Founder.scss';
 
-const Founder = ({ founder = {} }) => (
+const Founder = ({
+  founder = {},
+  favoriteBeerStyleHeading,
+  favoriteBreweriesHeading,
+}) => (
   <div className="Founder">
     <div className="Founder__parallax-container">
       {founder.image && (
@@ -29,10 +33,10 @@ const Founder = ({ founder = {} }) => (
           backgroundColor: founder.backgroundColor,
         }}
       >
-        <dt>Favorite Beer Style</dt>
+        <dt>{favoriteBeerStyleHeading}</dt>
         <dd>{founder.favorites.beerStyle}</dd>
 
-        <dt>Favorite Breweries</dt>
+        <dt>{favoriteBreweriesHeading}</dt>
         <dd>
           <ul>
             {founder.favorites.breweries.map((brewery, i) => (

@@ -1,41 +1,46 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import logo from '../images/logo.svg';
-
-import LayoutFooterSocial from './Social';
+import LayoutFooterComponent from './Footer';
 
 import './Footer.scss';
 
-const LayoutFooter = ({ locale }) => (
-  <footer className="LayoutFooter">
-    <div className="LayoutFooter__information">
-      <h3
-        className="LayoutFooter__information__logo"
-        style={{
-          backgroundImage: `url(${logo})`,
-        }}
-      >
-        <a href="#intro">Overmorrow</a>
-      </h3>
+const LayoutFooter = ({ locale }) => {
+  const {
+    markdownRemark: { frontmatter },
+  } = useStaticQuery(graphql`
+    query FooterQuery {
+      markdownRemark(frontmatter: { templateKey: { eq: "footer" } }) {
+        id
 
-      <div className="LayoutFooter__information__legal">
-        <span className="LayoutFooter__information__legal__copyright">
-          2019 Overmorrow Brewing Company Limited
-        </span>
+        frontmatter {
+          designerName
+          designerUrl
 
-        <span className="LayoutFooter__information__legal__address">
-          Công Ty TNHH Bia Ngày Nối Tiếp • <strong>Address:</strong> Xã Đông Dư,
-          Gia Lâm, Hà Nội
-        </span>
+          english {
+            designAttribution
+          }
 
-        <span className="LayoutFooter__information__legal__design-services">
-          Branding and Design Services Provided by Crunchy Frog
-        </span>
-      </div>
-    </div>
+          vietnamese {
+            designAttribution
+          }
+        }
+      }
+    }
+  `);
 
-    <LayoutFooterSocial />
-  </footer>
-);
+  const content =
+    locale !== 'vietnamese'
+      ? {
+          ...frontmatter,
+          ...frontmatter.english,
+        }
+      : {
+          ...frontmatter,
+          ...frontmatter.vietnamese,
+        };
+
+  return <LayoutFooterComponent content={content} />;
+};
 
 export default LayoutFooter;

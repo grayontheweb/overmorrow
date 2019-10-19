@@ -12,7 +12,12 @@ const Founders = ({ content }) => (
 
       <div className="Founders__container">
         {content.foundersList.map((founder, i) => (
-          <Founder founder={founder} key={i} />
+          <Founder
+            founder={founder}
+            favoriteBeerStyleHeading={content.favoriteBeerStyleHeading}
+            favoriteBreweriesHeading={content.favoriteBreweriesHeading}
+            key={i}
+          />
         ))}
       </div>
     </div>

@@ -14,10 +14,14 @@ const Founders = ({ locale = 'english' }) => {
 
         frontmatter {
           english {
+            favoriteBeerStyleHeading
+            favoriteBreweriesHeading
             heading
           }
 
           vietnamese {
+            favoriteBeerStyleHeading
+            favoriteBreweriesHeading
             heading
           }
 
@@ -59,6 +63,7 @@ const Founders = ({ locale = 'english' }) => {
 
               other {
                 classifier
+                classifierVietnamese
                 favorite
               }
             }
@@ -84,7 +89,13 @@ const Founders = ({ locale = 'english' }) => {
           ...frontmatter.vietnamese,
           foundersList: frontmatter.foundersList.map((founder) => ({
             backgroundColor: founder.backgroundColor,
-            favorites: founder.favorites,
+            favorites: {
+              ...founder.favorites,
+              other: {
+                ...founder.favorites.other,
+                classifier: founder.favorites.other.classifierVietnamese,
+              },
+            },
             name: founder.name,
             image: founder.image,
             ...founder.vietnamese,

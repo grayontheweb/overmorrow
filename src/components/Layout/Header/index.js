@@ -108,6 +108,7 @@ const LayoutHeader = ({ locale }) => {
       isFixed={isOpen || isFixed}
       isOpen={isOpen}
       isVisible={isVisible}
+      locale={locale}
       setIsOpen={setIsOpen}
       toggleIsOpen={toggleIsOpen}
     />

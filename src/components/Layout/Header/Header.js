@@ -18,6 +18,7 @@ const LayoutHeader = ({
   isFixed,
   isOpen,
   isVisible,
+  locale,
   setIsOpen,
   toggleIsOpen,
 }) => (
@@ -105,13 +106,13 @@ const LayoutHeader = ({
 
       <ul className="LayoutHeader__language-toggle">
         <li>
-          <Link activeClassName="active" to="/">
+          <Link className={locale !== 'vietnamese' ? 'active' : null} to="/">
             English
           </Link>
         </li>
 
         <li>
-          <Link activeClassName="active" to="/vn">
+          <Link className={locale === 'vietnamese' ? 'active' : null} to="/vn">
             Tiếng Việt
           </Link>
         </li>
