@@ -14,12 +14,12 @@ const Layout = ({ children, locale = 'english', meta }) => (
       <meta name="description" content={meta.description} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.overmorrow.beer" />
+      <meta property="og:url" content="http://www.overmorrow.beer" />
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
       <meta
         property="og:image"
-        content="https://www.overmorrow.beer/img/meta-image.jpg"
+        content="http://www.overmorrow.beer/img/meta-image.jpg"
       />
 
       <meta property="twitter:card" content="summary_large_image" />
@@ -28,7 +28,7 @@ const Layout = ({ children, locale = 'english', meta }) => (
       <meta property="twitter:description" content={meta.description} />
       <meta
         property="twitter:image"
-        content="https://www.overmorrow.beer/img/meta-image.jpg"
+        content="http://www.overmorrow.beer/img/meta-image.jpg"
       />
     </Helmet>
 
