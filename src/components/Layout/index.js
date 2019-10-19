@@ -20,7 +20,7 @@ const Layout = (props) => {
           image {
             relativePath
             childImageSharp {
-              fixed(height: 1200, quality: 100, width: 1200) {
+              fixed(height: 1200, quality: 70, width: 1200) {
                 ...GatsbyImageSharpFixed_noBase64
               }
             }

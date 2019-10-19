@@ -31,7 +31,7 @@ const Mainstays = ({ locale = 'english' }) => {
 
             bottleImage {
               childImageSharp {
-                fluid(quality: 100, maxWidth: 340) {
+                fluid(quality: 70, maxWidth: 340) {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }
@@ -39,7 +39,7 @@ const Mainstays = ({ locale = 'english' }) => {
 
             nameImage {
               childImageSharp {
-                fluid(quality: 100, maxWidth: 350) {
+                fluid(quality: 70, maxWidth: 350) {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }

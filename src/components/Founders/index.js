@@ -35,7 +35,7 @@ const Founders = ({ locale = 'english' }) => {
                 fixed(
                   cropFocus: ATTENTION
                   height: 360
-                  quality: 100
+                  quality: 50
                   width: 360
                 ) {
                   ...GatsbyImageSharpFixed_noBase64
