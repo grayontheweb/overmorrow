@@ -44,9 +44,8 @@ foundersList:
   - backgroundColor: '#e29a26'
     english:
       jobDescription: >-
-        Official taste tester. Unofficial  Supervises design, branding, and
-        Internet things. Writes emails, signs paperwork, solves problems, and
-        sometimes sleeps.
+        Official taste tester. Supervises design, branding, and Internet things.
+        Writes emails, signs paperwork, solves problems, and sometimes sleeps.
       jobTitle: Director of Operations
     favorites:
       beerStyle: 'Black IPA, Anything Aged in a Bourbon Barrel'
@@ -59,6 +58,8 @@ foundersList:
           url: 'https://duckrabbitbrewery.com/'
         - name: Mikkeller
           url: 'http://mikkeller.dk/'
+        - name: Stone Brewing
+          url: 'https://www.stonebrewing.com/'
       other:
         classifier: Favorite Progressive Rock Band
         classifierVietnamese: '"Progressive Rock Band" Ưa Thích'
