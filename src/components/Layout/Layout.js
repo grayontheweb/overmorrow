@@ -14,7 +14,10 @@ const Layout = ({ children, locale = 'english', meta }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
-      <meta property="og:image" content={meta.imageUrl} />
+      <meta
+        property="og:image"
+        content="https://www.overmorrow.beer/img/meta-image.jpg"
+      />
       <meta property="og:url" content="http://overmorrow.beer" />
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
