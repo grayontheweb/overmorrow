@@ -10,21 +10,36 @@ collections:
     name: pages
     files:
       -
-        file: data/whereToFindUs.md
-        label: Where to Find Us
-        name: whereTofindUs
+        file: data/where.md
+        label: Where
+        name: where
         fields:
           -
-            label: Cities
-            name: cities
-            widget: list
+            default: where
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: English
+            name: english
+            widget: object
             fields:
               -
-                hint: The name of the city
-                label: Name
-                name: name
+                hint: The heading text for the Where section
+                label: Heading
+                name: heading
                 widget: string
-                required: true
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                hint: The heading text for the Where section
+                label: Heading
+                name: heading
+                widget: string
+
 
 #   file: data/meta.md
 #   label: Meta
