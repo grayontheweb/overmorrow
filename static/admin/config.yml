@@ -1,7 +1,7 @@
 ---
 backend:
-  branch: master
-  name: test-repo
+  branch: gs/add-locations
+  name: git-gateway
 media_folder: static/img
 public_folder: /img
 collections:
@@ -596,13 +596,16 @@ collections:
                     label: Telephone Number
                     name: telephoneNumber
                     widget: string
+                    required: false
                   -
                     hint: The website for the business
                     label: Website
                     name: website
                     widget: string
+                    required: false
                   -
                     hint: The Facebook page for the business
                     label: Facebook
                     name: facebook
                     widget: string
+                    required: false
