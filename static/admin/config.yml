@@ -542,12 +542,12 @@ collections:
                 required: true
                 widget: string
       -
-        file: data/whereToFindUs.md
+        file: data/where.md
         label: Where to Find Us
-        name: whereToFindUs
+        name: where
         fields:
           -
-            default: whereToFindUs
+            default: where
             label: "Template Key"
             name: templateKey
             widget: hidden
