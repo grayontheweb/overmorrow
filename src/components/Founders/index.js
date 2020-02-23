@@ -38,7 +38,11 @@ const Founders = ({ locale = 'english' }) => {
                   quality: 50
                   width: 360
                 ) {
-                  ...GatsbyImageSharpFixed_noBase64
+                  base64
+                  width
+                  height
+                  src
+                  srcSet
                 }
               }
             }

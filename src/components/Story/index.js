@@ -15,7 +15,11 @@ const Story = ({ locale = 'english' }) => {
           backgroundImage {
             childImageSharp {
               fluid(cropFocus: ATTENTION, quality: 70, maxWidth: 1440) {
-                ...GatsbyImageSharpFluid_noBase64
+                base64
+                aspectRatio
+                src
+                srcSet
+                sizes
               }
             }
           }

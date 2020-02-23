@@ -21,7 +21,11 @@ const Layout = (props) => {
             relativePath
             childImageSharp {
               fixed(height: 1200, quality: 70, width: 1200) {
-                ...GatsbyImageSharpFixed_noBase64
+                base64
+                width
+                height
+                src
+                srcSet
               }
             }
           }
