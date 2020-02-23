@@ -1,3 +1,3 @@
 ---
-whereToFindUs: about
+templateKey: whereToFindUs
 ---
