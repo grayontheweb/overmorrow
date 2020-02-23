@@ -1,7 +1,7 @@
 ---
 backend:
   branch: master
-  name: git-gateway
+  name: test-repo
 media_folder: static/img
 public_folder: /img
 collections:
@@ -10,12 +10,46 @@ collections:
     name: pages
     files:
       -
-        file: data/where.md
-        label: Where
-        name: where
+        file: data/meta.md
+        label: Meta
+        name: meta
         fields:
           -
-            default: where
+            default: meta
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            hint: The title of the website
+            label: Title
+            name: title
+            required: true
+            widget: string
+          -
+            hint: The description of the website, for display in search engines and in social media shares
+            label: Description
+            name: description
+            required: true
+            widget: string
+          -
+            hint: The Vietnamese description of the website, for display in search engines and in social media shares
+            label: Vietnamese Description
+            name: vnDescription
+            required: true
+            widget: string
+          -
+            hint: The image to display with the website in social media shares, should be 1200x1200px
+            label: Image
+            name: image
+            required: true
+            widget: image
+      -
+        file: data/header.md
+        label: Header
+        name: header
+        fields:
+          -
+            default: header
             label: "Template Key"
             name: templateKey
             widget: hidden
@@ -25,9 +59,22 @@ collections:
             widget: object
             fields:
               -
-                hint: The heading text for the Where section
-                label: Heading
-                name: heading
+                hint: The label for the About Us nav entry
+                label: About Us
+                name: aboutUs
+                required: true
+                widget: string
+              -
+                hint: The label for the Founders nav entry
+                label: Founders
+                name: founders
+                required: true
+                widget: string
+              -
+                hint: The label for the Our Beers nav entry
+                label: Our Beers
+                name: ourBeers
+                required: true
                 widget: string
           -
             label: Vietnamese
@@ -35,605 +82,527 @@ collections:
             widget: object
             fields:
               -
-                hint: The heading text for the Where section
+                hint: The label for the About Us nav entry
+                label: About Us
+                name: aboutUs
+                required: true
+                widget: string
+              -
+                hint: The label for the Founders nav entry
+                label: Founders
+                name: founders
+                required: true
+                widget: string
+              -
+                hint: The label for the Our Beers nav entry
+                label: Our Beers
+                name: ourBeers
+                required: true
+                widget: string
+      -
+        file: data/intro.md
+        label: Intro
+        name: intro
+        fields:
+          -
+            default: intro
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: English
+            name: english
+            widget: object
+            fields:
+              -
+                hint: The text that appears below the logo on the intro section
+                label: Subtitle
+                name: subtitle
+                required: true
+                widget: string
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                hint: The text that appears below the logo on the intro section
+                label: Subtitle
+                name: subtitle
+                required: true
+                widget: string
+      -
+        file: data/about.md
+        label: About
+        name: about
+        fields:
+          -
+            default: about
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            hint: The background image to display on the "About Us" section.
+            label: Background Image
+            name: backgroundImage
+            widget: image
+          -
+            label: English
+            name: english
+            widget: object
+            fields:
+              -
+                hint: The introduction text that displays next to the dictionary definition.
+                label: Intro
+                name: intro
+                widget: markdown
+              -
+                default: Our Story
+                hint: The heading text for the "About Us" section.
                 label: Heading
                 name: heading
                 widget: string
-
-
-#   file: data/meta.md
-#   label: Meta
-#   name: meta
-#   fields:
-#     -
-#       default: meta
-#       label: "Template Key"
-#       name: templateKey
-#       widget: hidden
-#     -
-#       hint: The title of the website
-#       label: Title
-#       name: title
-#       required: true
-#       widget: string
-#     -
-#       hint: The description of the website, for display in search engines and in social media shares
-#       label: Description
-#       name: description
-#       required: true
-#       widget: string
-#     -
-#       hint: The Vietnamese description of the website, for display in search engines and in social media shares
-#       label: Vietnamese Description
-#       name: vnDescription
-#       required: true
-#       widget: string
-#     -
-#       hint: The image to display with the website in social media shares, should be 1200x1200px
-#       label: Image
-#       name: image
-#       required: true
-#       widget: image
-# -
-#   file: data/header.md
-#   label: Header
-#   name: header
-#   fields:
-#     -
-#       default: header
-#       label: "Template Key"
-#       name: templateKey
-#       widget: hidden
-#     -
-#       label: English
-#       name: english
-#       widget: object
-#       fields:
-#         -
-#           hint: The label for the About Us nav entry
-#           label: About Us
-#           name: aboutUs
-#           required: true
-#           widget: string
-#         -
-#           hint: The label for the Founders nav entry
-#           label: Founders
-#           name: founders
-#           required: true
-#           widget: string
-#         -
-#           hint: The label for the Our Beers nav entry
-#           label: Our Beers
-#           name: ourBeers
-#           required: true
-#           widget: string
-#     -
-#       label: Vietnamese
-#       name: vietnamese
-#       widget: object
-#       fields:
-#         -
-#           hint: The label for the About Us nav entry
-#           label: About Us
-#           name: aboutUs
-#           required: true
-#           widget: string
-#         -
-#           hint: The label for the Founders nav entry
-#           label: Founders
-#           name: founders
-#           required: true
-#           widget: string
-#         -
-#           hint: The label for the Our Beers nav entry
-#           label: Our Beers
-#           name: ourBeers
-#           required: true
-#           widget: string
-# -
-#   file: data/intro.md
-#   label: Intro
-#   name: intro
-#   fields:
-#     -
-#       default: intro
-#       label: "Template Key"
-#       name: templateKey
-#       widget: hidden
-#     -
-#       label: English
-#       name: english
-#       widget: object
-#       fields:
-#         -
-#           hint: The text that appears below the logo on the intro section
-#           label: Subtitle
-#           name: subtitle
-#           required: true
-#           widget: string
-#     -
-#       label: Vietnamese
-#       name: vietnamese
-#       widget: object
-#       fields:
-#         -
-#           hint: The text that appears below the logo on the intro section
-#           label: Subtitle
-#           name: subtitle
-#           required: true
-#           widget: string
-# -
-#   file: data/about.md
-#   label: About
-#   name: about
-#   fields:
-#     -
-#       default: about
-#       label: "Template Key"
-#       name: templateKey
-#       widget: hidden
-#     -
-#       hint: The background image to display on the "About Us" section.
-#       label: Background Image
-#       name: backgroundImage
-#       widget: image
-#     -
-#       label: English
-#       name: english
-#       widget: object
-#       fields:
-#         -
-#           hint: The introduction text that displays next to the dictionary definition.
-#           label: Intro
-#           name: intro
-#           widget: markdown
-#         -
-#           default: Our Story
-#           hint: The heading text for the "About Us" section.
-#           label: Heading
-#           name: heading
-#           widget: string
-#         -
-#           hint: The primary content of the "About Us" section.
-#           label: Content
-#           name: content
-#           widget: markdown
-#     -
-#       label: Vietnamese
-#       name: vietnamese
-#       widget: object
-#       fields:
-#         -
-#           hint: The introduction text that displays next to the dictionary definition.
-#           label: Intro
-#           name: intro
-#           widget: markdown
-#         -
-#           default: Our Story
-#           hint: The heading text for the "About Us" section.
-#           label: Heading
-#           name: heading
-#           widget: string
-#         -
-#           hint: The primary content of the "About Us" section.
-#           label: Content
-#           name: content
-#           widget: markdown
-# -
-#   file: data/founders.md
-#   label: Founders
-#   name: founders
-#   fields:
-#     -
-#       default: founders
-#       label: "Template Key"
-#       name: templateKey
-#       widget: hidden
-#     -
-#       label: English
-#       name: english
-#       widget: object
-#       fields:
-#         -
-#           default: The Founders
-#           hint: The heading text for the "Founders" section.
-#           label: Heading
-#           name: heading
-#           required: true
-#           widget: string
-#         -
-#           hint: The heading text to display for "Favorite Beer Style"
-#           label: Favorite Beer Style Heading
-#           name: favoriteBeerStyleHeading
-#           required: true
-#           widget: string
-#         -
-#           hint: The heading text to display for "Favorite Breweries"
-#           label: Favorite Breweries Heading
-#           name: favoriteBreweriesHeading
-#           required: true
-#           widget: string
-#     -
-#       label: Vietnamese
-#       name: vietnamese
-#       widget: object
-#       fields:
-#         -
-#           default: The Founders
-#           hint: The heading text for the "Founders" section.
-#           label: Heading
-#           name: heading
-#           required: true
-#           widget: string
-#         -
-#           hint: The heading text to display for "Favorite Beer Style"
-#           label: Favorite Beer Style Heading
-#           name: favoriteBeerStyleHeading
-#           required: true
-#           widget: string
-#         -
-#           hint: The heading text to display for "Favorite Breweries"
-#           label: Favorite Breweries Heading
-#           name: favoriteBreweriesHeading
-#           required: true
-#           widget: string
-#     -
-#       label: Founders
-#       name: foundersList
-#       widget: list
-#       fields:
-#         -
-#           hint: The profile image of the Founder.
-#           label: image
-#           name: image
-#           required: true
-#           widget: image
-#         -
-#           hint: The hex code for the background color for the Founder.
-#           label: background
-#           name: backgroundColor
-#           required: true
-#           widget: string
-#         -
-#           hint: The full name of the Founder.
-#           label: Name
-#           name: name
-#           required: true
-#           widget: string
-#         -
-#           label: English
-#           name: english
-#           required: true
-#           widget: object
-#           fields:
-#             -
-#               hint: The job title of the Founder.
-#               label: Job Title
-#               name: jobTitle
-#               required: true
-#               widget: string
-#             -
-#               hint: The job description of the Founder.
-#               label: Job Description
-#               name: jobDescription
-#               required: true
-#               widget: string
-#         -
-#           label: Vietnamese
-#           name: vietnamese
-#           required: true
-#           widget: object
-#           fields:
-#             -
-#               hint: The job title of the Founder.
-#               label: Job Title
-#               name: jobTitle
-#               required: true
-#               widget: string
-#             -
-#               hint: The job description of the Founder.
-#               label: Job Description
-#               name: jobDescription
-#               required: true
-#               widget: string
-#         -
-#           hint: A list of fun favorite things for each Founder. No Vietnamese translation here as it's not necessary
-#           label: Favorites
-#           name: favorites
-#           required: true
-#           widget: object
-#           fields:
-#             -
-#               hint: Favorite style of beer
-#               label: Beer Style
-#               name: beerStyle
-#               required: true
-#               widget: string
-#             -
-#               label: Breweries
-#               name: breweries
-#               required: true
-#               widget: list
-#               fields:
-#                 -
-#                   hint: The name of the brewery
-#                   label: Brewery Name
-#                   name: name
-#                   required: true
-#                   widget: string
-#                 -
-#                   hint: The url for the brewery's website
-#                   label: Brewery URL
-#                   name: url
-#                   widget: string
-#             -
-#               label: Other
-#               name: other
-#               required: true
-#               widget: object
-#               fields:
-#                 -
-#                   label: Classifier
-#                   name: classifier
-#                   required: true
-#                   widget: string
-#                 -
-#                   label: Classifier in Vietnamese
-#                   name: classifierVietnamese
-#                   required: true
-#                   widget: string
-#                 -
-#                   label: favorite
-#                   name: favorite
-#                   required: true
-#                   widget: string
-# -
-#   file: data/beers.md
-#   label: Beers
-#   name: beers
-#   fields:
-#     -
-#       default: beers
-#       label: "Template Key"
-#       name: templateKey
-#       widget: hidden
-#     -
-#       label: English
-#       name: english
-#       widget: object
-#       fields:
-#         -
-#           default: Our Beers
-#           hint: The heading text for the "Beers" section.
-#           label: Heading
-#           name: heading
-#           required: true
-#           widget: string
-#         -
-#           default: Aroma & Taste
-#           hint: The text displayed for the "Aroma & Taste" section of each beer.
-#           label: Aroma and Taste Heading
-#           name: aromaAndTasteHeading
-#           required: true
-#           widget: string
-#     -
-#       label: Vietnamese
-#       name: vietnamese
-#       widget: object
-#       fields:
-#         -
-#           default: The Founders
-#           hint: The heading text for the "Beers" section.
-#           label: Heading
-#           name: heading
-#           required: true
-#           widget: string
-#         -
-#           default: Aroma & Taste
-#           hint: The text displayed for the "Aroma & Taste" section of each beer.
-#           label: Aroma and Taste Heading
-#           name: aromaAndTasteHeading
-#           required: true
-#           widget: string
-#     -
-#       label: Beers
-#       name: beerList
-#       widget: list
-#       fields:
-#         -
-#           hint: The bottle image for the beer.
-#           label: Bottle Image
-#           name: bottleImage
-#           required: true
-#           widget: image
-#         -
-#           hint: The image of the beer's stylized name.
-#           label: Name Image
-#           name: nameImage
-#           required: true
-#           widget: image
-#         -
-#           hint: The hex code for the accent color of the beer.
-#           label: Accent Color
-#           name: accentColor
-#           required: true
-#           widget: string
-#         -
-#           hint: The name of the beer.
-#           label: Name
-#           name: name
-#           required: true
-#           widget: string
-#         -
-#           hint: The grains used in the beer, separated by comma.
-#           label: Grains
-#           name: grains
-#           required: true
-#           widget: list
-#         -
-#           hint: The hops used in the beer, separated by comma.
-#           label: Hops
-#           name: hops
-#           required: true
-#           widget: list
-#         -
-#           hint: The yeast used in the beer, separated by comma.
-#           label: Yeast
-#           name: yeast
-#           required: true
-#           widget: list
-#         -
-#           label: English
-#           name: english
-#           required: true
-#           widget: object
-#           fields:
-#             -
-#               hint: The introduction text for the beer.
-#               label: Intro
-#               name: intro
-#               required: true
-#               widget: string
-#             -
-#               hint: The description for the beer.
-#               label: Description
-#               name: description
-#               required: true
-#               widget: markdown
-#             -
-#               hint: The aroma and taste notes for the beer.
-#               label: Aroma and Taste
-#               name: aromaAndTaste
-#               required: true
-#               widget: string
-#         -
-#           label: Vietnamese
-#           name: vietnamese
-#           required: true
-#           widget: object
-#           fields:
-#             -
-#               hint: The introduction text for the beer.
-#               label: Intro
-#               name: intro
-#               required: true
-#               widget: string
-#             -
-#               hint: The description for the beer.
-#               label: Description
-#               name: description
-#               required: true
-#               widget: markdown
-#             -
-#               hint: The aroma and taste notes for the beer.
-#               label: Aroma and Taste
-#               name: aromaAndTaste
-#               required: true
-#               widget: string
-# -
-#   file: data/footer.md
-#   label: Footer
-#   name: footer
-#   fields:
-#     -
-#       default: footer
-#       label: "Template Key"
-#       name: templateKey
-#       widget: hidden
-#     -
-#       hint: The name of the design agency providing the design
-#       label: Designer Name
-#       name: designerName
-#       widget: String
-#     -
-#       hint: The url for the design agency providing the design
-#       label: Designer Url
-#       name: designerUrl
-#       widget: String
-#     -
-#       label: English
-#       name: english
-#       widget: object
-#       fields:
-#         -
-#           hint: The text for the attribution of the design
-#           label: Design Attribution
-#           name: designAttribution
-#           required: true
-#           widget: string
-#     -
-#       label: Vietnamese
-#       name: vietnamese
-#       widget: object
-#       fields:
-#         -
-#           hint: The text for the attribution of the design
-#           label: Design Attribution
-#           name: designAttribution
-#           required: true
-#           widget: string
-# -
-#   file: data/whereToFindUs.md
-#   label: Where to Find Us
-#   name: whereToFindUs
-#   fields:
-#     -
-#       default: whereToFindUs
-#       label: "Template Key"
-#       name: templateKey
-#       widget: hidden
-#     -
-#       label: Cities
-#       name: cities
-#       widget: list
-#       fields:
-#         -
-#           hint: The name of the city
-#           label: Name
-#           name: name
-#           widget: string
-#           required: true
-#         -
-#           label: Locations
-#           name: locations
-#           widget: list
-#           fields:
-#             -
-#               hint: The name of the business
-#               label: Name
-#               name: name
-#               widget: string
-#               required: true
-#             -
-#               hint: The street address of the business
-#               label: Street Address
-#               name: streetAddress
-#               widget: string
-#               required: true
-#             -
-#               hint: The latitude for the business
-#               label: Latitude
-#               name: latitude
-#               widget: string
-#               required: true
-#             -
-#               hint: The longitude for the business
-#               label: longitude
-#               name: longitude
-#               widget: string
-#               required: true
-#             -
-#               hint: The telephone number for the business
-#               label: Telephone Number
-#               name: telephoneNumber
-#               widget: string
-#             -
-#               hint: The website for the business
-#               label: Website
-#               name: website
-#               widget: string
-#             -
-#               hint: The Facebook page for the business
-#               label: Facebook
-#               name: facebook
-#               widget: string
+              -
+                hint: The primary content of the "About Us" section.
+                label: Content
+                name: content
+                widget: markdown
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                hint: The introduction text that displays next to the dictionary definition.
+                label: Intro
+                name: intro
+                widget: markdown
+              -
+                default: Our Story
+                hint: The heading text for the "About Us" section.
+                label: Heading
+                name: heading
+                widget: string
+              -
+                hint: The primary content of the "About Us" section.
+                label: Content
+                name: content
+                widget: markdown
+      -
+        file: data/founders.md
+        label: Founders
+        name: founders
+        fields:
+          -
+            default: founders
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: English
+            name: english
+            widget: object
+            fields:
+              -
+                default: The Founders
+                hint: The heading text for the "Founders" section.
+                label: Heading
+                name: heading
+                required: true
+                widget: string
+              -
+                hint: The heading text to display for "Favorite Beer Style"
+                label: Favorite Beer Style Heading
+                name: favoriteBeerStyleHeading
+                required: true
+                widget: string
+              -
+                hint: The heading text to display for "Favorite Breweries"
+                label: Favorite Breweries Heading
+                name: favoriteBreweriesHeading
+                required: true
+                widget: string
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                default: The Founders
+                hint: The heading text for the "Founders" section.
+                label: Heading
+                name: heading
+                required: true
+                widget: string
+              -
+                hint: The heading text to display for "Favorite Beer Style"
+                label: Favorite Beer Style Heading
+                name: favoriteBeerStyleHeading
+                required: true
+                widget: string
+              -
+                hint: The heading text to display for "Favorite Breweries"
+                label: Favorite Breweries Heading
+                name: favoriteBreweriesHeading
+                required: true
+                widget: string
+          -
+            label: Founders
+            name: foundersList
+            widget: list
+            fields:
+              -
+                hint: The profile image of the Founder.
+                label: image
+                name: image
+                required: true
+                widget: image
+              -
+                hint: The hex code for the background color for the Founder.
+                label: background
+                name: backgroundColor
+                required: true
+                widget: string
+              -
+                hint: The full name of the Founder.
+                label: Name
+                name: name
+                required: true
+                widget: string
+              -
+                label: English
+                name: english
+                required: true
+                widget: object
+                fields:
+                  -
+                    hint: The job title of the Founder.
+                    label: Job Title
+                    name: jobTitle
+                    required: true
+                    widget: string
+                  -
+                    hint: The job description of the Founder.
+                    label: Job Description
+                    name: jobDescription
+                    required: true
+                    widget: string
+              -
+                label: Vietnamese
+                name: vietnamese
+                required: true
+                widget: object
+                fields:
+                  -
+                    hint: The job title of the Founder.
+                    label: Job Title
+                    name: jobTitle
+                    required: true
+                    widget: string
+                  -
+                    hint: The job description of the Founder.
+                    label: Job Description
+                    name: jobDescription
+                    required: true
+                    widget: string
+              -
+                hint: A list of fun favorite things for each Founder. No Vietnamese translation here as it's not necessary
+                label: Favorites
+                name: favorites
+                required: true
+                widget: object
+                fields:
+                  -
+                    hint: Favorite style of beer
+                    label: Beer Style
+                    name: beerStyle
+                    required: true
+                    widget: string
+                  -
+                    label: Breweries
+                    name: breweries
+                    required: true
+                    widget: list
+                    fields:
+                      -
+                        hint: The name of the brewery
+                        label: Brewery Name
+                        name: name
+                        required: true
+                        widget: string
+                      -
+                        hint: The url for the brewery's website
+                        label: Brewery URL
+                        name: url
+                        widget: string
+                  -
+                    label: Other
+                    name: other
+                    required: true
+                    widget: object
+                    fields:
+                      -
+                        label: Classifier
+                        name: classifier
+                        required: true
+                        widget: string
+                      -
+                        label: Classifier in Vietnamese
+                        name: classifierVietnamese
+                        required: true
+                        widget: string
+                      -
+                        label: favorite
+                        name: favorite
+                        required: true
+                        widget: string
+      -
+        file: data/beers.md
+        label: Beers
+        name: beers
+        fields:
+          -
+            default: beers
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: English
+            name: english
+            widget: object
+            fields:
+              -
+                default: Our Beers
+                hint: The heading text for the "Beers" section.
+                label: Heading
+                name: heading
+                required: true
+                widget: string
+              -
+                default: Aroma & Taste
+                hint: The text displayed for the "Aroma & Taste" section of each beer.
+                label: Aroma and Taste Heading
+                name: aromaAndTasteHeading
+                required: true
+                widget: string
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                default: The Founders
+                hint: The heading text for the "Beers" section.
+                label: Heading
+                name: heading
+                required: true
+                widget: string
+              -
+                default: Aroma & Taste
+                hint: The text displayed for the "Aroma & Taste" section of each beer.
+                label: Aroma and Taste Heading
+                name: aromaAndTasteHeading
+                required: true
+                widget: string
+          -
+            label: Beers
+            name: beerList
+            widget: list
+            fields:
+              -
+                hint: The bottle image for the beer.
+                label: Bottle Image
+                name: bottleImage
+                required: true
+                widget: image
+              -
+                hint: The image of the beer's stylized name.
+                label: Name Image
+                name: nameImage
+                required: true
+                widget: image
+              -
+                hint: The hex code for the accent color of the beer.
+                label: Accent Color
+                name: accentColor
+                required: true
+                widget: string
+              -
+                hint: The name of the beer.
+                label: Name
+                name: name
+                required: true
+                widget: string
+              -
+                hint: The grains used in the beer, separated by comma.
+                label: Grains
+                name: grains
+                required: true
+                widget: list
+              -
+                hint: The hops used in the beer, separated by comma.
+                label: Hops
+                name: hops
+                required: true
+                widget: list
+              -
+                hint: The yeast used in the beer, separated by comma.
+                label: Yeast
+                name: yeast
+                required: true
+                widget: list
+              -
+                label: English
+                name: english
+                required: true
+                widget: object
+                fields:
+                  -
+                    hint: The introduction text for the beer.
+                    label: Intro
+                    name: intro
+                    required: true
+                    widget: string
+                  -
+                    hint: The description for the beer.
+                    label: Description
+                    name: description
+                    required: true
+                    widget: markdown
+                  -
+                    hint: The aroma and taste notes for the beer.
+                    label: Aroma and Taste
+                    name: aromaAndTaste
+                    required: true
+                    widget: string
+              -
+                label: Vietnamese
+                name: vietnamese
+                required: true
+                widget: object
+                fields:
+                  -
+                    hint: The introduction text for the beer.
+                    label: Intro
+                    name: intro
+                    required: true
+                    widget: string
+                  -
+                    hint: The description for the beer.
+                    label: Description
+                    name: description
+                    required: true
+                    widget: markdown
+                  -
+                    hint: The aroma and taste notes for the beer.
+                    label: Aroma and Taste
+                    name: aromaAndTaste
+                    required: true
+                    widget: string
+      -
+        file: data/footer.md
+        label: Footer
+        name: footer
+        fields:
+          -
+            default: footer
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            hint: The name of the design agency providing the design
+            label: Designer Name
+            name: designerName
+            widget: String
+          -
+            hint: The url for the design agency providing the design
+            label: Designer Url
+            name: designerUrl
+            widget: String
+          -
+            label: English
+            name: english
+            widget: object
+            fields:
+              -
+                hint: The text for the attribution of the design
+                label: Design Attribution
+                name: designAttribution
+                required: true
+                widget: string
+          -
+            label: Vietnamese
+            name: vietnamese
+            widget: object
+            fields:
+              -
+                hint: The text for the attribution of the design
+                label: Design Attribution
+                name: designAttribution
+                required: true
+                widget: string
+      -
+        file: data/whereToFindUs.md
+        label: Where to Find Us
+        name: whereToFindUs
+        fields:
+          -
+            default: whereToFindUs
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: Cities
+            name: cities
+            widget: list
+            fields:
+              -
+                hint: The name of the city
+                label: Name
+                name: name
+                widget: string
+                required: true
+              -
+                label: Locations
+                name: locations
+                widget: list
+                fields:
+                  -
+                    hint: The name of the business
+                    label: Name
+                    name: name
+                    widget: string
+                    required: true
+                  -
+                    hint: The street address of the business
+                    label: Street Address
+                    name: streetAddress
+                    widget: string
+                    required: true
+                  -
+                    hint: The latitude for the business
+                    label: Latitude
+                    name: latitude
+                    widget: string
+                    required: true
+                  -
+                    hint: The longitude for the business
+                    label: longitude
+                    name: longitude
+                    widget: string
+                    required: true
+                  -
+                    hint: The telephone number for the business
+                    label: Telephone Number
+                    name: telephoneNumber
+                    widget: string
+                  -
+                    hint: The website for the business
+                    label: Website
+                    name: website
+                    widget: string
+                  -
+                    hint: The Facebook page for the business
+                    label: Facebook
+                    name: facebook
+                    widget: string
