@@ -541,3 +541,68 @@ collections:
                 name: designAttribution
                 required: true
                 widget: string
+      -
+        file: data/whereToFindUs.md
+        label: Where to Find Us
+        name: whereToFindUs
+        fields:
+          -
+            default: whereToFindUs
+            label: "Template Key"
+            name: templateKey
+            widget: hidden
+          -
+            label: Cities
+            name: cities
+            widget: list
+            fields:
+              -
+                hint: The name of the city
+                label: Name
+                name: name
+                widget: string
+                required: true
+              -
+                label: Locations
+                name: locations
+                widget: list
+                fields:
+                  -
+                    hint: The name of the business
+                    label: Name
+                    name: name
+                    widget: string
+                    required: true
+                  -
+                    hint: The street address of the business
+                    label: Street Address
+                    name: streetAddress
+                    widget: string
+                    required: true
+                  -
+                    hint: The latitude for the business
+                    label: Latitude
+                    name: latitude
+                    widget: string
+                    required: true
+                  -
+                    hint: The longitude for the business
+                    label: longitude
+                    name: longitude
+                    widget: string
+                    required: true
+                  -
+                    hint: The telephone number for the business
+                    label: Telephone Number
+                    name: telephoneNumber
+                    widget: string
+                  -
+                    hint: The website for the business
+                    label: Website
+                    name: website
+                    widget: string
+                  -
+                    hint: The Facebook page for the business
+                    label: Facebook
+                    name: facebook
+                    widget: string
