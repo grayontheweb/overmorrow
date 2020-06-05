@@ -66,7 +66,7 @@ beerList:
         sunset washes over a hard day’s labor.
 
 
-        **Sơnsette** is the marriage of handpicked spices from mountainous
+        **Sơn Sette** is the marriage of handpicked spices from mountainous
         Northern Vietnam, international hops, and French farmhouse ale yeast to
         create a savory yet thirst-quenching beer.
       intro: >-
