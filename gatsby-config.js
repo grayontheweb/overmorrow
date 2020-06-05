@@ -6,6 +6,8 @@
 
 module.exports = {
   plugins: [
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-root-import',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
@@ -24,8 +26,6 @@ module.exports = {
         path: `${__dirname}/data`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
