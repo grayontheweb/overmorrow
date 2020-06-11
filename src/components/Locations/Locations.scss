@@ -1,0 +1,17 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
+.Locations {
+
+
+  &__map-container {
+    height: 400px;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+  }
+}

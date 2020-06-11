@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require("dotenv").config();
+
 module.exports = {
   plugins: [
     'gatsby-transformer-sharp',
@@ -59,6 +61,20 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: 'OVERMORROWAPI',
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: 'overmorrowApi',
+        // Url to query from
+        url: 'https://overmorrow-api.herokuapp.com/v1/graphql',
+        headers: {
+          'X-Hasura-Admin-Secret': process.env.OVERMORROW_API_SECRET,
+        },
       },
     },
     'gatsby-plugin-favicon',
