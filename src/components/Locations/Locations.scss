@@ -1,0 +1,23 @@
+@import 'src/css/variables';
+@import 'src/css/mixins';
+
+.Locations {
+  padding-top: 90px;
+
+  &__map-container {
+    height: 400px;
+    position: relative;
+  }
+
+  &__header {
+    margin-bottom: 148px;
+    text-align: center;
+
+    h2 {
+      font-family: $font-family-gotham;
+      font-size: 48px;
+      font-weight: 900;
+      margin: 0;
+    }
+  }
+}

@@ -6,9 +6,9 @@ import Section from 'src/components/Section';
 import './Mainstays.scss';
 
 const Mainstays = ({ content }) => (
-  <Section className="Mainstays" id="beers">
+  <Section className="Mainstays">
     <div className="Mainstays__header">
-      <h2>{content.heading}</h2>
+      <h2 id="beers">{content.heading}</h2>
     </div>
 
     {content.beerList.map((mainstay, index) => (

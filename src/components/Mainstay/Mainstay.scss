@@ -151,10 +151,10 @@
       bottom: 0;
       content: '';
       display: block;
-      left: 0;
+      left: -400px;
       position: absolute;
-      right: 0;
-      top: 0;;
+      right: -400px;
+      top: 0;
       z-index: 1;
 
       @include breakpoint(tablet) {
