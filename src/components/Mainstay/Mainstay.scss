@@ -2,11 +2,14 @@
 @import 'src/css/mixins';
 
 .Mainstay {
-  background-image: linear-gradient(to top, $white);
   color: $very-dark-blue;
   padding-top: 1154px;
   position: relative;
   z-index: 300;
+
+  @media (max-width: $tablet - 1) {
+    background: none !important;
+  }
 
   @include breakpoint(tablet) {
     background-image: linear-gradient(to top, transparent, transparent 160px, $white 160px, $white);
@@ -151,9 +154,9 @@
       bottom: 0;
       content: '';
       display: block;
-      left: 0;
+      left: -400px;
       position: absolute;
-      right: 0;
+      right: -400px;
       top: 0;;
       z-index: 1;
 
