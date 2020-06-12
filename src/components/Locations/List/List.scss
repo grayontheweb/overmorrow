@@ -9,21 +9,44 @@
   flex-wrap: wrap;
   left: 0;
   list-style: none;
-  margin: 0 208px;
+  margin: 0;
   max-height: 430px;
   overflow-y: scroll;
   padding: 55px 60px;
-  position: absolute;
+  position: relative;
   right: 0;
+  z-index: 5000;
+
+  @include breakpoint(desktop) {
+    margin: -20px 208px 0;
+  }
 
   &__item {
-    flex: none;
-    margin-right: 41px;
+    margin-bottom: 50px;
     position: relative;
-    width: calc(33% - 27.3px);
 
-    &:nth-child(3n + 3) {
-      margin-right: 0;
+    @include breakpoint(phablet) {
+      flex: none;
+      margin-right: 41px;
+      width: calc(50% - 41px);
+
+      &:nth-child(2n + 2) {
+        margin-right: 0;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      flex: none;
+      margin-right: 41px;
+      width: calc(33% - 27.3px);
+
+      &:nth-child(2n + 2) {
+        margin-right: 41px;
+      }
+
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
     }
 
     &__active {

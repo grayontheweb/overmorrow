@@ -24,8 +24,14 @@ const LocationsList = ({
         <h3 className="LocationsList__item__title">
           <a
             href={`#${location.name}`}
-            onClick={() => onSelectLocation(location.id)}
-            onKeyDown={() => onSelectLocation(location.id)}
+            onClick={(e) => {
+              e.preventDefault();
+              onSelectLocation(location.id);
+            }}
+            onKeyDown={(e) => {
+              e.preventDefault();
+              onSelectLocation(location.id);
+            }}
           >
             {location.name}
           </a>

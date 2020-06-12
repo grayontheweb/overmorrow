@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { get } from 'lodash';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import getElementCoordinates from 'src/helpers/getElementCoordinates';
 import isInViewport from 'src/helpers/isInViewport';
 import useCompare from 'src/hooks/useCompare';
 
@@ -9,12 +10,15 @@ import LocationsComponent from './Locations';
 
 const Locations = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
-  const [zoom, setZoom] = useState(14);
+  const [zoom, setZoom] = useState(13);
 
   const { data } = useStaticQuery(graphql`
     query LocationsQuery {
       data: overmorrowApi {
-        locations: business_location {
+        locations: business_location(
+          where: { address: { city: { _eq: "Hà Nội" } } }
+          order_by: { name: asc }
+        ) {
           id
           name
 
@@ -61,10 +65,16 @@ const Locations = () => {
       `location-list-item-${id}`,
     );
 
+    const locationsMap = document.getElementById('locations-map');
+
     setSelectedLocation(id);
 
     if (locationListItem && !isInViewport(locationListItem)) {
       locationListItem.scrollIntoView(false);
+    }
+
+    if (locationsMap) {
+      window.scrollTo(0, getElementCoordinates(locationsMap).top);
     }
   };
 

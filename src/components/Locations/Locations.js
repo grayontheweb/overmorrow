@@ -2,6 +2,7 @@ import React from 'react';
 import { get } from 'lodash';
 
 import Map, { Marker } from 'src/components/UI/Map';
+import Section from 'src/components/Section';
 
 import LocationsCity from './City';
 import LocationsList from './List';
@@ -16,9 +17,12 @@ const Locations = ({
   selectedLocation,
   zoom,
 }) => (
-  <div className="Locations">
-    <h2 className="Locations__title">Where</h2>
-    <div className="Locations__map-container">
+  <Section className="Locations" fullScreen>
+    <div className="Locations__header">
+      <h2 id="where">Where</h2>
+    </div>
+
+    <div className="Locations__map-container" id="locations-map">
       <LocationsCity />
 
       <Map
@@ -52,7 +56,7 @@ const Locations = ({
       onSelectLocation={onSelectLocation}
       selectedLocation={selectedLocation}
     />
-  </div>
+  </Section>
 );
 
 export default Locations;

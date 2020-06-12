@@ -90,7 +90,6 @@ const LayoutHeader = ({
           </ScrollLink>
         </li>
 
-        {/*
         <li>
           <ScrollLink
             duration={500}
@@ -101,7 +100,6 @@ const LayoutHeader = ({
             Where
           </ScrollLink>
         </li>
-        */}
       </ul>
 
       <ul className="LayoutHeader__language-toggle">

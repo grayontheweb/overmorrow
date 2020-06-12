@@ -6,9 +6,9 @@ import Founder from 'src/components/Founder';
 import './Founders.scss';
 
 const Founders = ({ content }) => (
-  <Section className="Founders" fullScreen id="founders">
+  <Section className="Founders" fullScreen>
     <div className="Founders__parallax-container">
-      <h2>{content.heading}</h2>
+      <h2 id="founders">{content.heading}</h2>
 
       <div className="Founders__container">
         {content.foundersList.map((founder, i) => (
