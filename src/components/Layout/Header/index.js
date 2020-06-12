@@ -34,39 +34,45 @@ const LayoutHeader = ({ locale }) => {
     }
   `);
 
-  const handleResize = (e) => {
-    if (isOpen) {
-      setIsOpen(false);
-    }
-  };
+  const handleResize = useCallback(
+    (e) => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    },
+    [isOpen],
+  );
 
-  const handleScroll = useCallback((e) => {
-    let top = null;
+  const handleScroll = useCallback(
+    (e) => {
+      let top = null;
 
-    if (!headerRef || !headerRef.current) return;
+      if (!headerRef || !headerRef.current) return;
 
-    const { height } = headerRef.current.getBoundingClientRect();
+      const { height } = headerRef.current.getBoundingClientRect();
 
-    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-      top = window.pageYOffset || document.documentElement.scrollTop;
-    }
+      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+        top = window.pageYOffset || document.documentElement.scrollTop;
+      }
 
-    if (typeof top !== 'number') return;
+      if (typeof top !== 'number') return;
 
-    if (top > height * 3) {
-      if (!isFixed) setIsFixed(true);
-    } else {
-      if (isFixed) setIsFixed(false);
-    }
+      if (top > height * 3) {
+        if (!isFixed) setIsFixed(true);
+      } else {
+        if (isFixed) setIsFixed(false);
+      }
 
-    if (top > window.innerHeight - height && top < previousScrollTop) {
-      if (!isVisible) setIsVisible(true);
-    } else {
-      if (isVisible) setIsVisible(false);
-    }
+      if (top > window.innerHeight - height && top < previousScrollTop) {
+        if (!isVisible) setIsVisible(true);
+      } else {
+        if (isVisible) setIsVisible(false);
+      }
 
-    setPreviousScrollTop(top);
-  });
+      setPreviousScrollTop(top);
+    },
+    [isFixed, isVisible, previousScrollTop],
+  );
 
   const toggleIsOpen = () => {
     setIsOpen(!isOpen);
@@ -81,16 +87,6 @@ const LayoutHeader = ({ locale }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [handleResize, handleScroll, previousScrollTop]);
-
-  // Ensures that the header state gets updated even if the user scrolls around real quick
-  // and the scroll listener bounces
-  useEffect(() => {
-    setInterval(handleScroll, 500);
-
-    return () => {
-      clearInterval(handleScroll, 500);
-    };
-  }, [handleScroll]);
 
   const content =
     locale !== 'vietnamese'
