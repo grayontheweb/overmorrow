@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { get } from 'lodash';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import isInViewport from 'src/helpers/isInViewport';
+import useCompare from 'src/hooks/useCompare';
+
 import LocationsComponent from './Locations';
 
 const Locations = () => {
@@ -51,23 +54,44 @@ const Locations = () => {
       }
     : undefined;
 
+  const selectedLocationDidChange = useCompare(selectedLocation);
+
+  const onSelectLocation = (id) => {
+    const locationListItem = document.getElementById(
+      `location-list-item-${id}`,
+    );
+
+    setSelectedLocation(id);
+
+    if (locationListItem && !isInViewport(locationListItem)) {
+      locationListItem.scrollIntoView(false);
+    }
+  };
+
+  const onZoomChange = (z) => {
+    if (z !== zoom) {
+      setZoom(z);
+    }
+  };
+
   useEffect(() => {
     const zoomIn = 16;
     const zoomOut = 13;
 
-    if (selectedLocation && zoom !== zoomIn) {
+    if (selectedLocationDidChange && selectedLocation) {
       setZoom(zoomIn);
-    } else if (!selectedLocation && zoom !== zoomOut) {
+    } else if (selectedLocationDidChange && !selectedLocation) {
       setZoom(zoomOut);
     }
-  }, [selectedLocation, zoom]);
+  }, [selectedLocation, selectedLocationDidChange]);
 
   return (
     <LocationsComponent
       center={center}
       locations={locations}
+      onSelectLocation={onSelectLocation}
+      onZoomChange={onZoomChange}
       selectedLocation={selectedLocation}
-      setSelectedLocation={setSelectedLocation}
       zoom={zoom}
     />
   );

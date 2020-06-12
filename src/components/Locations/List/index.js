@@ -3,16 +3,32 @@ import { get } from 'lodash';
 
 import './List.scss';
 
-const LocationsList = ({ locations = [], setSelectedLocation }) => (
+const LocationsList = ({
+  locations = [],
+  selectedLocation,
+  onSelectLocation,
+}) => (
   <ul className="LocationsList">
     {locations.map((location) => (
-      <li className="LocationsList__item" key={location.id}>
-        <h3
-          onClick={() => setSelectedLocation(location.id)}
-          onKeyDown={() => setSelectedLocation(location.id)}
-          role="link"
-        >
-          {location.name}
+      <li
+        className="LocationsList__item"
+        key={location.id}
+        id={`location-list-item-${location.id}`}
+      >
+        {selectedLocation === location.id && (
+          <div className="LocationsList__item__active">
+            <img alt="map-pin" src="/img/marker-pin-active@3x.png" />
+          </div>
+        )}
+
+        <h3 className="LocationsList__item__title">
+          <a
+            href={`#${location.name}`}
+            onClick={() => onSelectLocation(location.id)}
+            onKeyDown={() => onSelectLocation(location.id)}
+          >
+            {location.name}
+          </a>
         </h3>
 
         <div
@@ -63,22 +79,22 @@ const LocationsList = ({ locations = [], setSelectedLocation }) => (
               </dd>
             </Fragment>
           )}
-        </dl>
 
-        {get(location, 'business.facebook_username') && (
-          <dl>
-            <dt>Facebook</dt>
-            <dd>
-              <a
-                href={`http://www.facebook.com/${location.business.facebook_username}`}
-                rel="noreferrer"
-                target="_blank"
-              >
-                {location.business.facebook_username}
-              </a>
-            </dd>
-          </dl>
-        )}
+          {get(location, 'business.facebook_username') && (
+            <Fragment>
+              <dt>Facebook:</dt>
+              <dd>
+                <a
+                  href={`http://www.facebook.com/${location.business.facebook_username}`}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {location.business.facebook_username}
+                </a>
+              </dd>
+            </Fragment>
+          )}
+        </dl>
       </li>
     ))}
   </ul>

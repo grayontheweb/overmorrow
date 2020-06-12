@@ -3,6 +3,7 @@ import { get } from 'lodash';
 
 import Map, { Marker } from 'src/components/UI/Map';
 
+import LocationsCity from './City';
 import LocationsList from './List';
 
 import './Locations.scss';
@@ -10,13 +11,16 @@ import './Locations.scss';
 const Locations = ({
   center,
   locations = [],
+  onSelectLocation,
+  onZoomChange,
   selectedLocation,
-  setSelectedLocation,
   zoom,
 }) => (
   <div className="Locations">
     <h2 className="Locations__title">Where</h2>
     <div className="Locations__map-container">
+      <LocationsCity />
+
       <Map
         center={center}
         className="Locations__map"
@@ -24,6 +28,7 @@ const Locations = ({
           lat: 21.0532,
           lng: 105.8261,
         }}
+        onZoomChanged={(map, { zoom }) => onZoomChange(zoom)}
         zoom={zoom}
       >
         {locations.map((location) => (
@@ -32,7 +37,7 @@ const Locations = ({
             name={location.name}
             title={location.name}
             key={location.id}
-            onClick={() => setSelectedLocation(location.id)}
+            onClick={() => onSelectLocation(location.id)}
             position={{
               lat: get(location, 'address.latitude'),
               lng: get(location, 'address.longitude'),
@@ -44,8 +49,8 @@ const Locations = ({
 
     <LocationsList
       locations={locations}
+      onSelectLocation={onSelectLocation}
       selectedLocation={selectedLocation}
-      setSelectedLocation={setSelectedLocation}
     />
   </div>
 );
